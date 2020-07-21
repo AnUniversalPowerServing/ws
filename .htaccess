@@ -1,0 +1,13 @@
+# Default Timezone
+php_value date.timezone 'Asia/kolkata'
+
+# Disables Error Reporting on Screen
+#php_value display_errors Off 
+
+DirectoryIndex pages/default.php
+
+RewriteEngine on
+
+# Rewrite URLs
+#RewriteRule ^(.*)$ $1.php
+RewriteRule story/([^/]+)/([^/]+) pages/index.php?1=$1&2=$2 [QSA,L]
