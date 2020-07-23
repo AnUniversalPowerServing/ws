@@ -12,3 +12,4 @@ RewriteEngine on
 RewriteRule tutorial/reactjs pages/reactjs.php [QSA,L]
 RewriteRule tutorial/seo pages/seo.php [QSA,L]
 RewriteRule tutorial/ecmascript pages/ecmascript.php [QSA,L]
+RewriteRule tutorial/aws pages/aws.php [QSA,L]

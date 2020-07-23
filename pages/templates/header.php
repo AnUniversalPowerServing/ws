@@ -12,8 +12,8 @@
       <ul class="nav navbar-nav">
         <li id="tutorial-reactjs"><a href="<?php echo $PROJECT_URL; ?>/tutorial/reactjs"><b>React JS</b></a></li>
         <li id="tutorial-seo"><a href="<?php echo $PROJECT_URL; ?>/tutorial/seo"><b>SEO</b></a></li>
-		<li id="tutorial-ecmascript"><a href="<?php echo $PROJECT_URL; ?>/tutorial/ecmascript"><b>Javascript (Ecmascript)</b></a></li>
-        <li><a href="#">Page 2</a></li>
+		    <li id="tutorial-ecmascript"><a href="<?php echo $PROJECT_URL; ?>/tutorial/ecmascript"><b>Javascript (Ecmascript)</b></a></li>
+        <li id="tutorial-aws"><a href="<?php echo $PROJECT_URL; ?>/tutorial/aws"><b>AWS</b></a></li>
         <li><a href="#">Page 3</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">

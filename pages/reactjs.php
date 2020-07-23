@@ -23,9 +23,19 @@ $(document).ready(function(){
 
 <?php include_once 'templates/header.php'; ?>
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">ReactJS</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Overview of React JS</li>
+  </ol>
+</nav>
+
 <div class="container-fluid fs14 mtop15p">
   <div class="row">
-   <div class="col-sm-7">
+   <div class="col-sm-3">
+      <?php include_once 'templates/reactjs/00-content.php'; ?>
+   </div><!--/.col-sm-3 -->
+   <div class="col-sm-5">
 
      <div><h4 class="font-red"><b>Overview of React JS</b></h4></div>
 
@@ -47,6 +57,37 @@ $(document).ready(function(){
       <div>
         In MVC (Model-View-Controller) Application, ReactJS deals with the <i>View</i> of the Application.
       </div>
+
+      <div><h4 class="font-red"><b>Features of React JS</b></h4></div>
+      <div>
+        <ol>
+          <li>ReactJS also simplifies complex DOM manipulations by using VIRTUAL DOM and
+              DIFFING ALGORITHM.</li>
+          <li>ReactJS implements one-way reactive data flow</li>
+        </ol>
+      </div>
+
+      <!--/.React JS Virtual DOM (VDOM) ::: START -->
+      <div><h4 class="font-red"><b>React JS Virtual DOM (VDOM) and Diffing Algorithm</b></h4></div>
+      <div>
+        React JS DOM Manipulation Engine is also known as <i>Virtual DOM</i>. It is a programming 
+        Concept where UI Representation is kept in Memory and synced with real DOM by
+        <i>ReactDOM</i> library. This process is called as <i>Reconciliation</i>.
+      </div>
+      <div class="jumbotron mtop10p mbot10p">
+        <div><h4><b>What is React Fiber?</b></h4></div>
+        <div>
+          It is a new Reconciliation Engine in React@16. Its main goal is to enable incremental 
+          rendering of the Virtual DOM.
+        </div>
+      </div><!--/.jumbotron -->
+      
+
+      <div>
+        The central piece of React JS Virtual DOM is its <code>Smart Diffing Algorithm</code>.
+      </div>
+      <!--/.React JS Virtual DOM (VDOM) ::: END -->
+      
 
       <div><h4 class="font-red"><b>Development of React JS Application</b></h4></div>
 
@@ -82,9 +123,7 @@ $(document).ready(function(){
           </li>
         </ol>
       </div>
-<style>
 
-</style>
       <div><h4 class="font-red"><b>Plugin CDN Links into a Website</b></h4></div>
       <div>
         For a website, to make it a React-Ready Website, you need to add following three script Tags:
@@ -236,8 +275,8 @@ $(document).ready(function(){
       </div>
       <div><b>Production Environment:</b></div>
 
-   </div><!--/.col-sm-7 -->
-   <div class="col-sm-5">
+   </div><!--/.col-sm-5 -->
+   <div class="col-sm-4">
 
       <div class="list-group">
         <div class="list-group-item bg-lgtRed">
@@ -264,43 +303,22 @@ $(document).ready(function(){
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
 
-   </div><!--/.col-sm-5 -->
-   <div class="col-sm-3">
-    <!-- -->
-    <div class="list-group">
-      <div class="list-group-item">
-        <span class="label label-primary">state</span>
-        <span class="label label-danger">render</span>
-        <span class="label label-success">props</span>
-        <span class="label label-warning"></span>
-        <span class="label label-primary"></span>
-        <span class="label label-danger"></span>
-        <span class="label label-success"></span>
-        <span class="label label-warning"></span>
-        <span class="label label-primary"></span>
-        <span class="label label-danger"></span>
-        <span class="label label-success"></span>
-        <span class="label label-warning"></span>
-        <span class="label label-primary"></span>
-        <span class="label label-danger"></span>
-        <span class="label label-success"></span>
-        <span class="label label-warning"></span>
-        <span class="label label-primary"></span>
-        <span class="label label-danger"></span>
-        <span class="label label-success"></span>
-        <span class="label label-warning"></span>
-        <span class="label label-primary"></span>
-        <span class="label label-danger"></span>
-        <span class="label label-success"></span>
-        <span class="label label-warning"></span>
-        <span class="label label-primary"></span>
-        <span class="label label-danger"></span>
-        <span class="label label-success"></span>
-        <span class="label label-warning"></span>
-      </div>
-    </div><!--/.col-sm-3 -->
-    <!-- -->
-   </div>
+      <!-- What you'll learn in this Page ::: START -->
+      <div class="list-group">
+        <div class="list-group-item">
+          <div><h4 class="font-red"><b>What you'll learn in this Page:</b></h4></div>
+          <div>
+              <ul>
+                <li><h5 class="lh26">Overview of ReactJS</h5></li>
+                <li><h5 class="lh26"></h5></li>
+              </ul>
+          </div>
+        </div><!-- list-group-item -->
+      </div><!-- list-group -->
+      <!-- What you'll learn in this Page ::: END -->
+
+   </div><!--/.col-sm-4 -->
+
  </div>      
 </div>
 
