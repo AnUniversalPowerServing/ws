@@ -2,59 +2,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>ReactJS</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/styles/api/core-skeleton.css">
+  <script src="<?php echo $PROJECT_URL; ?>/js/api/core-skeleton.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/jquery/jquery.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
 <style>
-.navbar-default { border-radius:0px;margin-bottom:0px;border-bottom:2px solid #d9534f; }
-a.navbar-brand { font-size:14px;çolor:#d9534f; }
-@media screen and (min-width: 768px) { .container-fluid .jumbotron { padding:20px; } }
-.bg-black { ;background-color:#0d122f; }
-.font-paleBlue { color:#0eb9a9; }
-.font-paleLgtBlue { color:#5ee6da; }
-.font-paleRed {color:#f7857c; }
-.font-paleOrange { color:#efb35a; }
-.font-paleWhite { color:#f5e8d6; }
-.font-palePurple { color:#e29fec; }
-.font-paleLgtGreen { color:#b2c39d; }
-.font-red { color:#d9534f; }
-.fs12 { font-size:12px; }
-.fs14 { font-size:14px;line-height:26px; }
-.mtop5p { margin-top:5px; }
-.mtop15p { margin-top:15px; }
-.mbot0 { margin-bottom:0px; }
-.mbot5p { margin-bottom:5px; }
+
 </style>
+<script type="text/javascript">
+$(document).ready(function(){
+ $('#tutorial-reactjs').addClass('active');
+});
+</script>
 </head>
 <body>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><span class="font-red"><b>WideSecond.com</b></span></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">React JS</a></li>
-        <li><a href="#">Page 1</a></li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<?php include_once 'templates/header.php'; ?>
 
 <div class="container-fluid fs14 mtop15p">
   <div class="row">
@@ -116,8 +83,7 @@ a.navbar-brand { font-size:14px;çolor:#d9534f; }
         </ol>
       </div>
 <style>
-.code-htmlTags { font-size: 0;line-height:18px; }
-.code-htmlTags span { font-size: 14px; }
+
 </style>
       <div><h4 class="font-red"><b>Plugin CDN Links into a Website</b></h4></div>
       <div>
@@ -272,8 +238,9 @@ a.navbar-brand { font-size:14px;çolor:#d9534f; }
 
    </div><!--/.col-sm-7 -->
    <div class="col-sm-5">
+
       <div class="list-group">
-        <div class="list-group-item">
+        <div class="list-group-item bg-lgtRed">
           <div><h4 class="font-red"><b>Skillset Required</b></h4></div>
           <div>
             <ul>
@@ -285,6 +252,18 @@ a.navbar-brand { font-size:14px;çolor:#d9534f; }
           </div>
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
+
+      <div class="list-group">
+        <div class="list-group-item bg-lgtRed">
+          <div><h4 class="font-red"><b>Other Related links</b></h4></div>
+          <div>
+            <ul class="noListStyle">
+              <li><a href="">XHP (An HTML Component Framework for PHP)</a></li>
+            </ul>
+          </div>
+        </div><!--/.list-group-item -->
+      </div><!--/.list-group -->
+
    </div><!--/.col-sm-5 -->
    <div class="col-sm-3">
     <!-- -->

@@ -1,0 +1,26 @@
+.navbar-default { border-radius:0px;margin-bottom:0px;border-bottom:2px solid #d9534f; }
+a.navbar-brand { font-size:14px;çolor:#d9534f; }
+@media screen and (min-width: 768px) { .container-fluid .jumbotron { padding:20px; } }
+.bg-black { background-color:#0d122f; }
+.bg-lgtRed { background-color:#fffbfb; }
+.font-paleBlue { color:#0eb9a9; }
+.font-paleLgtBlue { color:#5ee6da; }
+.font-paleRed {color:#f7857c; }
+.font-paleOrange { color:#efb35a; }
+.font-paleWhite { color:#f5e8d6; }
+.font-palePurple { color:#e29fec; }
+.font-paleLgtGreen { color:#b2c39d; }
+.font-red { color:#d9534f; }
+.fs12 { font-size:12px; }
+.fs14 { font-size:14px;line-height:26px; }
+.mtop5p { margin-top:5px; }
+.mtop10p { margin-top:10px; }
+.mtop15p { margin-top:15px; }
+.mbot0 { margin-bottom:0px; }
+.mbot5p { margin-bottom:5px; }
+.mbot10p { margin-bottom:10px; }
+.noListStyle { list-style-type:none; }
+.code-htmlTags { font-size: 0;line-height:18px; }
+.code-htmlTags span { font-size: 14px; }
+.lh26 { line-height:26px; }
+h5 { font-size:14px; }
