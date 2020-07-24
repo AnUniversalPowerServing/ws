@@ -10,9 +10,6 @@
   <script src="<?php echo $PROJECT_URL; ?>/js/api/core-skeleton.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/jquery/jquery.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
-<style>
-
-</style>
 <script type="text/javascript">
 $(document).ready(function(){
  $('#tutorial-ecmascript').addClass('active');
@@ -65,19 +62,42 @@ $(document).ready(function(){
    </div><!--/.col-sm-5 -->
   
    <div class="col-sm-4">
-      <!-- What you'll learn in this Page ::: START -->
-      <div class="list-group">
-        <div class="list-group-item">
-          <div><h4 class="font-red"><b>What you'll learn in this Page:</b></h4></div>
-          <div>
-              <ul>
-                <li><h5 class="lh26">Does Javascript and ECMAScript are same or different?</h5></li>
-                <li><h5 class="lh26">What is the Idea behind the evolution and introduction of Javascript?</h5></li>
-              </ul>
-          </div>
-        </div><!-- list-group-item -->
-      </div><!-- list-group -->
-      <!-- What you'll learn in this Page ::: END -->
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- What you'll learn in this Page ::: START -->
+          <div class="list-group">
+            <div class="list-group-item">
+              <div><h4 class="font-red"><b>What you'll learn in this Page:</b></h4></div>
+              <div>
+                  <ul>
+                    <li><h5 class="lh26">Does Javascript and ECMAScript are same or different?</h5></li>
+                    <li><h5 class="lh26">What is the Idea behind the evolution and introduction of Javascript?</h5></li>
+                  </ul>
+              </div>
+            </div><!-- list-group-item -->
+          </div><!-- list-group -->
+          <!-- What you'll learn in this Page ::: END -->
+        </div><!--/.col-sm-12 -->
+      </div><!--/.row -->
+      <div class="row">
+        <div class="col-sm-7">
+          <!-- JavaScript Libraries and Frameworks ::: START -->
+          <div class="list-group">
+            <div class="list-group-item">
+              <div><h4 class="font-red"><b>JavaScript Libraries</b></h4></div>
+              <div>
+                  <ul>
+                    <li><h5 class="lh26">JQuery</h5></li>
+                    <li><h5 class="lh26">React JS</h5></li>
+                  </ul>
+              </div>
+            </div><!-- list-group-item -->
+          </div><!-- list-group -->
+          <!-- JavaScript Libraries and Frameworks ::: END -->
+        </div><!--/.col-sm-7 -->
+      </div>
+      
+
    </div><!--/.col-sm-4 -->
   </div><!--/.row -->
 </div><!--/.container-fluid -->

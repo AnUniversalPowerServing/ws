@@ -22,14 +22,17 @@ $(document).ready(function(){
   <div class="container-fluid fs14 mtop15p">
    <div class="row">
     <div class="col-sm-7">
-       <div><h4 class="font-red"><b>SEO (Search Engine Optimization)</b></h4></div>
-       <div>
-         Search Engine Optimization is a marketing technique at Search Engines which is applied in our project for: 
-         <ul>
-            <li>getting better rank on User search</li>
-            <li>improving and increasing Users Volume to the Website</li>
-         </ul>
-       </div>
+
+       <?php 
+         if(isset($_GET["1"]) && $_GET["1"]=='introduction-to-seo'){
+            include_once 'templates/seo/01-introduction-to-seo.php';
+         } else if(isset($_GET["1"]) && $_GET["1"]=='factors-improving-search-engine-ranking'){
+            include_once 'templates/seo/02-factors-improving-search-engine-ranking.php';
+         }
+         
+       ?>
+
+       
        <div><h4 class="font-red"><b>How Search Engine works?</b></h4></div>
        <div>
        To deliver better Search Results, Search Engine performs few Activities:

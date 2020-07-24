@@ -9,7 +9,9 @@ DirectoryIndex pages/reactjs.php
 RewriteEngine on
 
 # Rewrite URLs
-RewriteRule tutorial/reactjs pages/reactjs.php [QSA,L]
-RewriteRule tutorial/seo pages/seo.php [QSA,L]
-RewriteRule tutorial/ecmascript pages/ecmascript.php [QSA,L]
-RewriteRule tutorial/aws pages/aws.php [QSA,L]
+RewriteRule tutorial/reactjs/([^/]+)$ pages/reactjs.php?1=$1 [QSA,L]
+RewriteRule tutorial/seo/([^/]+)$ pages/seo.php?1=$1 [QSA,L]
+RewriteRule tutorial/ecmascript/([^/]+)$ pages/ecmascript.php?1=$1 [QSA,L]
+RewriteRule tutorial/typescript/([^/]+)$ pages/typescript.php?1=$1 [QSA,L]
+RewriteRule tutorial/aws/([^/]+)$ pages/aws.php?1=$1 [QSA,L]
+RewriteRule tutorial/java/([^/]+)$ pages/java.php?1=$1 [QSA,L]

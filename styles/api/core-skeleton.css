@@ -22,5 +22,7 @@ a.navbar-brand { font-size:14px;çolor:#d9534f; }
 .noListStyle { list-style-type:none; }
 .code-htmlTags { font-size: 0;line-height:18px; }
 .code-htmlTags span { font-size: 14px; }
-.lh26, .lh26>li>h5  { line-height:26px; }
+.lh26, ol.lh26>li>h5  { line-height:26px; }
+ol.lh26 { color:#024279; }
+.lh26>li>h5>a { text-decoration:none; }
 h5 { font-size:14px; }
