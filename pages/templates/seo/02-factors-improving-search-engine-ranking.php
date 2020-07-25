@@ -13,6 +13,17 @@
   <div>
     
   </div>
+  <div class="list-group">
+   <div class="list-group-item">
+     <div><h4 class="font-red"><b>Website Owner shouldn't do:</b></h4></div>
+     <ul>
+      <li>Meta tag keywords and Description as a Dynamic Content change is a wrong practise.
+      Meta tags must be changed manually from page to page and article to article.
+      Dynamic content changes on Meta tag keywords and description will make a negative impact 
+      on SEO website ranking.</li>
+      </ul>
+   </div>
+  </div>
  </li>
  <li>
   <div><h5><b>Sub-headings</b></h5></div>

@@ -3,6 +3,8 @@
 <html lang="en">
 <head>
   <title>Search Engine Optimization</title>
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="seo, seo tools, seo khazana, seo report, seositecheckup, seoclerks, seo login, seo jobs, seo services, seo images">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/vendor/bootstrap/css/bootstrap.min.css">
@@ -21,55 +23,29 @@ $(document).ready(function(){
 
   <div class="container-fluid fs14 mtop15p">
    <div class="row">
-    <div class="col-sm-7">
+     <div class="col-sm-3">
+      <?php include_once 'templates/seo/00-content.php'; ?>
+     </div>
+     <div class="col-sm-6">
 
        <?php 
          if(isset($_GET["1"]) && $_GET["1"]=='introduction-to-seo'){
             include_once 'templates/seo/01-introduction-to-seo.php';
          } else if(isset($_GET["1"]) && $_GET["1"]=='factors-improving-search-engine-ranking'){
             include_once 'templates/seo/02-factors-improving-search-engine-ranking.php';
-         }
+         } else if(isset($_GET["1"]) && $_GET["1"]=='keyword-research'){
+            include_once 'templates/seo/03-keyword-research.php';
+         } else if(isset($_GET["1"]) && $_GET["1"]=='backlinks-in-seo'){
+            include_once 'templates/seo/04-backlinks-in-seo.php';
+         } else if(isset($_GET["1"]) && $_GET["1"]=='how-search-engine-works'){
+            include_once 'templates/seo/05-how-search-engine-works.php';
+         } else if(isset($_GET["1"]) && $_GET["1"]=='how-google-search-engine-works'){
+            include_once 'templates/seo/06-how-google-search-engine-works.php';
+         } 
+
          
        ?>
 
-       
-       <div><h4 class="font-red"><b>How Search Engine works?</b></h4></div>
-       <div>
-       To deliver better Search Results, Search Engine performs few Activities:
-       <ol class="noListStyle">
-        <li>
-            <div><b>Stage #1: Crawling</b></div>
-            <div>
-            It is a process of fetching all the web page links under a website. This task was done by 
-            a software called <i>crawler</i> or <i>spider</i>.
-            For Google Search Engine, this software is known as Googlebot. This Software runs by the 
-            Search Engine with a periodical Frequency (Daily or Weekly) for updating existing Websites and fetching new Websites.
-            </div>
-        </li>
-        <li>
-            <div><b>Stage #2: Indexing</b></div>
-            <div>
-            From the Fetched Web links, for each webpage, it identifies the words and expressions.
-            Then, in the Search Engine's Big Database, index is created for Web link with keywords.
-            </div>
-        </li>
-        <li>
-            <div><b>Stage #3: Processing</b></div>
-            <div>
-            When the search Request comes in the Search Engine, based on the keywords it fetches the 
-            Web links.
-            </div>
-        </li>
-        <li>
-            <div><b>Stage #4: Calculating Relevancy (Ranking)</b></div>
-            <div>
-            In Stage #3, for a Searched String, we could collect Millions of Weblinks. Now, the Search 
-            Engine calculates the Relevancy and display the results in ranking Order. 
-            </div>
-        </li>
-
-       </ol>
-       </div>
 
        <!-- Google Crawler / Googlebot -->
        <div><h4 class="font-red"><b>Google Crawler / Googlebot</b></h4></div>
@@ -101,9 +77,6 @@ $(document).ready(function(){
 
        </div>
 
-       <!-- -->
-       <?php include_once 'templates/seo-google-searchengine-works.php'; ?>
-
        <div><h4 class="font-red"><b>Introduction to robots.txt</b></h4></div>
 
        <div><h4 class="font-red"><b>Googlebot Crawl Rate</b></h4></div>
@@ -130,8 +103,8 @@ $(document).ready(function(){
         </ul>
       </div>
 
-    </div><!--/.col-sm-7 -->
-    <div class="col-sm-5">
+     </div><!--/.col-sm-6 -->
+     <div class="col-sm-3">
 
       <div><h4 class="font-red"><b>Googlebot Terminologies</b></h4></div>
 
