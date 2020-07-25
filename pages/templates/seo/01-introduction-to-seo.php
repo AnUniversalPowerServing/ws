@@ -11,6 +11,28 @@
     is called as SEO.
 </div>
 
+<div><h4 class="font-red"><b>Necessity of Search Engine and its Optimization</b></h4></div>
+
+<div>
+There are millions of Websites over the Internet with Trillions of different Content Representations. 
+Search Engines acts as a Websites libraries. When a Respective User queries for a term in the Search 
+Engine, required number of relevant websites are displayed to the User.
+</div>
+<div>
+To Obtain this:
+</div>
+
+<div>
+ <ul>
+  <li>When a New Website is added or Existing Website is updated into the Internet, it should be
+   known to the Search Engine. 
+  </li>
+  <li>
+
+  </li>
+ </ul>
+</div>
+
 <div class="list-group">
  <div class="list-group-item mtop10p">
    <div><h4 class="font-red"><b>In this Tutorial, you'll learn:</b></h4></div>
@@ -27,4 +49,5 @@
    </div>
   </div><!--/.list-group-item -->
 </div><!--/.list-group -->
+
 
