@@ -24,35 +24,35 @@ $(document).ready(function(){
   <div class="container-fluid fs14 mtop15p">
    <div class="row">
      <div class="col-sm-3">
-      <?php include_once 'templates/seo/00-content.php'; ?>
+      <?php include_once 'templates/tutorials/seo/00-content.php'; ?>
      </div>
      <div class="col-sm-9">
 
        <?php 
          if(isset($_GET["1"]) && $_GET["1"]=='introduction-to-seo'){
-            include_once 'templates/seo/01-introduction-to-seo.php';
+            include_once 'templates/tutorials/seo/01-introduction-to-seo.php';
          } else if(isset($_GET["1"]) && $_GET["1"]=='factors-improving-search-engine-ranking'){
-            include_once 'templates/seo/02-factors-improving-search-engine-ranking.php';
+            include_once 'templates/tutorials/seo/02-factors-improving-search-engine-ranking.php';
          } else if(isset($_GET["1"]) && $_GET["1"]=='keyword-research'){
-            include_once 'templates/seo/03-keyword-research.php';
+            include_once 'templates/tutorials/seo/03-keyword-research.php';
          } else if(isset($_GET["1"]) && $_GET["1"]=='backlinks-in-seo'){
-            include_once 'templates/seo/04-backlinks-in-seo.php';
+            include_once 'templates/tutorials/seo/04-backlinks-in-seo.php';
          } else if(isset($_GET["1"]) && $_GET["1"]=='how-search-engine-works'){
-            include_once 'templates/seo/05-how-search-engine-works.php';
+            include_once 'templates/tutorials/seo/05-how-search-engine-works.php';
          } else if(isset($_GET["1"]) && $_GET["1"]=='how-google-search-engine-works'){
-            include_once 'templates/seo/06-how-google-search-engine-works.php';
+            include_once 'templates/tutorials/seo/06-how-google-search-engine-works.php';
          } else if(isset($_GET["1"]) && $_GET["1"]=='google-crawler'){
-            include_once 'templates/seo/07-google-crawler.php';
+            include_once 'templates/tutorials/seo/07-google-crawler.php';
          } else if(isset($_GET["1"]) && $_GET["1"]=='types-of-search-engine-seo'){
-            include_once 'templates/seo/08-types-of-search-engine-seo.php';
+            include_once 'templates/tutorials/seo/08-types-of-search-engine-seo.php';
          } else if(isset($_GET["1"]) && $_GET["1"]=='black-hat-seo'){
-            include_once 'templates/seo/09-black-hat-seo.php';
+            include_once 'templates/tutorials/seo/09-black-hat-seo.php';
          } else if(isset($_GET["1"]) && $_GET["1"]=='white-hat-seo'){
-            include_once 'templates/seo/10-white-hat-seo.php';
+            include_once 'templates/tutorials/seo/10-white-hat-seo.php';
          } else if(isset($_GET["1"]) && $_GET["1"]=='how-website-known-to-search-engine'){
-            include_once 'templates/seo/11-how-website-known-to-search-engine.php';
+            include_once 'templates/tutorials/seo/11-how-website-known-to-search-engine.php';
          } else if(isset($_GET["1"]) && $_GET["1"]=='search-engines-ranking-factors'){
-            include_once 'templates/seo/12-search-engines-ranking-factors.php';
+            include_once 'templates/tutorials/seo/12-search-engines-ranking-factors.php';
          } 
          
 

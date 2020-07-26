@@ -35,7 +35,7 @@ $(document).ready(function(){
 <div class="container-fluid fs14 mtop15p">
   <div class="row">
    <div class="col-sm-3">
-      <?php include_once 'templates/reactjs/00-content.php'; ?>
+      <?php include_once 'templates/tutorials/reactjs/00-content.php'; ?>
    </div><!--/.col-sm-3 -->
    <div class="col-sm-5">
 

@@ -23,14 +23,14 @@ $(document).ready(function(){
 <div class="container-fluid fs14 mtop15p">
   <div class="row">
    <div class="col-sm-3">
-      <?php include_once 'templates/java/00-content.php'; ?>
+      <?php include_once 'templates/tutorials/java/00-content.php'; ?>
    </div>
    <div class="col-sm-5">
      <?php 
         if(isset($_GET["1"]) && $_GET["1"]=='introduction-to-java'){
-          include_once 'templates/java/01-introduction-to-java.php'; 
+          include_once 'templates/tutorials/java/01-introduction-to-java.php'; 
         } else if(isset($_GET["1"]) && $_GET["1"]=='architecture-of-java'){
-          include_once 'templates/java/02-architecture-of-java.php'; 
+          include_once 'templates/tutorials/java/02-architecture-of-java.php'; 
         }
          
      ?>

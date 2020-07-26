@@ -36,7 +36,7 @@ $(document).ready(function(){
 
    <div class="col-sm-5">
 
-   <?php include_once 'templates/javascript/01-introduction-to-javascript.php'; ?>
+   <?php include_once 'templates/tutorials/javascript/01-introduction-to-javascript.php'; ?>
 
     <div><h4 class="font-red lh26"><b>How to make the First Letter of a String Uppercase (Sentence - Case Format) in Javascript?</b></h4></div>
 	<div class="well bg-black code-htmlTags mbot5p">
