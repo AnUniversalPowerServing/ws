@@ -3,6 +3,7 @@ a.navbar-brand { font-size:14px;çolor:#d9534f; }
 @media screen and (min-width: 768px) { .container-fluid .jumbotron { padding:20px; } }
 .bg-black { background-color:#0d122f; }
 .bg-lgtRed { background-color:#fffbfb; }
+.bg-lgtGrey { background-color:#e7e7e7; }
 .font-paleBlue { color:#0eb9a9; }
 .font-paleLgtBlue { color:#5ee6da; }
 .font-paleRed {color:#f7857c; }
@@ -24,5 +25,8 @@ a.navbar-brand { font-size:14px;çolor:#d9534f; }
 .code-htmlTags span { font-size: 14px; }
 .lh26, ol.lh26>li>h5  { line-height:26px; }
 ol.lh26 { color:#024279; }
-.lh26>li>h5>a { text-decoration:none; }
-h5 { font-size:14px; }
+.lh26>li>h5>a, a, a:hover { text-decoration:none; }
+h5 { font-size:14px;line-height:22px; }
+.padtopbot0 { padding-top:0px;padding-bottom:0px; }
+.padInlineStart20p { padding-inline-start: 20px; }
+.borderBot2p-primary { border-bottom: 2px solid #02428a; }

@@ -1,3 +1,11 @@
+<script type="text/javascript">
+var breadcrumb = [{url:'tutorial/seo/introduction-to-seo',label:'SEO'},
+                  {label:'Introduction to SEO (Search Engine Optimization)'}];
+$(document).ready(function(){
+ build_pageBreadcrumb(breadcrumb);
+});
+</script>
+
 <div class="row">
  <div class="col-sm-7">
   <!-- -->
@@ -42,7 +50,8 @@
     </div><!--/.list-group-item -->
   </div><!--/.list-group -->
 
-  <div><h4 class="font-red"><b>Necessity of Search Engine and its Optimization</b></h4></div>
+  <div id="Necessity-of-Search-Engine-and-its-Optimization">
+    <div><h4 class="font-red"><b>Necessity of Search Engine and its Optimization</b></h4></div>
 
   <div>
   There are millions of Websites over the Internet with Trillions of different Content Representations. 
@@ -72,7 +81,9 @@
     </li>
   </ul>
   </div>
+  </div><!--/#Necessity-of-Search-Engine-and-its-Optimization -->
   
+  <div id="Search-Engine-Facts-Trends-and-Statistics">
   <div><h4 class="font-red"><b>Search Engine's Facts, Trends and Statistics</b></h4></div>
   <div class="mbot15p">
    <ul>
@@ -152,6 +163,7 @@
     </li>
    </ul>
   </div>
+  </div><!--/#Search-Engine-Facts-Trends-and-Statistics -->
 
   <!-- -->
  </div><!--/.col-sm-7 -->
