@@ -31,7 +31,7 @@ function build_pageBreadcrumb(jsonData){
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li id="tutorial-ecmascript"><a href="<?php echo $PROJECT_URL; ?>/tutorial/ecmascript/introduction-to-ecmascript"><b>Javascript (Ecmascript)</b></a></li>
+        <li id="tutorial-javascript"><a href="<?php echo $PROJECT_URL; ?>/tutorial/javascript/introduction-to-javascript"><b>Javascript</b></a></li>
         <li id="tutorial-typescript"><a href="<?php echo $PROJECT_URL; ?>/tutorial/typescript/introduction-to-typescript"><b>Typescript</b></a></li>
         <li id="tutorial-reactjs"><a href="<?php echo $PROJECT_URL; ?>/tutorial/reactjs/introduction-to-reactjs"><b>React JS</b></a></li>
         <li id="tutorial-aws"><a href="<?php echo $PROJECT_URL; ?>/tutorial/aws/introduction-to-aws"><b>AWS</b></a></li>

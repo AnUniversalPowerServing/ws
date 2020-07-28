@@ -21,17 +21,6 @@ $(document).ready(function(){
       In other words, we can say, improving your website's Search Ranking on Search Engine 
       is called as SEO (Search Engine Optimization).
   </div>
-  <div>
-   <span class="label label-primary">Science of SEO</span>
-   <span class="label label-success">Learn SEO</span>
-   <span class="label label-warning">SEO and keyword Optimization</span>
-   <span class="label label-primary">SEO Courses</span>
-   <span class="label label-success">SEO Google</span>
-   <span class="label label-warning">SEO Basics</span>
-   <span class="label label-primary">Best SEO tools</span>
-   <span class="label label-success">Digital Marketing</span>
-   <span class="label label-warning">Improve SEO</span>
-  </div>
 
   <div class="list-group">
   <div class="list-group-item mtop10p">
