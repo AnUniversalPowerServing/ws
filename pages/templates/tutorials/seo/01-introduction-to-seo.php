@@ -19,7 +19,11 @@ $(document).ready(function(){
   </div>
   <div>
       In other words, we can say, improving your website's Search Ranking on Search Engine 
-      is called as SEO (Search Engine Optimization).
+      is called as SEO (Search Engine Optimization).<br/>
+      SEO is the Content Marketing Strategy of a Website at Search Engines.<br/>
+      SEO is also called as SEO Copywriting.<br/>
+      Balancing the content that engages Users and the content that Search Engine ranks highly for your 
+      targetted Keywords is known as <i>SEO Copywriting</i>.
   </div>
 
   <div class="list-group">

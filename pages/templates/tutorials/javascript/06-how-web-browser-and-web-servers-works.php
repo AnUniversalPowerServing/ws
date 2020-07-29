@@ -103,7 +103,7 @@
     </table>
    </div>
    <div class="list-group mtop15p">
-    <div class="list-group-item bg-lgtGrey">
+    <div class="list-group-item">
       <b>Note</b><br/>
       When you are using http protocol, the default port is 80. You can mention Origin as
       <code>http://localhost</code> instead of <code>http://localhost:80</code>.<br/>
