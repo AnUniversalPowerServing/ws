@@ -1,4 +1,4 @@
-<?php $PROJECT_URL = 'http://localhost/ws'; ?>
+<?php include_once 'templates/api.php';  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

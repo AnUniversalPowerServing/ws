@@ -11,6 +11,22 @@ $(document).ready(function(){
   <!-- -->
   <div><h4 class="font-red"><b>Introduction to SEO (Search Engine Optimization)</b></h4></div>
   <div>
+  Designing, developing and hosting a website in the internet is of one level. 
+  Marketing the Website and bringing the Customers traffic to it is of another level.
+  </div>
+  <div class="list-group">
+  <div class="list-group-item">
+  &emsp;<i>90% of internet customers traffic to a website is getting from Search Engines and rest 
+  of the 10% is achieved from Social Media's and Other platforms.<br/>
+  &emsp;And In search Engines, for a User Searched Keywords, 95% of customer traffic is only diverted to 
+  the First page Results of Search Engine. This First Page of Search Results is called as SERP 
+  (Search Engine's Result Page). Only 5% of the Users are going to Second Page and 
+  Third Page Results.<br/>
+  &emsp;Therefore, Keeping your Website in the SERP for a User Searched Keywords could give you 
+  95% of Internet Customers Traffic easily is the Concept of Search Engine Optimization (SEO).</i>
+  </div><!--/.list-group-item -->
+  </div><!--/.list-group -->
+  <div>
   Search Engine Optimization is a marketing technique at Search Engines which is applied in our web project for: 
   <ul>
     <li>getting better rank on User search</li>
@@ -20,11 +36,16 @@ $(document).ready(function(){
   <div>
       In other words, we can say, improving your website's Search Ranking on Search Engine 
       is called as SEO (Search Engine Optimization).<br/>
-      SEO is the Content Marketing Strategy of a Website at Search Engines.<br/>
-      SEO is also called as SEO Copywriting.<br/>
-      Balancing the content that engages Users and the content that Search Engine ranks highly for your 
-      targetted Keywords is known as <i>SEO Copywriting</i>.
+      SEO is the Content Marketing Strategy of a Website at Search Engines and it is also 
+      called as SEO Copywriting.
   </div>
+  <div class="list-group mtop15p">
+    <div class="list-group-item">
+      <div align="center"><b>What is SEO Copywriting?</b></div>
+      <div>Balancing the content that engages Users and the content that Search Engine ranks highly for your 
+      targetted Keywords is known as <i>SEO Copywriting</i>.</div>
+    </div><!--/.list-group-item -->
+  </div><!--/.list-group -->
 
   <div class="list-group">
   <div class="list-group-item mtop10p">
