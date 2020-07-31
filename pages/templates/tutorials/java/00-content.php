@@ -8,6 +8,7 @@
       <ol class="lh26">
         <li><h5><a href="<?php echo $CONTENT_URL_INDEX; ?>/introduction-to-java">Introduction to Java</a></h5></li>
         <li><h5><a href="<?php echo $CONTENT_URL_INDEX; ?>/architecture-of-java">Architecture of Java</a></h5></li>
+        <li><h5><a href="<?php echo $CONTENT_URL_INDEX; ?>/java-versions-and-its-features">Java Versions and its Features</a></h5></li>
         <li><h5>Java Environment Setup</h5></li>
         <li><h5></h5></li>
         <li><h5></h5></li>

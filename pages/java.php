@@ -25,13 +25,17 @@ $(document).ready(function(){
    <div class="col-sm-3">
       <?php include_once 'templates/tutorials/java/00-content.php'; ?>
    </div>
-   <div class="col-sm-5">
+   <div class="col-sm-9">
      <?php 
         if(isset($_GET["1"]) && $_GET["1"]=='introduction-to-java'){
           include_once 'templates/tutorials/java/01-introduction-to-java.php'; 
         } else if(isset($_GET["1"]) && $_GET["1"]=='architecture-of-java'){
           include_once 'templates/tutorials/java/02-architecture-of-java.php'; 
+        } else if(isset($_GET["1"]) && $_GET["1"]=='java-versions-and-its-features'){
+          include_once 'templates/tutorials/java/03-java-versions-and-its-features.php'; 
         }
+
+        
          
      ?>
    </div>
