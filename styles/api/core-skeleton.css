@@ -1,3 +1,4 @@
+html,body { overflow-x:hidden; }
 .navbar-default { border-radius:0px;margin-bottom:0px;border-bottom:2px solid #d9534f; }
 a.navbar-brand { font-size:14px;çolor:#d9534f; }
 @media screen and (min-width: 768px) { .container-fluid .jumbotron { padding:20px; } }
