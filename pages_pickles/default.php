@@ -73,7 +73,7 @@ function submit_addToCart(id){
                 <input type="text" class="form-control" placeholder="Your Total Order Price" readonly/>
               </div>
               <div class="form-group">
-                <button class="form-control btn btn-success">Add to Cart</button>
+                <button class="form-control btn btn-success"><b>Add to Cart</b></button>
               </div>
              <!-- -->
             </div><!--/.col-sm-6 -->
