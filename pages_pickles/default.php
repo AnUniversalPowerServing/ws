@@ -43,10 +43,10 @@ function submit_addToCart(id){
               <div class="table-responsive">
                <table class="table">
                 <thead>
-                  <tr style="background-color:#607d8b;color:#fff;"><th>Specification</th><th>Information</th></tr>
+                  <tr style="background-color:#607d8b;color:#fff;"><th>Specification</th><th>Per Bottle</th></tr>
                 </thead>
                 <tbody>
-                 <tr><td>Quantity</th><th>100 gms / bottle</th></tr>
+                 <tr><td>Quantity</th><th>100 gms</th></tr>
                  <tr><td>Pieces</th><th>8</th></tr>
                  <tr><td>Price</th><th>Rs. 40</th></tr>
                 </tbody>
