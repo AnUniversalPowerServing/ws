@@ -23,7 +23,8 @@ $(document).ready(function(){
   (Search Engine's Result Page). Only 5% of the Users are going to Second Page and 
   Third Page Results.<br/>
   &emsp;Therefore, Keeping your Website in the SERP for a User Searched Keywords could give you 
-  95% of Internet Customers Traffic easily is the Concept of Search Engine Optimization (SEO).</i>
+  95% of Internet Customers Traffic easily. Achieving this huge amount of traffic to your Website 
+  on the Internet is the Concept of Search Engine Optimization (SEO).</i>
   </div><!--/.list-group-item -->
   </div><!--/.list-group -->
   <div>
