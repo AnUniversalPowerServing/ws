@@ -37,6 +37,24 @@ function submit_addToCart(id){
         <!-- -->
         <div class="container-fluid">
           <div class="row">
+
+            <div class="col-sm-6">
+              <!-- Item Info ::: START  -->
+              <div class="table-responsive">
+               <table class="table">
+                <thead>
+                  <tr style="background-color:#607d8b;color:#fff;"><th>Specification</th><th>Information</th></tr>
+                </thead>
+                <tbody>
+                 <tr><td>Quantity</th><th>100 gms / bottle</th></tr>
+                 <tr><td>Pieces</th><th>8</th></tr>
+                 <tr><td>Price</th><th>Rs. 40</th></tr>
+                </tbody>
+               </table>
+              </div><!--/.table-responsive -->
+              <!-- Item Info ::: END  -->
+            </div><!--/.col-sm-6 -->
+
             <div class="col-sm-6">
              <!-- -->
               <div class="form-group">
@@ -59,22 +77,7 @@ function submit_addToCart(id){
               </div>
              <!-- -->
             </div><!--/.col-sm-6 -->
-            <div class="col-sm-6">
-              <!-- Item Info ::: START  -->
-              <div class="table-responsive">
-               <table class="table">
-                <thead>
-                  <tr style="background-color:#607d8b;color:#fff;"><th>Specification</th><th>Information</th></tr>
-                </thead>
-                <tbody>
-                 <tr><td>Quantity</th><th>100 gms / bottle</th></tr>
-                 <tr><td>Pieces</th><th>8</th></tr>
-                 <tr><td>Price</th><th>Rs. 40</th></tr>
-                </tbody>
-               </table>
-              </div><!--/.table-responsive -->
-              <!-- Item Info ::: END  -->
-            </div><!--/.col-sm-6 -->
+          
           </div><!--/.row -->
         </div><!--/.container-fluid -->
         <!-- -->
