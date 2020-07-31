@@ -33,5 +33,16 @@ h5 { font-size:14px;line-height:22px; }
 .padInlineStart20p { padding-inline-start: 20px; }
 .borderBot2p-primary { border-bottom: 2px solid #02428a; }
 .pad0{ padding:0px; }
+.pad10p{ padding:10px; }
 .hide-block { display:none; }
 hr { margin-bottom:10px; }
+
+@font-face { font-family:thirdDegree;src:url('../../fonts/third-degree.ttf'); }
+
+/* images: zoom-hover Effect within Divsion */
+div.img-hover-zoom { position: relative;height: 300px;overflow: hidden; }
+div.img-hover-zoom img { transition: transform 1s ease; }
+div.img-hover-zoom:hover img { transform: scale(1.5); }
+div.img-hover-zoom div.overlay { position: absolute;opacity:0;top: 0;bottom: 0;left: 0;right: 0;height: 100%;width: 100%;transition: .5s ease;background-color:#423f3f; }
+div.img-hover-zoom:hover div.overlay { opacity: 0.8; }
+div.overlay div.overlay-text { background-color:#000;width:100%;color: white;font-size: 20px;position: absolute;top: 86%;left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%); }

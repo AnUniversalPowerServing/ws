@@ -15,3 +15,12 @@ RewriteRule tutorial/javascript/([^/]+)$ pages/javascript.php?1=$1 [QSA,L]
 RewriteRule tutorial/typescript/([^/]+)$ pages/typescript.php?1=$1 [QSA,L]
 RewriteRule tutorial/aws/([^/]+)$ pages/aws.php?1=$1 [QSA,L]
 RewriteRule tutorial/java/([^/]+)$ pages/java.php?1=$1 [QSA,L]
+
+
+#Rewrite URLs
+RewriteRule pickles/home  pages_pickles/default.php [QSA,L]
+RewriteRule pickles/my-profile pages_pickles/my-profile.php [QSA,L]
+RewriteRule pickles/my-order-history pages_pickles/my-order-history.php [QSA,L]
+RewriteRule pickles/my-cart pages_pickles/my-cart.php [QSA,L]
+RewriteRule pickles/contact-us pages_pickles/contact-us.php [QSA,L]
+RewriteRule pickles/auth pages_pickles/auth.php [QSA,L]
