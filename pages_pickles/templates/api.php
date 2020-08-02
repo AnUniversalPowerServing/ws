@@ -49,7 +49,14 @@ var kitchenMenu = { 111:{  "name":"Lemon Pickle",
                     "saleCurrencySymbol":"Rs",
                     "salePrice":40,
                     "specifications":[{ "key":"Quantity", "value":"100 gms" },
-                                      { "key":"Pieces", "value":8 }]
+                                      { "key":"Pieces", "value":8 }],
+                                      "specifications":[{ "key":"Quantity", "value":"100 gms" },
+                                      { "key":"Pieces", "value":8 },
+                                      { "key":"Quantity", "value":"100 gms" }
+                                     ],
+                    "discount_type":"variable", 
+                    "discounts":{ 8:{"discount":10},
+                                  10:{"discount":12} }
                  },
              114:{  "name":"Onion Pickle",
                     "img":"img/pickles/04-onion-pickle.png", 

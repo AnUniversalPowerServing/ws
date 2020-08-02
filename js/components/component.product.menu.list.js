@@ -103,6 +103,12 @@ class ProductItems extends React.Component {
                    <div className="row mtop15p">
                     <div className="col-sm-6">
 
+                    <div align="center" className="fs12">
+                      <div style={{backgroundColor:'#024279',padding:'5px',color:'#fff'}}>
+                        <b>Product Information</b>
+                      </div>
+                    </div>
+
                      <div className="table-responsive">
                       <table className="table">
                         <thead>
@@ -121,7 +127,9 @@ class ProductItems extends React.Component {
                       </div>
                       
                       
-                      {(productItem.discount_type!==undefined) && 
+                      {(productItem.specifications!==undefined) &&
+                       (productItem.specifications.length<=5) &&
+                       (productItem.discount_type!==undefined) && 
                        (productItem.discount_type==='variable') &&
                        (productItem.discounts!==undefined) &&
                       (<div align="center" className="fs12">
@@ -166,6 +174,31 @@ class ProductItems extends React.Component {
                           <span className="fs14">&nbsp;/ {productItem.saleQuantity}</span>
                         </div>
                       </div>
+
+                      {(productItem.specifications!==undefined) &&
+                       (productItem.specifications.length>5) &&
+                       (productItem.discount_type!==undefined) && 
+                       (productItem.discount_type==='variable') &&
+                       (productItem.discounts!==undefined) &&
+                      (<div align="center" className="fs12">
+                      <div style={{backgroundColor:'#024279',padding:'5px',color:'#fff'}}>
+                      <b>Discount on Your Order</b>
+                    </div>
+                      <div className="table-responsive">
+                      <table className="table">
+                        <thead>
+                         <tr style={{backgroundColor:"#607d8b",color:"#fff"}}>
+                          <th>{productItem.saleQuantity}</th>
+                          <th>Discounts</th>
+                         </tr>
+                        </thead>
+                        <tbody>
+                          {this.viewVariableDiscounts(productItem.discounts)}
+                        </tbody>
+                       </table>
+                      </div>
+                      </div>
+                      )}
 
                         <div className="form-group">
                           <label>Select your Order</label>
