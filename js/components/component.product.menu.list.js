@@ -19,6 +19,15 @@ class ProductItems extends React.Component {
   this.setState({ productItemId, productItem });
     $("#addToCartModal").modal({backdrop: "static"});
  }
+
+ viewVariableDiscounts(discounts){
+    var html =[];
+   for(var quantity in discounts){
+    var discount = discounts[quantity].discount + ' % Discount';
+    html.push(<tr><td>{quantity}</td><td>{discount}</td></tr>);
+   }
+   return html;
+ }
   
   ui_itemMenu(data){
     let cartProductItems = this.state.cartProductItems;
@@ -33,7 +42,7 @@ class ProductItems extends React.Component {
                 <img src={imgURL}/>
                 <div style={{position:'absolute',top:10,left:10}}>
                   {(cartProductItems[productItemId]!==undefined) && (
-                    <span className="label label-success">
+                    <span className="label fs11 fw550 label-success">
                       <i class="fa fa-check-circle"></i> Added to Cart
                     </span>
                   )}
@@ -64,6 +73,7 @@ class ProductItems extends React.Component {
       let productItemId = this.state.productItemId;
       let productItem = this.state.productItem;
       let cartProductItems = this.state.cartProductItems;
+      console.log("[ui_viewItemInfoModal] cartProductItems: "+JSON.stringify(cartProductItems));
       return (<div id="addToCartModal" className="modal fade" role="dialog">
                <div className="modal-dialog">
                 <div className="modal-content">
@@ -81,12 +91,18 @@ class ProductItems extends React.Component {
                  <div className="modal-body">
                   <div className="container-fluid">
                   <div className="row">
+                    <div align="right" className="col-sm-12">
+                      
+                    </div>
+                   </div>
+                  <div className="row">
                     <div className="col-sm-6">
                       
                     </div>
                    </div>
                    <div className="row mtop15p">
                     <div className="col-sm-6">
+
                      <div className="table-responsive">
                       <table className="table">
                         <thead>
@@ -103,46 +119,115 @@ class ProductItems extends React.Component {
                         </tbody>
                        </table>
                       </div>
-                    <div>
-                    <h4><b>Price / {productItem.saleQuantity}:</b>&nbsp;
-                        {productItem.saleCurrencySymbol}.&nbsp;{productItem.salePrice}</h4>
-                   </div>
-                  </div>
-                  <div className="col-sm-6">
-                    <div className="form-group">
-                      <label>Select your Order</label>
-                      <select className="form-control" onChange={this.calculate_productOrder}>
-                        <option value="">Select Bottles</option>
-                        <option value="1">1 Bottle</option>
-                        <option value="2">2 Bottles</option>
-                        <option value="3">3 Bottles</option>
-                        <option value="4">4 Bottles</option>
-                        <option value="5">5 Bottles</option>
-                      </select>
+                      
+                      
+                      {(productItem.discount_type!==undefined) && 
+                       (productItem.discount_type==='variable') &&
+                       (productItem.discounts!==undefined) &&
+                      (<div align="center" className="fs12">
+                      <div style={{backgroundColor:'#024279',padding:'5px',color:'#fff'}}>
+                      <b>Discount on Your Order</b>
                     </div>
-                    <div className="form-group">
-                      <label>Total Price</label>
-                      <input type="text" className="form-control" placeholder="Your Total Order Price" readonly/>
-                    </div>
-                    <div className="form-group">
-                    {(cartProductItems[productItemId]===undefined) ? (
-                      <button className="form-control btn btn-success"
-                      onClick={() => this.props.addToCart(productItemId, productItem)}>
-                        <b>Add to Cart</b>
-                      </button>)
-                      : (
-                        <div className="btn-group">
-                        <button className="btn btn-xs btn-primary"
-                        onClick={() =>{} }>
-                        <b>Edit Your purchase</b>
-                        </button>
-                        <button className="btn btn-xs btn-danger"
-                        onClick={() =>{} }>
-                        <b>Remove from Cart</b>
-                        </button>
+                      <div className="table-responsive">
+                      <table className="table">
+                        <thead>
+                         <tr style={{backgroundColor:"#607d8b",color:"#fff"}}>
+                          <th>{productItem.saleQuantity}</th>
+                          <th>Discounts</th>
+                         </tr>
+                        </thead>
+                        <tbody>
+                          {this.viewVariableDiscounts(productItem.discounts)}
+                        </tbody>
+                       </table>
+                      </div>
                       </div>
                       )}
+                  </div>
+                  <div className="col-sm-6">
+                    <div class="row">
+                      <div class="col-sm-12">
+
+                      <div align="right" className="form-group">
+                      {(productItem.discount_type!== undefined) && (
+                          <div>
+                            <span className="label fw550 label-primary">
+                          {(productItem.discount_type === 'flat') && 
+                            (productItem.discount!==undefined) &&
+                              (productItem.discount + '% FLAT DISCOUNT')}
+                          {(productItem.discount_type === 'variable') && 
+                           ('DISCOUNT VARIES ON YOUR ORDER')}
+                          </span>
+                          </div>
+                      )}
+                        
+                        <div className="mtop15p">
+                          <span className="fs18"><b>{productItem.saleCurrencySymbol}.&nbsp;{productItem.salePrice}</b></span>
+                          <span className="fs14">&nbsp;/ {productItem.saleQuantity}</span>
+                        </div>
+                      </div>
+
+                        <div className="form-group">
+                          <label>Select your Order</label>
+                          <select className="form-control" onChange={this.calculate_productOrder}>
+                            <option value="">Select Bottles</option>
+                            <option value="1">1 Bottle</option>
+                            <option value="2">2 Bottles</option>
+                            <option value="3">3 Bottles</option>
+                            <option value="4">4 Bottles</option>
+                            <option value="5">5 Bottles</option>
+                          </select>
+                        </div>
+
+                        <div className="form-group">
+                        {(cartProductItems[productItemId]===undefined) ? (
+                          <button className="form-control btn btn-success"
+                          onClick={() => this.props.addToCart(productItemId, productItem)}>
+                            <b>Add to Cart</b>
+                          </button>)
+                          : (
+                            <div className="btn-group">
+                            <button className="btn btn-xs btn-primary"
+                            onClick={() =>{} }>
+                            <b>Edit Your purchase</b>
+                            </button>
+                            <button className="btn btn-xs btn-danger"
+                            onClick={() =>{} }>
+                            <b>Remove from Cart</b>
+                            </button>
+                          </div>
+                          )}
+                        </div>
+
+                      </div>
                     </div>
+                    <div className="row">
+                      <div className="col-sm-12">
+                        <div className="form-group">
+                        <label>Your Purchase Price</label>
+                        <div className="list-group">
+                         <div align="right" className="list-group-item fs18 bg-greyMix">
+                         {productItem.saleCurrencySymbol}. 100/-
+                         </div>
+                        </div>
+                      </div>
+                      </div>
+                      <div className="col-sm-12">
+                        <div className="form-group">
+                        <label>You saved on Discount</label>
+                        <div className="list-group">
+                         <div align="right" className="list-group-item fs18 bg-greyMix">
+                         {productItem.saleCurrencySymbol}. 100/-
+                         </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    
+                    
+                    
+                    
+
                   </div>
                 
                 </div>

@@ -5,6 +5,7 @@ a.navbar-brand { font-size:14px;çolor:#d9534f; }
 .bg-black { background-color:#0d122f; }
 .bg-lgtRed { background-color:#fffbfb; }
 .bg-lgtGrey { background-color:#e7e7e7; }
+.bg-greyMix { background-color:#e8e5ca; }
 .font-paleBlue { color:#0eb9a9; }
 .font-paleLgtBlue { color:#5ee6da; }
 .font-paleRed {color:#f7857c; }
@@ -12,10 +13,12 @@ a.navbar-brand { font-size:14px;çolor:#d9534f; }
 .font-paleWhite { color:#f5e8d6; }
 .font-palePurple { color:#e29fec; }
 .font-paleLgtGreen { color:#b2c39d; }
+
 .font-red { color:#d9534f; }
 .fs11 { font-size:11px; }
 .fs12 { font-size:12px; }
 .fs14 { font-size:14px;line-height:26px; }
+.fs18 { font-size:18px; }
 .fw550 { font-weight:550; }
 .mtop5p { margin-top:5px; }
 .mtop10p { margin-top:10px; }

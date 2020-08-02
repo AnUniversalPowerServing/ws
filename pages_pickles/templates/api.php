@@ -1,5 +1,5 @@
 <?php 
-$PROJECT_MODE='PROD';
+$PROJECT_MODE='DEBUG';
 $PROJECT_URL = 'http://localhost/ws';
 if($PROJECT_MODE=='PROD'){ $PROJECT_URL = 'http://widesecond.com'; }
 ?>
@@ -15,7 +15,21 @@ var kitchenMenu = { 111:{  "name":"Lemon Pickle",
                     "saleCurrencySymbol":"Rs",
                     "salePrice":40,
                     "specifications":[{ "key":"Quantity", "value":"100 gms" },
-                                      { "key":"Pieces", "value":8 }]
+                                      { "key":"Pieces", "value":8 },
+                                      { "key":"Quantity", "value":"100 gms" },
+                                      { "key":"Pieces", "value":8 },
+                                      { "key":"Quantity", "value":"100 gms" },
+                                      { "key":"Pieces", "value":8 },
+                                      { "key":"Quantity", "value":"100 gms" },
+                                      { "key":"Pieces", "value":8 },
+                                      { "key":"Quantity", "value":"100 gms" },
+                                      { "key":"Pieces", "value":8 },
+                                      { "key":"Quantity", "value":"100 gms" },
+                                      { "key":"Pieces", "value":8 }
+                                     ],
+                    "discount_type":"variable", 
+                    "discounts":{ 8:{"discount":10},
+                                  10:{"discount":12} }
                  },
              112:{  "name":"Raw Mango Pickle",
                     "img":"img/pickles/02-raw-mango-pickle.png", 
@@ -24,7 +38,9 @@ var kitchenMenu = { 111:{  "name":"Lemon Pickle",
                     "saleCurrencySymbol":"Rs",
                     "salePrice":40,
                     "specifications":[{ "key":"Quantity", "value":"100 gms" },
-                                      { "key":"Pieces", "value":8 }]
+                                      { "key":"Pieces", "value":8 }],
+                    "discount_type":"flat",
+                    "discount":12
                  },
              113:{  "name":"Carrot Pickle",
                     "img":"img/pickles/03-carrot-pickle.png", 
