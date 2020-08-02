@@ -1,0 +1,8 @@
+.navbar-default { background-color:#fff;border-color:#fff; }
+.navbar-default .navbar-nav>.active>a,
+ .navbar-default .navbar-nav>.active>a:focus, 
+ .navbar-default .navbar-nav>.active>a:hover { 
+   font-weight:bold;color:#d9534f;background-color:#fff;border-top:4px solid #d9534f;  }
+ .navbar-default .navbar-nav { letter-spacing:1.3px; }
+ .modal-header-skyBlue { background-color:#2196f3;color:#fff; }
+ .label-skyBlue  { background-color: #fff;color: #2196f3; }

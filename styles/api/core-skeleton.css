@@ -13,8 +13,10 @@ a.navbar-brand { font-size:14px;çolor:#d9534f; }
 .font-palePurple { color:#e29fec; }
 .font-paleLgtGreen { color:#b2c39d; }
 .font-red { color:#d9534f; }
+.fs11 { font-size:11px; }
 .fs12 { font-size:12px; }
 .fs14 { font-size:14px;line-height:26px; }
+.fw550 { font-weight:550; }
 .mtop5p { margin-top:5px; }
 .mtop10p { margin-top:10px; }
 .mtop15p { margin-top:15px; }
@@ -45,4 +47,4 @@ div.img-hover-zoom img { transition: transform 1s ease; }
 div.img-hover-zoom:hover img { transform: scale(1.5); }
 div.img-hover-zoom div.overlay { position: absolute;opacity:0;top: 0;bottom: 0;left: 0;right: 0;height: 100%;width: 100%;transition: .5s ease;background-color:#423f3f; }
 div.img-hover-zoom:hover div.overlay { opacity: 0.8; }
-div.overlay div.overlay-text { background-color:#000;width:100%;color: white;font-size: 20px;position: absolute;top: 86%;left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%); }
+div.overlay div.overlay-text { background-color:#000;width:100%;color: white;font-size: 15px;position: absolute;top: 86%;left: 50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%); }
