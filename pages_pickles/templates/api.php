@@ -214,7 +214,7 @@ var kitchenMenu = { 111:{  "name":"Lemon Pickle",
 var appMenu = { "pickles-home":{"label":"PICKLE VARIETIES", "url":"pickles/home"},
                 "pickles-profile":{ "label":"MY PROFILE", "url":"pickles/my-profile"},
                 "pickles-myOrderHistory":{ "label":"MY ORDER HISTORY", "url":"pickles/my-order-history"},
-                "pickles-myCart":{ "label":"MY CART", "url":"pickles/my-cart","value":"0" },
+                "pickles-myCart":{ "label":"MY CART", "url":"pickles/my-cart","value":"0", "valueType":"label" },
                 "pickles-contactUs":{ "label":"CONTACT US", "url":"pickles/contact-us"},
                 "pickles-logout":{ "label":"LOG OUT", "url":"#"},
                 "pickles-auth":{ "label":"SIGN IN | REGISTER", "url":"pickles/auth"} };

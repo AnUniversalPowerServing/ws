@@ -24,7 +24,7 @@ class ProductItems extends React.Component {
     var html =[];
    for(var quantity in discounts){
     var discount = discounts[quantity].discount + ' % Discount';
-    html.push(<tr><td>{quantity}</td><td>{discount}</td></tr>);
+    html.push(<tr><td>Upto {quantity}</td><td>{discount}</td></tr>);
    }
    return html;
  }

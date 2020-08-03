@@ -16,8 +16,23 @@ class AppHeader extends React.Component {
         let label = productItem[index].label;
         let url = PROJECT_URL+'/'+productItem[index].url;
         let value = productItem[index].value;
+        let valueType = productItem[index].valueType;
+        console.log('valueType: '+valueType);
         let info = []; 
-        info.push (<a href={url}><b>{label}&nbsp;{(value !== undefined) && `(${value})`}</b></a>);
+        info.push (<a href={url}><b>{label}&nbsp;
+        
+        {(value !== undefined) && 
+         (valueType !== undefined && valueType==='bracket') && (`(${value})`)}
+
+         {(value !== undefined) && 
+         (valueType !== undefined && valueType==='badge') && 
+         (<span className="badge">{value}</span>)}
+
+        {(value !== undefined) && 
+         (valueType !== undefined && valueType==='label') && 
+         (<span className="label label-danger">{value}</span>)}
+
+        </b></a>);
         if(id===this.props.active){
             html.push(<li id={id} className="active">{info}</li>);
         } else {
