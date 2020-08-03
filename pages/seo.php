@@ -23,14 +23,14 @@ $(document).ready(function(){
 });
 var pageContent = { "contentMenu":[{ "id":"introduction-to-seo",
                                      "label":"Introduction to SEO", 
-                                     "url":"/introduction-to-seo", 
+                                     "url":"tutorial/seo/introduction-to-seo", 
                                      "subContentMenu":[{"id":"", "label":"",  "url":"" }] },
                                    { "id":"seo-fundamentals",
                                      "label":"SEO Fundamentals", 
-                                     "url":"/seo-fundamentals", 
+                                     "url":"tutorial/seo/seo-fundamentals", 
                                      "subContentMenu":[{ "id":"what-is-seo-and-how-it-works",
                                                          "label":"What is SEO and How it works?", 
-                                                         "url":"/what-is-seo-and-how-it-works" }] }
+                                                         "url":"tutorial/seo/what-is-seo-and-how-it-works" }] }
                                   ]
                   };
 </script>
