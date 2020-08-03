@@ -9,14 +9,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/styles/api/core-skeleton.css">
+  <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/vendor/font-awesome//css/font-awesome.min.css">
   <script src="<?php echo $PROJECT_URL; ?>/js/api/core-skeleton.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/jquery/jquery.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/vendor/font-awesome//css/font-awesome.min.css">
-<script type="text/javascript">
+  <script src="<?php echo $PROJECT_URL; ?>/vendor/babel-standalone@6/babel.min.js"></script>
+  <script src="<?php echo $PROJECT_URL; ?>/vendor/react@16/react.production.min.js"></script>
+  <script src="<?php echo $PROJECT_URL; ?>/vendor/react-dom@16/react-dom.production.min.js"></script>
+  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/component.app.content.menu.js"></script>
+  <script type="text/javascript">
 $(document).ready(function(){
  $('#tutorial-seo').addClass('active');
 });
+var pageContent = { "contentMenu":[{ "id":"introduction-to-seo",
+                                     "label":"Introduction to SEO", 
+                                     "url":"/introduction-to-seo", 
+                                     "subContentMenu":[{"id":"", "label":"",  "url":"" }] },
+                                   { "id":"seo-fundamentals",
+                                     "label":"SEO Fundamentals", 
+                                     "url":"/seo-fundamentals", 
+                                     "subContentMenu":[{ "id":"what-is-seo-and-how-it-works",
+                                                         "label":"What is SEO and How it works?", 
+                                                         "url":"/what-is-seo-and-how-it-works" }] }
+                                  ]
+                  };
+</script>
+
+<script type="text/babel">
+ReactDOM.render(<ContentMenu data={pageContent} 
+                             selectMenuId="seo-fundamentals" 
+                             selectSubMenuId="what-is-seo-and-how-it-works"/>, 
+                             document.getElementById('content'));
 </script>
 </head>
 <body>
@@ -24,7 +47,7 @@ $(document).ready(function(){
 
   <div class="container-fluid fs14 mtop15p">
    <div class="row">
-     <div class="col-sm-3">
+     <div id= "content" class="col-sm-3">
       <?php include_once 'templates/tutorials/seo/00-content.php'; ?>
      </div>
      <div class="col-sm-9">

@@ -14,7 +14,9 @@ a.navbar-brand { font-size:14px;çolor:#d9534f; }
 .font-palePurple { color:#e29fec; }
 .font-paleLgtGreen { color:#b2c39d; }
 
-.font-red { color:#d9534f; }
+.list-group-item .borderRad0:last-child { border-radius:0px; }
+
+.font-red, .font-red:hover { color:#d9534f; }
 .fs11 { font-size:11px; }
 .fs12 { font-size:12px; }
 .fs14 { font-size:14px;line-height:26px; }
