@@ -15,7 +15,7 @@ a.navbar-brand { font-size:14px;çolor:#d9534f; }
 .font-paleLgtGreen { color:#b2c39d; }
 
 .list-group-item .borderRad0:last-child { border-radius:0px; }
-
+.font-black, .font-black:hover, a.font-black:hover { color:#000; }
 .font-red, .font-red:hover, a.font-red:hover { color:#d9534f; }
 .font-navyBlue, .font-navyBlue:hover, a.font-navyBlue:hover { color:#024279; }
 .fs11 { font-size:11px; }

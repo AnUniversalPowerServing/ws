@@ -38,7 +38,7 @@ class ContentMenu extends React.Component {
             <div className="list-group-item padtopbot0 bg-lgtGrey borderBot2p-primary" 
                    data-toggle="collapse" data-target={('#'+menuId)}>
                 <h5>
-                  <a href={url}><b>{index+'. '+label}</b></a>
+                  <a class="font-black" href={url}><b>{index+'. '+label}</b></a>
                   <i className="fa fa-angle-double-down pull-right" aria-hidden="true"></i>
                 </h5>
               </div>
