@@ -1,26 +1,20 @@
 <sitemapindex xmlns="http://www.google.com/schemas/sitemap/0.84">
  <sitemap>
   <loc>https://widesecond.com/sm/tutorials.aws.xml</loc>
-  <lastmod>2004-10-01T18:23:17+00:00</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://widesecond.com/sm/tutorials.java.xml</loc>
-  <lastmod>2004-10-01T18:23:17+00:00</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://widesecond.com/sm/tutorials.javascript.xml</loc>
-  <lastmod>2004-10-01T18:23:17+00:00</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://widesecond.com/sm/tutorials.reactjs.xml</loc>
-  <lastmod>2004-10-01T18:23:17+00:00</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://widesecond.com/sm/tutorials.seo.xml</loc>
-  <lastmod>2004-10-01T18:23:17+00:00</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://widesecond.com/sm/tutorials.typescript.xml</loc>
-  <lastmod>2004-10-01T18:23:17+00:00</lastmod>
  </sitemap>
 </sitemapindex>
