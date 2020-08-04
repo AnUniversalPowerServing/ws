@@ -8,7 +8,7 @@ $(document).ready(function(){
 <script type="text/babel">
 ReactDOM.render(<ContentMenu data={pageContent} 
                              selectMenuId="introduction-to-seo" 
-                             selectSubMenuId=""/>, 
+                             selectSubMenuId="introduction-to-seo"/>, 
                              document.getElementById('content'));
 </script>
 
