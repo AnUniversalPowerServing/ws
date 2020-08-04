@@ -24,7 +24,14 @@ $(document).ready(function(){
 var pageContent = { "contentMenu":[{ "id":"introduction-to-seo",
                                      "label":"Introduction to SEO", 
                                      "url":"tutorial/seo/introduction-to-seo", 
-                                     "subContentMenu":[{"id":"", "label":"",  "url":"" }] },
+                                     "subContentMenu":[{"id":"necessity-of-search-engine-and-its-optimization",
+                                                        "label":"Necessity of Search Engine and its Optimization",  
+                                                        "url":"tutorial/seo/introduction-to-seo#Necessity-of-Search-Engine-and-its-Optimization" },
+                                                        {"id":"search-engine-facts-trends-and-statistics",
+                                                         "label":"Search Engine's Facts, Trends and Statistics",  
+                                                         "url":"tutorial/seo/introduction-to-seo#Search-Engine-Facts-Trends-and-Statistics" },
+                                                      ]
+                                   },
                                    { "id":"seo-fundamentals",
                                      "label":"SEO Fundamentals", 
                                      "url":"tutorial/seo/seo-fundamentals", 
@@ -37,8 +44,8 @@ var pageContent = { "contentMenu":[{ "id":"introduction-to-seo",
 
 <script type="text/babel">
 ReactDOM.render(<ContentMenu data={pageContent} 
-                             selectMenuId="seo-fundamentals" 
-                             selectSubMenuId="what-is-seo-and-how-it-works"/>, 
+                             selectMenuId="introduction-to-seo" 
+                             selectSubMenuId="necessity-of-search-engine-and-its-optimization"/>, 
                              document.getElementById('content'));
 </script>
 </head>

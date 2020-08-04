@@ -10,12 +10,12 @@ class ContentMenu extends React.Component {
      console.log("subMenuId: "+subMenuId);
      console.log("selectSubMenuId: "+selectSubMenuId);
      if(selectSubMenuId === subMenuId){
-        html.push(<li class="font-red fw550" id={subMenuId}>
-                     <h5><a class="font-red fw550"  href={subUrl}>{subLabel}</a></h5>
+        html.push(<li id={subMenuId} class="font-red fw550">
+                     <h5><a class="font-red fw550" href={subUrl}>{subLabel}</a></h5>
                   </li>);
      } else {
-        html.push(<li class="fw550" id={subMenuId}>
-                     <h5><a class="fw550" href={subUrl}>{subLabel}</a></h5>
+        html.push(<li id={subMenuId} class="font-navyBlue fw550">
+                     <h5><a class="font-navyBlue fw550" href={subUrl}>{subLabel}</a></h5>
                   </li>);
      }
      

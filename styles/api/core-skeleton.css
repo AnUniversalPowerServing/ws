@@ -17,6 +17,7 @@ a.navbar-brand { font-size:14px;çolor:#d9534f; }
 .list-group-item .borderRad0:last-child { border-radius:0px; }
 
 .font-red, .font-red:hover, a.font-red:hover { color:#d9534f; }
+.font-navyBlue, .font-navyBlue:hover, a.font-navyBlue:hover { color:#024279; }
 .fs11 { font-size:11px; }
 .fs12 { font-size:12px; }
 .fs14 { font-size:14px;line-height:26px; }
