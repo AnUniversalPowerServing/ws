@@ -8,6 +8,16 @@ class AppHeader extends React.Component {
    };
   }
 
+  subHeaderMenu(subMenu){
+    let html = [];  
+    for(var subMenuIndex in subMenu){
+      let label = subMenu[subMenuIndex].label;
+      let url = subMenu[subMenuIndex].url;
+      html.push(<li><a href={url}>{label}</a></li>);
+    }
+    return html;
+  }
+
   headerMenu(){
     let html =[];
     let productItem = this.props.menu;
@@ -17,7 +27,7 @@ class AppHeader extends React.Component {
         let url = PROJECT_URL+'/'+productItem[index].url;
         let value = productItem[index].value;
         let valueType = productItem[index].valueType;
-        console.log('valueType: '+valueType);
+        let subMenu =  productItem[index].menu;
         let info = []; 
         info.push (<a href={url}><b>{label}&nbsp;
         
@@ -33,11 +43,30 @@ class AppHeader extends React.Component {
          (<span className="label label-danger">{value}</span>)}
 
         </b></a>);
-        if(id===this.props.active){
-            html.push(<li id={id} className="active">{info}</li>);
-        } else {
-            html.push(<li id={id}>{info}</li>);
-        }
+
+if((typeof subMenu === 'object')){
+  if(id===this.props.active){
+    html.push(<li className="dropdown active">
+              <a className="dropdown-toggle" data-toggle="dropdown" href="#">{info}
+              &nbsp;<span className="caret"></span></a>
+              <ul className="dropdown-menu">{this.subHeaderMenu(subMenu)}</ul>
+            </li>);
+  } else {
+    html.push(<li className="dropdown">
+              <a className="dropdown-toggle" data-toggle="dropdown" href="#">{info}
+              <span className="caret"></span></a>
+              <ul className="dropdown-menu">{this.subHeaderMenu(subMenu)}</ul>
+            </li>);
+  }
+} else {
+  if(id===this.props.active){
+    html.push(<li id={id} className="active">{info}</li>);
+  } else {
+      html.push(<li id={id}>{info}</li>);
+  }
+}
+
+       
         }
         return html;
     }
@@ -53,7 +82,7 @@ class AppHeader extends React.Component {
             <span className="icon-bar"></span>
           </button>
           <a className="navbar-brand" href="#" style={{fontFamily:"thirdDegree",fontSize:"32px",letterSpacing:"1px"}}>
-            <span className="font-red"><b>Native pickles</b></span>
+      <span className="font-red"><b>{this.props.title}</b></span>
           </a>
          </div>
          <div className="collapse navbar-collapse" id="myNavbar">

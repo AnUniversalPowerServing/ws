@@ -34,7 +34,7 @@ class DefaultPage extends React.Component {
 
   render(){
     return (<div>    
-      <AppHeader menu={this.state.appHeaderMenu} active="pickles-home" />
+      <AppHeader title="Native Pickles" menu={this.state.appHeaderMenu} active="pickles-home" />
       <ProductItems productItems={this.state.allProductItems}
                     cartProductItems={this.state.cartProductItems} 
                     addToCart={this.submit_addToCart} />
