@@ -29,7 +29,7 @@ var pageContent = { "contentMenu":[{ "id":"introduction-to-seo",
                                                         "url":"tutorial/seo/introduction-to-seo#Necessity-of-Search-Engine-and-its-Optimization" },
                                                         {"id":"search-engine-facts-trends-and-statistics",
                                                          "label":"Search Engine's Facts, Trends and Statistics",  
-                                                         "url":"tutorial/seo/introduction-to-seo#Search-Engine-Facts-Trends-and-Statistics" },
+                                                         "url":"tutorial/seo/introduction-to-seo#Search-Engine-Facts-Trends-and-Statistics" }
                                                       ]
                                    },
                                    { "id":"seo-fundamentals",
@@ -37,16 +37,64 @@ var pageContent = { "contentMenu":[{ "id":"introduction-to-seo",
                                      "url":"tutorial/seo/seo-fundamentals", 
                                      "subContentMenu":[{ "id":"what-is-seo-and-how-it-works",
                                                          "label":"What is SEO and How it works?", 
-                                                         "url":"tutorial/seo/what-is-seo-and-how-it-works" }] }
+                                                         "url":"tutorial/seo/what-is-seo-and-how-it-works" },
+                                                       { "id":"how-search-engine-works",
+                                                         "label":"How Search Engine works?", 
+                                                         "url":"tutorial/seo/how-search-engine-works" },
+                                                       { "id":"how-website-known-to-search-engine",
+                                                         "label":"How website is know to search Engine?", 
+                                                         "url":"tutorial/seo/how-website-known-to-search-engine" },
+                                                       { "id":"ranking-factors-of-different-search-engine",
+                                                         "label":"Ranking Factors of different Search Engine", 
+                                                         "url":"tutorial/seo/ranking-factors-of-different-search-engine" },
+                                                       { "id":"how-google-search-engine-works",
+                                                         "label":"How Google Search Engine works?", 
+                                                         "url":"tutorial/seo/how-google-search-engine-works" },
+                                                       { "id":"google-crawler-or-googlebot",
+                                                         "label":"Google Crawler / Googlebot", 
+                                                         "url":"tutorial/seo/google-crawler-or-googlebot" }
+                                                      ] 
+                                   },
+                                   { "id":"types-of-search-engines-seo",
+                                     "label":"Types of Search Engine's SEO", 
+                                     "url":"tutorial/seo/types-of-search-engines-seo", 
+                                     "subContentMenu":[{ "id":"black-hat-seo",
+                                                         "label":"Black Hat SEO", 
+                                                         "url":"tutorial/seo/black-hat-seo" },
+                                                       { "id":"white-hat-seo",
+                                                         "label":"White Hat SEO", 
+                                                         "url":"tutorial/seo/white-hat-seo" }
+                                                      ] 
+                                   },
+                                   { "id":"science-of-keyword-research",
+                                     "label":"Science of Keyword Research", 
+                                     "url":"tutorial/seo/science-of-keyword-research", 
+                                     "subContentMenu":[{ "id":"what-is-keyword-research",
+                                                         "label":"What is Keyword Research?", 
+                                                         "url":"tutorial/seo/what-is-keyword-research"
+
+                                                       }] 
+                                   },
+                                   { "id":"website-and-content-optimization",
+                                     "label":"Website and Content Optimization", 
+                                     "url":"tutorial/seo/website-and-content-optimization", 
+                                     "subContentMenu":[{ "id":"factors-improving-search-engine-ranking",
+                                                         "label":"Factors Improving Search Engine Ranking", 
+                                                         "url":"tutorial/seo/factors-improving-search-engine-ranking" }] 
+                                   },
+                                   { "id":"link-building",
+                                     "label":"Link Building", 
+                                     "url":"tutorial/seo/link-building", 
+                                     "subContentMenu":[{ "id":"backlinks-in-seo",
+                                                         "label":"Backlinks in SEO", 
+                                                         "url":"tutorial/seo/backlinks-in-seo" }] 
+                                   },
+                                   { "id":"website-speed-optimization",
+                                     "label":"Website Speed Optimization", 
+                                     "url":"tutorial/seo/website-speed-optimization"
+                                   }
                                   ]
                   };
-</script>
-
-<script type="text/babel">
-ReactDOM.render(<ContentMenu data={pageContent} 
-                             selectMenuId="introduction-to-seo" 
-                             selectSubMenuId="necessity-of-search-engine-and-its-optimization"/>, 
-                             document.getElementById('content'));
 </script>
 </head>
 <body>
@@ -64,8 +112,8 @@ ReactDOM.render(<ContentMenu data={pageContent}
             include_once 'templates/tutorials/seo/01-introduction-to-seo.php';
          } else if(isset($_GET["1"]) && $_GET["1"]=='factors-improving-search-engine-ranking'){
             include_once 'templates/tutorials/seo/02-factors-improving-search-engine-ranking.php';
-         } else if(isset($_GET["1"]) && $_GET["1"]=='keyword-research'){
-            include_once 'templates/tutorials/seo/03-keyword-research.php';
+         } else if(isset($_GET["1"]) && $_GET["1"]=='what-is-keyword-research'){
+            include_once 'templates/tutorials/seo/03-what-is-keyword-research.php';
          } else if(isset($_GET["1"]) && $_GET["1"]=='backlinks-in-seo'){
             include_once 'templates/tutorials/seo/04-backlinks-in-seo.php';
          } else if(isset($_GET["1"]) && $_GET["1"]=='how-search-engine-works'){

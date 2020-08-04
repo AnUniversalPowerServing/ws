@@ -1,3 +1,9 @@
+<script type="text/babel">
+ReactDOM.render(<ContentMenu data={pageContent} 
+                             selectMenuId="link-building" 
+                             selectSubMenuId="backlinks-in-seo"/>, 
+                             document.getElementById('content'));
+</script>
 <div><h4 class="font-red"><b>Backlinks in SEO</b></h4></div>
 <div>
 <i>Backlinks</i> are the web links of the current website on an external website. 

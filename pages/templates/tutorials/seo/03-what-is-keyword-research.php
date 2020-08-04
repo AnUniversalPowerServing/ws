@@ -1,3 +1,9 @@
+<script type="text/babel">
+ReactDOM.render(<ContentMenu data={pageContent} 
+                             selectMenuId="science-of-keyword-research" 
+                             selectSubMenuId="what-is-keyword-research"/>, 
+                             document.getElementById('content'));
+</script>
 <div><h4 class="font-red"><b>Keyword Research</b></h4></div>
 <div>
  Keyword Research is the process of finding keywords which will drive targetted Customers Traffic to

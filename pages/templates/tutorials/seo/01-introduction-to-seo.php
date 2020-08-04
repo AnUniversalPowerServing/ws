@@ -5,6 +5,12 @@ $(document).ready(function(){
  build_pageBreadcrumb(breadcrumb);
 });
 </script>
+<script type="text/babel">
+ReactDOM.render(<ContentMenu data={pageContent} 
+                             selectMenuId="introduction-to-seo" 
+                             selectSubMenuId=""/>, 
+                             document.getElementById('content'));
+</script>
 
 <div class="row">
  <div class="col-sm-7">

@@ -6,7 +6,7 @@ class ContentMenu extends React.Component {
      let subContent = subContentMenu[subContentIndex];
      let subMenuId = subContent.id;
      let subLabel = subContent.label;
-     let subUrl = subContent.url;
+     let subUrl = PROJECT_URL+'/'+subContent.url;
      console.log("subMenuId: "+subMenuId);
      console.log("selectSubMenuId: "+selectSubMenuId);
      if(selectSubMenuId === subMenuId){
@@ -36,14 +36,14 @@ class ContentMenu extends React.Component {
         html.push(
             <div>
             <div className="list-group-item padtopbot0 bg-lgtGrey borderBot2p-primary" 
-                   data-toggle="collapse" data-target={('#'+selectMenuId)}>
+                   data-toggle="collapse" data-target={('#'+menuId)}>
                 <h5>
                   <a href={url}><b>{index+'. '+label}</b></a>
                   <i className="fa fa-angle-double-down pull-right" aria-hidden="true"></i>
                 </h5>
               </div>
               
-              <div id={selectMenuId} class={(selectMenuId !== menuId) ? 'collapse':''}>
+              <div id={menuId} class={(selectMenuId !== menuId) ? 'collapse':''}>
               <div className="list-group-item padtopbot0 collapse">
                 <ol className="padInlineStart20p">
                 {this.ui_subContentMenu(subContentMenu)}

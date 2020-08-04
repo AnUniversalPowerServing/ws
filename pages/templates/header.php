@@ -1,6 +1,4 @@
 <script type="text/javascript">
-var PROJECT_URL = '<?php echo $PROJECT_URL; ?>';
-
 function build_pageBreadcrumb(jsonData){
  var content='<nav aria-label="breadcrumb">';
      content+='<ol class="breadcrumb">';

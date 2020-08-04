@@ -1,3 +1,9 @@
+<script type="text/babel">
+ReactDOM.render(<ContentMenu data={pageContent} 
+                             selectMenuId="website-and-content-optimization" 
+                             selectSubMenuId="factors-improving-search-engine-ranking"/>, 
+                             document.getElementById('content'));
+</script>
 <div><h4 class="font-red"><b>Factors improving Search Engine Ranking</b></h4></div>
 <div>
 <ul>

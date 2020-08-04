@@ -1,3 +1,9 @@
+<script type="text/babel">
+ReactDOM.render(<ContentMenu data={pageContent} 
+                             selectMenuId="seo-fundamentals" 
+                             selectSubMenuId="how-search-engine-works"/>, 
+                             document.getElementById('content'));
+</script>
 <div><h4 class="font-red"><b>How Search Engine works?</b></h4></div>
 <div>
  To deliver better Search Results, Search Engine performs few Activities:
