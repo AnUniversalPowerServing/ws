@@ -230,6 +230,4 @@ var appMenu = { "pickles-home":{"label":"PICKLE VARIETIES",
                 "pickles-logout":{ "label":"LOG OUT", "url":"#" },
                 "pickles-auth":{ "label":"SIGN IN | REGISTER", 
                                  "url":"pickles/auth" } };
-
-
 </script>

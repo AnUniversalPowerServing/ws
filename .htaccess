@@ -4,7 +4,7 @@ php_value date.timezone 'Asia/kolkata'
 # Disables Error Reporting on Screen
 #php_value display_errors Off 
 
-DirectoryIndex pages/reactjs.php
+DirectoryIndex pages/default.php
 
 RewriteEngine on
 
