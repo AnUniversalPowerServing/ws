@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Search Engine Optimization</title>
+  <title>WideSecond.com | Learn Tutorials</title>
   <meta name="description" content="Free Web tutorials">
   <meta name="keywords" content="seo, seo tools, seo khazana, seo report, seositecheckup, seoclerks, seo login, seo jobs, seo services, seo images">
   <meta charset="utf-8">
