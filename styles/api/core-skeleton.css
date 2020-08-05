@@ -1,4 +1,7 @@
 html,body { overflow-x:hidden; }
+body::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);background-color: #F5F5F5; }
+body::-webkit-scrollbar { width: 6px;background-color: #F5F5F5; }
+body::-webkit-scrollbar-thumb { background-color: #d9534f; }
 .navbar-default { border-radius:0px;margin-bottom:0px;border-bottom:2px solid #d9534f; }
 a.navbar-brand { font-size:14px;çolor:#d9534f; }
 @media screen and (min-width: 768px) { .container-fluid .jumbotron { padding:20px; } }
