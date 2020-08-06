@@ -142,7 +142,7 @@
     </div><!--/.col-sm-12 -->
   </div><!--/.row -->
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-4">
 
       <!-- HTML Programming Language ::: START -->
       <div class="list-group boxShadow">
@@ -157,121 +157,6 @@
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
       <!-- HTML Programming Language ::: END -->
-
-      <!-- Javascript ::: START -->
-      <div class="list-group boxShadow">
-        <div class="list-group-item bg-skyBlue"><b>Javascript</b></div>
-        <div class="list-group-item bg-lgtSkyBlue">
-          <div>It is an interpreted Scripting language that describes the behaviour of an HTML document.</div>
-          <div class="mtop15p">
-              <span class="label btn-skyBlue-o">Basics</span>
-              <span class="label btn-skyBlue-o">Frontend Development</span>
-          </div>
-        </div><!--/.list-group-item -->
-      </div><!--/.list-group -->
-      <!-- Javascript ::: END -->
-
-       <!-- JQuery ::: START -->
-       <div class="list-group boxShadow">
-        <div class="list-group-item bg-mud"><b>JQuery</b></div>
-        <div class="list-group-item bg-lgtMud">
-          <div>It is an Javascript library that makes simple to write Javascript on HTML Document.</div>
-          <div class="mtop15p">
-              <span class="label btn-mud-o">Basics</span>
-              <span class="label btn-mud-o">Frontend Development</span>
-          </div>
-        </div><!--/.list-group-item -->
-      </div><!--/.list-group -->
-      <!-- JQuery ::: END -->
-
-      <!-- ECMAScript ::: START -->
-      <div class="list-group boxShadow">
-        <div class="list-group-item bg-pink"><b>ECMAScript</b></div>
-        <div class="list-group-item bg-lgtPink">
-          <div>
-          ECMAScript (core part of JavaScript) is a subset of JavaScript which is standardized by 
-          European Computer Manufacturers Association (ECMA) International.
-          </div>
-          <div class="mtop15p">
-              <span class="label btn-pink-o">Advanced</span>
-              <span class="label btn-pink-o">Frontend Development</span>
-          </div>
-        </div><!--/.list-group-item -->
-      </div><!--/.list-group -->
-      <!-- ECMAScript ::: END -->
-
-      <!-- AngularJS / Angular ::: START -->
-      <div class="list-group boxShadow">
-        <div class="list-group-item bg-darkLeaf"><b>AngularJS / Angular</b></div>
-        <div class="list-group-item bg-lgtDarkLeaf">
-          <div>
-          AngularJS (First version of Angular) is a JavaScript based front-end Web Application 
-          Framework. Angular is a TypeScript-based Web Application Framework for building Mobile 
-          and Desktop Web Applications.
-          </div>
-          <div class="mtop15p">
-              <span class="label btn-darkLeaf-o">Advanced</span>
-              <span class="label btn-darkLeaf-o">Frontend Development</span>
-              <span class="label btn-darkLeaf-o">Backend Development</span>
-              <span class="label btn-darkLeaf-o">FullStack Development</span>
-          </div>
-        </div><!--/.list-group-item -->
-      </div><!--/.list-group -->
-      <!-- AngularJS / Angular ::: END -->
-
-      <!-- PHP ::: START -->
-      <div class="list-group boxShadow">
-        <div class="list-group-item bg-darkPurple"><b>PHP</b></div>
-        <div class="list-group-item  bg-lgtDarkPurple">
-          <div>
-            PHP (Hypertext Pre-processor / Personal Home Pages) is a server scripting language 
-            for making static, dynamic and interactive web pages.
-          </div>
-          <div class="mtop15p">
-              <span class="label btn-darkPurple-o">Basic</span>
-              <span class="label btn-darkPurple-o">Frontend Development</span>
-              <span class="label btn-darkPurple-o">Backend Development</span>
-              <span class="label btn-darkPurple-o">FullStack Development</span>
-          </div>
-        </div><!--/.list-group-item -->
-      </div><!--/.list-group -->
-      <!-- PHP ::: END -->
-
-      <!-- Java Spring Framework ::: START -->
-      <div class="list-group boxShadow">
-        <div class="list-group-item bg-primary"><b>Java (Spring Framework, Spring Boot & Micro-Services) </b></div>
-        <div class="list-group-item bg-lgtPrimary">
-          <div>
-          Spring Framework is a light weight based Java Web Application Framework 
-          that built on the top of Java EE. Using Spring Framework, Spring Boot and 
-          Micro-Services, Developer can complete a Full-stack Web Development.
-          </div>
-          <div class="mtop15p">
-              <span class="label btn-primary-o">Basic</span>
-              <span class="label btn-primary-o">Frontend Development</span>
-              <span class="label btn-primary-o">Backend Development</span>
-              <span class="label btn-primary-o">FullStack Development</span>
-          </div>
-        </div><!--/.list-group-item -->
-      </div><!--/.list-group -->
-      <!-- Java Spring Framework  ::: END -->
-
-     </div><!--/.col-sm-6 -->
-     <div class="col-sm-6">
-
-       <!-- CSS ::: START -->
-       <div class="list-group boxShadow">
-        <div class="list-group-item bg-darkLeaf "><b>CSS</b></div>
-        <div class="list-group-item bg-lgtDarkLeaf ">
-          <div>It is a language that describes how HTML elements should be styled and displayed on an HTML document.</div>
-          <div class="mtop15p">
-              <span class="label btn-darkLeaf-o">Basics</span>
-              <span class="label btn-darkLeaf-o">Frontend Development</span>
-          </div>
-        </div><!--/.list-group-item -->
-      </div><!--/.list-group -->
-      <!-- CSS ::: END -->
-
 
       <!-- Font-Awesome Icons ::: START -->
       <div class="list-group boxShadow">
@@ -302,6 +187,69 @@
       </div><!--/.list-group -->
       <!-- Typescript ::: END -->
 
+       <!-- ReactJS ::: START -->
+       <div class="list-group boxShadow">
+        <div class="list-group-item bg-purple"><b>ReactJS</b></div>
+        <div class="list-group-item bg-lgtPurple">
+          <div>
+            React JS is a JavaScript library for building user interfaces (that we see on the 
+            Screen) of the Web pages.
+          </div>
+          <div class="mtop15p">
+              <span class="label btn-purple-o">Advanced</span>
+              <span class="label btn-purple-o">Frontend Development</span>
+          </div>
+        </div><!--/.list-group-item -->
+      </div><!--/.list-group -->
+      <!-- ReactJS ::: END -->
+
+      <!-- PHP ::: START -->
+      <div class="list-group boxShadow">
+        <div class="list-group-item bg-darkPurple"><b>PHP</b></div>
+        <div class="list-group-item  bg-lgtDarkPurple">
+          <div>
+            PHP (Hypertext Pre-processor / Personal Home Pages) is a server scripting language 
+            for making static, dynamic and interactive web pages.
+          </div>
+          <div class="mtop15p">
+              <span class="label btn-darkPurple-o">Basic</span>
+              <span class="label btn-darkPurple-o">Frontend Development</span>
+              <span class="label btn-darkPurple-o">Backend Development</span>
+              <span class="label btn-darkPurple-o">FullStack Development</span>
+          </div>
+        </div><!--/.list-group-item -->
+      </div><!--/.list-group -->
+      <!-- PHP ::: END -->
+
+    </div><!--/.col-sm-4 -->
+    <div class="col-sm-4">
+
+      <!-- Javascript ::: START -->
+      <div class="list-group boxShadow">
+        <div class="list-group-item bg-skyBlue"><b>Javascript</b></div>
+        <div class="list-group-item bg-lgtSkyBlue">
+          <div>It is an interpreted Scripting language that describes the behaviour of an HTML document.</div>
+          <div class="mtop15p">
+              <span class="label btn-skyBlue-o">Basics</span>
+              <span class="label btn-skyBlue-o">Frontend Development</span>
+          </div>
+        </div><!--/.list-group-item -->
+      </div><!--/.list-group -->
+      <!-- Javascript ::: END -->
+
+      <!-- JQuery ::: START -->
+      <div class="list-group boxShadow">
+        <div class="list-group-item bg-mud"><b>JQuery</b></div>
+        <div class="list-group-item bg-lgtMud">
+          <div>It is an Javascript library that makes simple to write Javascript on HTML Document.</div>
+          <div class="mtop15p">
+              <span class="label btn-mud-o">Basics</span>
+              <span class="label btn-mud-o">Frontend Development</span>
+          </div>
+        </div><!--/.list-group-item -->
+      </div><!--/.list-group -->
+      <!-- JQuery ::: END -->
+
       <!-- NodeJS ::: START -->
       <div class="list-group boxShadow">
         <div class="list-group-item bg-cement"><b>NodeJS</b></div>
@@ -317,22 +265,6 @@
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
       <!-- NodeJS ::: END -->
-      
-      <!-- ReactJS ::: START -->
-      <div class="list-group boxShadow">
-        <div class="list-group-item bg-purple"><b>ReactJS</b></div>
-        <div class="list-group-item bg-lgtPurple">
-          <div>
-            React JS is a JavaScript library for building user interfaces (that we see on the 
-            Screen) of the Web pages.
-          </div>
-          <div class="mtop15p">
-              <span class="label btn-purple-o">Advanced</span>
-              <span class="label btn-purple-o">Frontend Development</span>
-          </div>
-        </div><!--/.list-group-item -->
-      </div><!--/.list-group -->
-      <!-- ReactJS ::: END -->
 
       <!-- Java (JSPs & Servlets) ::: START -->
       <div class="list-group boxShadow">
@@ -353,7 +285,77 @@
       </div><!--/.list-group -->
       <!-- Java (JSPs & Servlets) ::: END -->
 
-     </div><!--/.col-sm-6 -->
+    </div><!--/.col-sm-4 -->
+    <div class="col-sm-4">
+
+      <!-- CSS ::: START -->
+      <div class="list-group boxShadow">
+        <div class="list-group-item bg-darkLeaf "><b>CSS</b></div>
+        <div class="list-group-item bg-lgtDarkLeaf ">
+          <div>It is a language that describes how HTML elements should be styled and displayed on an HTML document.</div>
+          <div class="mtop15p">
+              <span class="label btn-darkLeaf-o">Basics</span>
+              <span class="label btn-darkLeaf-o">Frontend Development</span>
+          </div>
+        </div><!--/.list-group-item -->
+      </div><!--/.list-group -->
+      <!-- CSS ::: END -->
+
+      <!-- ECMAScript ::: START -->
+      <div class="list-group boxShadow">
+        <div class="list-group-item bg-pink"><b>ECMAScript</b></div>
+        <div class="list-group-item bg-lgtPink">
+          <div>
+          ECMAScript (core part of JavaScript) is a subset of JavaScript which is standardized by 
+          European Computer Manufacturers Association (ECMA) International.
+          </div>
+          <div class="mtop15p">
+              <span class="label btn-pink-o">Advanced</span>
+              <span class="label btn-pink-o">Frontend Development</span>
+          </div>
+        </div><!--/.list-group-item -->
+      </div><!--/.list-group -->
+      <!-- ECMAScript ::: END -->
+       
+      <!-- AngularJS / Angular ::: START -->
+      <div class="list-group boxShadow">
+        <div class="list-group-item bg-darkLeaf"><b>AngularJS / Angular</b></div>
+        <div class="list-group-item bg-lgtDarkLeaf">
+          <div>
+          AngularJS (First version of Angular) is a JavaScript based front-end Web Application 
+          Framework. Angular is a TypeScript-based Web Application Framework for building Mobile 
+          and Desktop Web Applications.
+          </div>
+          <div class="mtop15p">
+              <span class="label btn-darkLeaf-o">Advanced</span>
+              <span class="label btn-darkLeaf-o">Frontend Development</span>
+              <span class="label btn-darkLeaf-o">Backend Development</span>
+              <span class="label btn-darkLeaf-o">FullStack Development</span>
+          </div>
+        </div><!--/.list-group-item -->
+      </div><!--/.list-group -->
+      <!-- AngularJS / Angular ::: END -->
+
+      <!-- Java Spring Framework ::: START -->
+      <div class="list-group boxShadow">
+        <div class="list-group-item bg-primary"><b>Java (Spring Framework, Spring Boot & Micro-Services) </b></div>
+        <div class="list-group-item bg-lgtPrimary">
+          <div>
+          Spring Framework is a light weight based Java Web Application Framework 
+          that built on the top of Java EE. Using Spring Framework, Spring Boot and 
+          Micro-Services, Developer can complete a Full-stack Web Development.
+          </div>
+          <div class="mtop15p">
+              <span class="label btn-primary-o">Basic</span>
+              <span class="label btn-primary-o">Frontend Development</span>
+              <span class="label btn-primary-o">Backend Development</span>
+              <span class="label btn-primary-o">FullStack Development</span>
+          </div>
+        </div><!--/.list-group-item -->
+      </div><!--/.list-group -->
+      <!-- Java Spring Framework  ::: END -->
+
+    </div><!--/.col-sm-4 -->
     </div><!--/.row -->
     <!-- Web Development ::: END --->
 
@@ -366,7 +368,7 @@
       </div><!--/.col-sm-12 -->
     </div><!--/.row -->
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-4">
 
         <!-- MySQLDatabase ::: START -->
         <div class="list-group boxShadow">
@@ -384,8 +386,8 @@
         </div><!--/.list-group -->
         <!-- MySQLDatabase ::: END -->
 
-      </div><!--/.col-sm-6 -->
-      <div class="col-sm-6">
+      </div><!--/.col-sm-4 -->
+      <div class="col-sm-4">
 
         <!-- Web Browser Cookies ::: START -->
         <div class="list-group boxShadow">
@@ -402,6 +404,9 @@
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
         <!-- Web Browser Cookies ::: END -->
+      
+      </div><!--/.col-sm-4 -->
+      <div class="col-sm-4">
 
         <!-- Web Browser Sessions ::: START -->
         <div class="list-group boxShadow">
@@ -419,7 +424,7 @@
         </div><!--/.list-group -->
         <!-- Web Browser Sessions ::: END -->
 
-      </div><!--/.col-sm-6 -->
+      </div><!--/.col-sm-4 -->
     </div><!--/.row -->
     <!-- Website Data Management ::: END -->
 
@@ -432,7 +437,7 @@
       </div><!--/.col-sm-12 -->
     </div><!--/.row -->
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-4">
 
         <!-- RabbitMQ ::: START -->
         <div class="list-group boxShadow">
@@ -450,8 +455,8 @@
         </div><!--/.list-group -->
         <!-- RabbitMQ ::: END -->
 
-      </div><!--/.col-sm-6 -->
-      <div class="col-sm-6">
+      </div><!--/.col-sm-4 -->
+      <div class="col-sm-4">
 
         <!-- Kafka ::: START -->
         <div class="list-group boxShadow">
@@ -469,7 +474,10 @@
         </div><!--/.list-group -->
         <!-- Kafka ::: END -->
 
-      </div><!--/.col-sm-6 -->
+      </div><!--/.col-sm-4 -->
+      <div class="col-sm-4">
+
+      </div><!--/.col-sm-4 -->
     </div><!--/.row -->
     <!-- Web Instant Communications ::: END -->
 
@@ -482,7 +490,7 @@
       </div><!--/.col-sm-12 -->
     </div><!--/.row -->
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-4">
 
         <!-- Selenium Automation for Java ::: START -->
         <div class="list-group boxShadow">
@@ -501,10 +509,13 @@
         </div><!--/.list-group -->
         <!-- Selenium Automation for Java ::: END -->
 
-      </div><!--/.col-sm-6 -->
-      <div class="col-sm-6">
+      </div><!--/.col-sm-4 -->
+      <div class="col-sm-4">
 
-      </div><!--/.col-sm-6 -->
+      </div><!--/.col-sm-4 -->
+      <div class="col-sm-4">
+
+      </div><!--/.col-sm-4 -->
     </div><!--/.row -->
     <!-- Web Testing  ::: END -->
 
@@ -517,7 +528,7 @@
       </div><!--/.col-sm-12 -->
     </div><!--/.row -->
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-4">
           
         <!-- Apache Tomcat ::: START -->
         <div class="list-group boxShadow">
@@ -535,8 +546,8 @@
         </div><!--/.list-group -->
         <!-- Apache Tomcat ::: END -->
         
-      </div><!--/.col-sm-6 -->
-      <div class="col-sm-6">
+      </div><!--/.col-sm-4 -->
+      <div class="col-sm-4">
 
         <!-- Apache HTTP Server ::: START -->
         <div class="list-group boxShadow">
@@ -551,7 +562,10 @@
         </div><!--/.list-group -->
         <!-- Apache HTTP Server ::: END -->
 
-      </div><!--/.col-sm-6 -->
+      </div><!--/.col-sm-4 -->
+      <div class="col-sm-4">
+
+      </div><!--/.col-sm-4 -->
     </div><!--/.row -->
     <!-- Web Servers  ::: END -->
 
@@ -564,7 +578,7 @@
       </div><!--/.col-sm-12 -->
     </div><!--/.row -->
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-4">
           
         <!-- Godaddy.com ::: START -->
         <div class="list-group boxShadow">
@@ -579,8 +593,8 @@
         </div><!--/.list-group -->
         <!-- Godaddy.com ::: END -->
         
-      </div><!--/.col-sm-6 -->
-      <div class="col-sm-6">
+      </div><!--/.col-sm-4 -->
+      <div class="col-sm-4">
 
         <!-- AWS ::: START -->
         <div class="list-group boxShadow">
@@ -595,7 +609,10 @@
         </div><!--/.list-group -->
         <!-- Godaddy.com ::: END -->
 
-      </div><!--/.col-sm-6 -->
+      </div><!--/.col-sm-4 -->
+      <div class="col-sm-4">
+
+      </div><!--/.col-sm-4 -->
     </div><!--/.row -->
     <!-- Website Hosting  ::: END -->
 
@@ -608,7 +625,7 @@
       </div><!--/.col-sm-12 -->
     </div><!--/.row -->
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-4">
 
         <!-- Search Engine Optimization (SEO) ::: START -->
         <div class="list-group boxShadow">
@@ -624,10 +641,13 @@
         </div><!--/.list-group -->
         <!-- Search Engine Optimization (SEO) ::: END -->
 
-      </div><!--/.col-sm-6 -->
-      <div class="col-sm-6">
+      </div><!--/.col-sm-4 -->
+      <div class="col-sm-4">
 
-      </div><!--/.col-sm-6 -->
+      </div><!--/.col-sm-4 -->
+      <div class="col-sm-4">
+
+      </div><!--/.col-sm-4 -->
     </div><!--/.row -->
     <!-- Website Marketing  ::: END -->
 
