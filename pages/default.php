@@ -521,9 +521,12 @@
           
         <!-- Apache Tomcat ::: START -->
         <div class="list-group boxShadow">
-         <div class="list-group-item bg-primary"><b>Apache Tomcat (Java)</b></div>
+         <div class="list-group-item bg-primary"><b>Apache Tomcat (Java based HTTP Web Server)</b></div>
            <div class="list-group-item bg-lgtPrimary">
-            <div></div>
+            <div>
+              Java Web Application that designed with JSPs (Java Server Pages) and Java Servlets are 
+              deployed into Apache Tomcat Web Server to host the developed Web Application on a Network.
+            </div>
             <div class="mtop15p">
                 <span class="label btn-primary-o">Basic</span>
                 <span class="label btn-primary-o">Web Server</span>
@@ -537,7 +540,7 @@
 
         <!-- Apache HTTP Server ::: START -->
         <div class="list-group boxShadow">
-         <div class="list-group-item bg-mud"><b>Apache HTTP Server (PHP)</b></div>
+         <div class="list-group-item bg-mud"><b>Apache HTTP Server</b></div>
            <div class="list-group-item bg-lgtMud">
             <div></div>
             <div class="mtop15p">
