@@ -38,7 +38,7 @@
     <div class="col-sm-6">
     <!-- -->
       <div class="list-group">
-      <div class="list-group-item">
+      <div class="list-group-item bg-lgtSkyBlue">
       <!-- -->
       <div><i>Web development is of:</i></div>
       <div>
@@ -53,7 +53,7 @@
        </div><!--/.list-group-item -->
       </div><!--/.list-group -->
       <div class="list-group">
-      <div class="list-group-item">
+      <div class="list-group-item bg-lgtSkyBlue">
       <div><i>Website Data Management is of:</i></div>
       <div>
         <div><b>Data Storage</b></div>
@@ -75,7 +75,7 @@
       </div><!--/.list-group-item -->
       </div><!--/.list-group -->
       <div class="list-group">
-      <div class="list-group-item">
+      <div class="list-group-item bg-lgtSkyBlue">
       <div><i>Web Instant Communication is of:</i></div>
       <div>
         <div><b>Messaging Queues</b></div>
@@ -90,7 +90,7 @@
      <div class="col-sm-6">
 
      <div class="list-group">
-      <div class="list-group-item">
+      <div class="list-group-item bg-lgtSkyBlue">
       <!-- -->
       <div><i>Website Testing is of:</i></div>
       <div>
@@ -104,7 +104,7 @@
       </div><!--/.list-group -->
 
       <div class="list-group">
-      <div class="list-group-item">
+      <div class="list-group-item bg-lgtSkyBlue">
       <!-- -->
       <div><i>Website Hosting is of:</i></div>
       <div>
@@ -118,7 +118,7 @@
       </div><!--/.list-group -->
 
       <div class="list-group">
-      <div class="list-group-item">
+      <div class="list-group-item bg-lgtSkyBlue">
       <!-- -->
       <div><i>Website Marketing is of:</i></div>
       <div>
@@ -241,7 +241,11 @@
       <div class="list-group boxShadow">
         <div class="list-group-item bg-primary"><b>Java (Spring Framework, Spring Boot & Micro-Services) </b></div>
         <div class="list-group-item bg-lgtPrimary">
-          <div></div>
+          <div>
+          Spring Framework is a light weight based Java Web Application Framework 
+          that built on the top of Java EE. Using Spring Framework, Spring Boot and 
+          Micro-Services, Developer can complete a Full-stack Web Development.
+          </div>
           <div class="mtop15p">
               <span class="label btn-primary-o">Basic</span>
               <span class="label btn-primary-o">Frontend Development</span>
@@ -366,12 +370,15 @@
 
         <!-- MySQLDatabase ::: START -->
         <div class="list-group boxShadow">
-         <div class="list-group-item"><b>MySQLDatabase</b></div>
-           <div class="list-group-item">
-            <div></div>
+         <div class="list-group-item bg-pink"><b>MySQLDatabase</b></div>
+           <div class="list-group-item bg-lgtPink">
+            <div>
+              MySQL Database is a Relational Database Management System (RDMS) which is based on 
+              Structured Query Language (SQL).
+            </div>
             <div class="mtop15p">
-                <span class="label label-warning">Basic</span>
-                <span class="label label-primary">Server-side Data Storage</span>
+                <span class="label btn-pink-o">Basic</span>
+                <span class="label btn-pink-o">Server-side Data Storage</span>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -382,12 +389,15 @@
 
         <!-- Web Browser Cookies ::: START -->
         <div class="list-group boxShadow">
-         <div class="list-group-item"><b>Web Browser Cookies</b></div>
-           <div class="list-group-item">
-            <div></div>
+         <div class="list-group-item bg-purple"><b>Web Browser Cookies</b></div>
+           <div class="list-group-item bg-lgtPurple">
+            <div>
+              Cookies are the Client-Side Data Storage Files where Web Browser stores the 
+              data within the System which is related to the Web Application. 
+            </div>
             <div class="mtop15p">
-                <span class="label label-warning">Basic</span>
-                <span class="label label-primary">Client-side Data Storage</span>
+                <span class="label btn-purple-o">Basic</span>
+                <span class="label btn-purple-o">Client-side Data Storage</span>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -395,12 +405,15 @@
 
         <!-- Web Browser Sessions ::: START -->
         <div class="list-group boxShadow">
-         <div class="list-group-item"><b>Web Browser Sessions</b></div>
-           <div class="list-group-item">
-            <div></div>
+         <div class="list-group-item bg-darkLeaf"><b>Web Browser Sessions</b></div>
+           <div class="list-group-item bg-lgtDarkLeaf">
+            <div>
+              Session is a time period of a User access the Web Application and communicates with Web Server.
+              The Data related to the particular Session is stored at Server-Side in the form of files.
+            </div>
             <div class="mtop15p">
-                <span class="label label-warning">Basic</span>
-                <span class="label label-primary">Client-side Data Storage</span>
+                <span class="label btn-darkLeaf-o">Basic</span>
+                <span class="label btn-darkLeaf-o">Client-side Data Storage</span>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -423,12 +436,15 @@
 
         <!-- RabbitMQ ::: START -->
         <div class="list-group boxShadow">
-         <div class="list-group-item"><b>RabbitMQ</b></div>
-           <div class="list-group-item">
-            <div></div>
+         <div class="list-group-item bg-skyBlue"><b>Rabbit MQ</b></div>
+           <div class="list-group-item bg-lgtSkyBlue">
+            <div>
+              RabbitMQ is a message Broker that is used to communicate messages between two End Users or 
+              End points in publisher / Subscriber Model.
+            </div>
             <div class="mtop15p">
-                <span class="label label-warning">Advanced</span>
-                <span class="label label-primary">Messaging Queues</span>
+                <span class="label btn-skyBlue-o">Advanced</span>
+                <span class="label btn-skyBlue-o">Messaging Queues</span>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -439,12 +455,15 @@
 
         <!-- Kafka ::: START -->
         <div class="list-group boxShadow">
-         <div class="list-group-item"><b>Kafka</b></div>
-           <div class="list-group-item">
-            <div></div>
+         <div class="list-group-item bg-cement"><b>Apache Kafka</b></div>
+           <div class="list-group-item  bg-lgtCement">
+            <div>
+              Apache kafka is a Distributed Streaming Platform (Distributed Publish-Subscribe Messaging System) 
+              that receives data from different source systems and makes the data available to target systems.
+            </div>
             <div class="mtop15p">
-                <span class="label label-warning">Advanced</span>
-                <span class="label label-primary">Messaging Queues</span>
+                <span class="label btn-cement-o">Advanced</span>
+                <span class="label btn-cement-o">Messaging Queues</span>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -465,18 +484,22 @@
     <div class="row">
       <div class="col-sm-6">
 
-        <!-- Selenium Automation Tool for Java ::: START -->
+        <!-- Selenium Automation for Java ::: START -->
         <div class="list-group boxShadow">
-         <div class="list-group-item"><b>Selenium Automation Tool for Java</b></div>
-           <div class="list-group-item">
-            <div></div>
+         <div class="list-group-item bg-darkPurple"><b>Selenium Automation</b></div>
+           <div class="list-group-item bg-lgtDarkPurple">
+            <div>
+              Selenium is a portable Web UI Automation framework for testing User 
+              Interfaces (UI) of Web Applications. This framework makes easy to test and capture bugs
+              automatically.
+            </div>
             <div class="mtop15p">
-                <span class="label label-warning">Basic</span>
-                <span class="label label-primary">Automation Tool</span>
+                <span class="label btn-darkPurple-o">Basic</span>
+                <span class="label btn-darkPurple-o">Automation Tool</span>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
-        <!-- Selenium Automation Tool for Java ::: END -->
+        <!-- Selenium Automation for Java ::: END -->
 
       </div><!--/.col-sm-6 -->
       <div class="col-sm-6">
@@ -498,12 +521,12 @@
           
         <!-- Apache Tomcat ::: START -->
         <div class="list-group boxShadow">
-         <div class="list-group-item"><b>Apache Tomcat (Java)</b></div>
-           <div class="list-group-item">
+         <div class="list-group-item bg-primary"><b>Apache Tomcat (Java)</b></div>
+           <div class="list-group-item bg-lgtPrimary">
             <div></div>
             <div class="mtop15p">
-                <span class="label label-warning">Basic</span>
-                <span class="label label-primary">Web Server</span>
+                <span class="label btn-primary-o">Basic</span>
+                <span class="label btn-primary-o">Web Server</span>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -514,12 +537,12 @@
 
         <!-- Apache HTTP Server ::: START -->
         <div class="list-group boxShadow">
-         <div class="list-group-item"><b>Apache HTTP Server (PHP)</b></div>
-           <div class="list-group-item">
+         <div class="list-group-item bg-mud"><b>Apache HTTP Server (PHP)</b></div>
+           <div class="list-group-item bg-lgtMud">
             <div></div>
             <div class="mtop15p">
-                <span class="label label-warning">Basic</span>
-                <span class="label label-primary">Web Server</span>
+                <span class="label btn-mud-o">Basic</span>
+                <span class="label btn-mud-o">Web Server</span>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -542,12 +565,12 @@
           
         <!-- Godaddy.com ::: START -->
         <div class="list-group boxShadow">
-         <div class="list-group-item"><b>Godaddy.com</b></div>
-           <div class="list-group-item">
+         <div class="list-group-item bg-darkleaf"><b>Godaddy.com</b></div>
+           <div class="list-group-item bg-lgtDarkleaf">
             <div></div>
             <div class="mtop15p">
-                <span class="label label-warning">Basic</span>
-                <span class="label label-primary">Web Hosting Platform</span>
+                <span class="label btn-darkleaf-o">Basic</span>
+                <span class="label btn-darkleaf-o">Web Hosting Platform</span>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -558,12 +581,12 @@
 
         <!-- AWS ::: START -->
         <div class="list-group boxShadow">
-         <div class="list-group-item"><b>Amazon Web Services</b></div>
-           <div class="list-group-item">
+         <div class="list-group-item bg-purple"><b>Amazon Web Services</b></div>
+           <div class="list-group-item bg-lgtPurple">
             <div></div>
             <div class="mtop15p">
-                <span class="label label-warning">Advanced</span>
-                <span class="label label-primary">Web Hosting Platform</span>
+                <span class="label btn-purple-o">Advanced</span>
+                <span class="label btn-purple-o">Web Hosting Platform</span>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -586,13 +609,13 @@
 
         <!-- Search Engine Optimization (SEO) ::: START -->
         <div class="list-group boxShadow">
-         <div class="list-group-item"><b>Search Engine Optimization (SEO)</b></div>
-           <div class="list-group-item">
+         <div class="list-group-item bg-pink"><b>Search Engine Optimization (SEO)</b></div>
+           <div class="list-group-item bg-lgtPink">
             <div></div>
             <div class="mtop15p">
-                <span class="label label-warning">Basic</span>
-                <span class="label label-warning">Advanced</span>
-                <span class="label label-primary">Web Marketing</span>
+                <span class="label btn-pink-o">Basic</span>
+                <span class="label btn-pink-o">Advanced</span>
+                <span class="label btn-pink-o">Web Marketing</span>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
