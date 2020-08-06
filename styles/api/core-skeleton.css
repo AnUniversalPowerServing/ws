@@ -1,16 +1,16 @@
 html,body { overflow-x:hidden; }
 body::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);background-color: #F5F5F5; }
 body::-webkit-scrollbar { width: 6px;background-color: #F5F5F5; }
-body::-webkit-scrollbar-thumb { background-color: #d9534f; }
-.navbar-default { border-radius:0px;margin-bottom:0px;border-bottom:2px solid #d9534f; }
-a.navbar-brand { font-size:14px;çolor:#d9534f; }
+body::-webkit-scrollbar-thumb { background-color: #c70d08; }
+.navbar-default { border-radius:0px;margin-bottom:0px;border-bottom:2px solid #c70d08; }
+a.navbar-brand { font-size:14px;çolor:#c70d08; }
 @media screen and (min-width: 768px) { .container-fluid .jumbotron { padding:20px; } }
 .bg-black { background-color:#0d122f; }
 .bg-lgtRed { background-color:#fffbfb; }
 .bg-lgtGrey { background-color:#e7e7e7; }
 .bg-hlgtGrey { background-color:#f5f5f5; }
 .bg-greyMix { background-color:#e8e5ca; }
-.bg-red { background-color:#d9534f;color:#fff; }
+.bg-red { background-color:#c70d08;color:#fff; }
 
 .bg-purple { background-color:#673ab7;color:#fff;border:1px solid #673ab7; }
 .bg-lgtPurple { background-color:#c2acea;color:#000;border:1px solid #c2acea;  }
@@ -69,7 +69,7 @@ a.navbar-brand { font-size:14px;çolor:#d9534f; }
 .font-paleLgtGreen { color:#b2c39d; }
 .font-purple, .font-purple:hover, a.font-purple:hover { color:#9C27B0 }
 .font-black, .font-black:hover, a.font-black:hover { color:#000; }
-.font-red, .font-red:hover, a.font-red:hover { color:#d9534f; }
+.font-red, .font-red:hover, a.font-red:hover { color:#c70d08; }
 .font-navyBlue, .font-navyBlue:hover, a.font-navyBlue:hover { color:#024279; }
 
 h1,.h1 { font-size:18px; }
@@ -95,7 +95,7 @@ h5 { font-size:14px;line-height:22px; }
 .padtopbot0 { padding-top:0px;padding-bottom:0px; }
 .padInlineStart20p { padding-inline-start: 20px; }
 .borderBot2p-primary { border-bottom: 2px solid #02428a; }
-.borderBot2p-red { border-bottom: 2px solid #d9534f; }
+.borderBot2p-red { border-bottom: 2px solid #c70d08; }
 .pad0{ padding:0px; }
 .pad5p { padding:5px; }
 .pad8p { padding:8px; }
