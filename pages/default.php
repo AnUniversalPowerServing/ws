@@ -145,75 +145,82 @@
     <div class="col-sm-6">
 
       <!-- HTML Programming Language ::: START -->
-      <div class="list-group">
-        <div class="list-group-item"><b>HTML Programming Language</b></div>
-        <div class="list-group-item">
+      <div class="list-group boxShadow">
+        <div class="list-group-item bg-purple"><b>HTML Programming Language</b></div>
+        <div class="list-group-item bg-lgtPurple">
           <div>It is the basic Programming Language for designing  Web Pages and presenting content  
               on the World Wide Web.</div>
           <div class="mtop15p">
-              <span class="label label-warning">Basics</span>
-              <span class="label label-primary">Frontend Development</span>
+              <span class="label btn-purple-o">Basics</span>
+              <span class="label btn-purple-o">Frontend Development</span>
           </div>
           <div align="right">
-              <button class="btn btn-danger"><b>Let's Get Started</b></button>
+              <button class="btn btn-xs btn-purple"><b>Let's Get Started</b></button>
           </div>
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
       <!-- HTML Programming Language ::: END -->
 
       <!-- Javascript ::: START -->
-      <div class="list-group">
-        <div class="list-group-item"><b>Javascript</b></div>
-        <div class="list-group-item">
+      <div class="list-group boxShadow">
+        <div class="list-group-item bg-sindur"><b>Javascript</b></div>
+        <div class="list-group-item bg-lgtSindur">
           <div>It is an interpreted Scripting language that describes the behaviour of an HTML document.</div>
           <div class="mtop15p">
-              <span class="label label-warning">Basics</span>
-              <span class="label label-primary">Frontend Development</span>
+              <span class="label btn-sindur-o">Basics</span>
+              <span class="label btn-sindur-o">Frontend Development</span>
           </div>
           <div align="right">
-              <button class="btn btn-danger"><b>Let's Get Started</b></button>
+              <button class="btn btn-xs btn-sindur"><b>Let's Get Started</b></button>
           </div>
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
       <!-- Javascript ::: END -->
 
        <!-- JQuery ::: START -->
-       <div class="list-group">
-        <div class="list-group-item"><b>JQuery</b></div>
-        <div class="list-group-item">
+       <div class="list-group boxShadow">
+        <div class="list-group-item bg-primary"><b>JQuery</b></div>
+        <div class="list-group-item bg-lgtPrimary">
           <div>It is an Javascript library that makes simple to write Javascript on HTML Document.</div>
           <div class="mtop15p">
-              <span class="label label-warning">Basics</span>
-              <span class="label label-primary">Frontend Development</span>
+              <span class="label btn-primary-o">Basics</span>
+              <span class="label btn-primary-o">Frontend Development</span>
           </div>
           <div align="right">
-              <button class="btn btn-danger"><b>Let's Get Started</b></button>
+              <button class="btn btn-xs btn-primary"><b>Let's Get Started</b></button>
           </div>
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
       <!-- JQuery ::: END -->
 
       <!-- ECMAScript ::: START -->
-      <div class="list-group">
+      <div class="list-group boxShadow">
         <div class="list-group-item"><b>ECMAScript</b></div>
         <div class="list-group-item">
-          <div></div>
+          <div>
+          ECMAScript (core part of JavaScript) is a subset of JavaScript which is standardized by 
+          European Computer Manufacturers Association (ECMA) International.
+          </div>
           <div class="mtop15p">
               <span class="label label-warning">Advanced</span>
               <span class="label label-primary">Frontend Development</span>
           </div>
           <div align="right">
-              <button class="btn btn-danger"><b>Let's Get Started</b></button>
+              <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
           </div>
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
       <!-- ECMAScript ::: END -->
 
       <!-- AngularJS / Angular ::: START -->
-      <div class="list-group">
+      <div class="list-group boxShadow">
         <div class="list-group-item"><b>AngularJS / Angular</b></div>
         <div class="list-group-item">
-          <div></div>
+          <div>
+          AngularJS (First version of Angular) is a JavaScript based front-end Web Application 
+          Framework. Angular is a TypeScript-based Web Application Framework for building Mobile 
+          and Desktop Web Applications.
+          </div>
           <div class="mtop15p">
               <span class="label label-warning">Advanced</span>
               <span class="label label-primary">Frontend Development</span>
@@ -221,17 +228,20 @@
               <span class="label label-success">FullStack Development</span>
           </div>
           <div align="right">
-              <button class="btn btn-danger"><b>Let's Get Started</b></button>
+              <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
           </div>
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
       <!-- AngularJS / Angular ::: END -->
 
       <!-- PHP ::: START -->
-      <div class="list-group">
+      <div class="list-group boxShadow">
         <div class="list-group-item"><b>PHP</b></div>
         <div class="list-group-item">
-          <div></div>
+          <div>
+            PHP (Hypertext Pre-processor / Personal Home Pages) is a server scripting language 
+            for making static, dynamic and interactive web pages.
+          </div>
           <div class="mtop15p">
               <span class="label label-warning">Basic</span>
               <span class="label label-primary">Frontend Development</span>
@@ -239,14 +249,14 @@
               <span class="label label-success">FullStack Development</span>
           </div>
           <div align="right">
-              <button class="btn btn-danger"><b>Let's Get Started</b></button>
+              <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
           </div>
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
       <!-- PHP ::: END -->
 
       <!-- Java Spring Framework ::: START -->
-      <div class="list-group">
+      <div class="list-group boxShadow">
         <div class="list-group-item"><b>Java (Spring Framework, Spring Boot & Micro-Services) </b></div>
         <div class="list-group-item">
           <div></div>
@@ -257,7 +267,7 @@
               <span class="label label-success">FullStack Development</span>
           </div>
           <div align="right">
-              <button class="btn btn-danger"><b>Let's Get Started</b></button>
+              <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
           </div>
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
@@ -267,16 +277,16 @@
      <div class="col-sm-6">
 
        <!-- CSS ::: START -->
-       <div class="list-group">
-        <div class="list-group-item"><b>CSS</b></div>
-        <div class="list-group-item">
+       <div class="list-group boxShadow">
+        <div class="list-group-item bg-darkLeaf "><b>CSS</b></div>
+        <div class="list-group-item bg-lgtDarkLeaf ">
           <div>It is a language that describes how HTML elements should be styled and displayed on an HTML document.</div>
           <div class="mtop15p">
-              <span class="label label-warning">Basics</span>
-              <span class="label label-primary">Frontend Development</span>
+              <span class="label btn-darkLeaf-o">Basics</span>
+              <span class="label btn-darkLeaf-o">Frontend Development</span>
           </div>
           <div align="right">
-              <button class="btn btn-danger"><b>Let's Get Started</b></button>
+              <button class="btn btn-xs btn-darkLeaf"><b>Let's Get Started</b></button>
           </div>
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
@@ -284,7 +294,7 @@
 
 
       <!-- Font-Awesome Icons ::: START -->
-      <div class="list-group">
+      <div class="list-group boxShadow">
         <div class="list-group-item"><b>Font-Awesome Icons</b></div>
         <div class="list-group-item">
           <div>It is an Icon Toolkit that can be customized in size, color, shadow and anything that can be done with the power of CSS.</div>
@@ -293,33 +303,37 @@
               <span class="label label-primary">Frontend Development</span>
           </div>
           <div align="right">
-              <button class="btn btn-danger"><b>Let's Get Started</b></button>
+              <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
           </div>
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
       <!-- Font-Awesome Icons ::: END -->
 
       <!-- Typescript ::: START -->
-      <div class="list-group">
-        <div class="list-group-item"><b>Typescript</b></div>
+      <div class="list-group boxShadow">
+        <div class="list-group-item"><b>TypeScript</b></div>
         <div class="list-group-item">
-          <div></div>
+          <div>
+            TypeScript is the superset of Javascript that speeds up the Development in catching Errors 
+            and providing fixes during Development stage itself. 
+          </div>
           <div class="mtop15p">
               <span class="label label-warning">Advanced</span>
               <span class="label label-primary">Frontend Development</span>
           </div>
           <div align="right">
-              <button class="btn btn-danger"><b>Let's Get Started</b></button>
+              <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
           </div>
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
       <!-- Typescript ::: END -->
 
       <!-- NodeJS ::: START -->
-      <div class="list-group">
+      <div class="list-group boxShadow">
         <div class="list-group-item"><b>NodeJS</b></div>
         <div class="list-group-item">
-          <div></div>
+          <div>NodeJS is a JavaScript runtime built on Chrome's V8 JavaScript engine 
+            which can executes JavaScript code outside a web browser.</div>
           <div class="mtop15p">
               <span class="label label-warning">Advanced</span>
               <span class="label label-primary">Frontend Development</span>
@@ -327,33 +341,40 @@
               <span class="label label-success">FullStack Development</span>
           </div>
           <div align="right">
-              <button class="btn btn-danger"><b>Let's Get Started</b></button>
+              <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
           </div>
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
       <!-- NodeJS ::: END -->
       
       <!-- ReactJS ::: START -->
-      <div class="list-group">
+      <div class="list-group boxShadow">
         <div class="list-group-item"><b>ReactJS</b></div>
         <div class="list-group-item">
-          <div></div>
+          <div>
+            React JS is a JavaScript library for building user interfaces (that we see on the 
+            Screen) of the Web pages.
+          </div>
           <div class="mtop15p">
               <span class="label label-warning">Advanced</span>
               <span class="label label-primary">Frontend Development</span>
           </div>
           <div align="right">
-              <button class="btn btn-danger"><b>Let's Get Started</b></button>
+              <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
           </div>
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
       <!-- ReactJS ::: END -->
 
       <!-- Java (JSPs & Servlets) ::: START -->
-      <div class="list-group">
+      <div class="list-group boxShadow">
         <div class="list-group-item"><b>Java (JSPs & Servlets)</b></div>
         <div class="list-group-item">
-          <div></div>
+          <div>
+            JSPs (Java Server Pages) and Servlets is a FullStack Web Development 
+            programming in Java where JSPs deals with Front-end Development and 
+            Servlets deals with Front-end and Back-end Development.
+          </div>
           <div class="mtop15p">
               <span class="label label-warning">Basic</span>
               <span class="label label-primary">Frontend Development</span>
@@ -361,7 +382,7 @@
               <span class="label label-success">FullStack Development</span>
           </div>
           <div align="right">
-              <button class="btn btn-danger"><b>Let's Get Started</b></button>
+              <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
           </div>
         </div><!--/.list-group-item -->
       </div><!--/.list-group -->
@@ -383,7 +404,7 @@
       <div class="col-sm-6">
 
         <!-- MySQLDatabase ::: START -->
-        <div class="list-group">
+        <div class="list-group boxShadow">
          <div class="list-group-item"><b>MySQLDatabase</b></div>
            <div class="list-group-item">
             <div></div>
@@ -392,7 +413,7 @@
                 <span class="label label-primary">Server-side Data Storage</span>
             </div>
             <div align="right">
-                <button class="btn btn-danger"><b>Let's Get Started</b></button>
+                <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -402,7 +423,7 @@
       <div class="col-sm-6">
 
         <!-- Web Browser Cookies ::: START -->
-        <div class="list-group">
+        <div class="list-group boxShadow">
          <div class="list-group-item"><b>Web Browser Cookies</b></div>
            <div class="list-group-item">
             <div></div>
@@ -411,14 +432,14 @@
                 <span class="label label-primary">Client-side Data Storage</span>
             </div>
             <div align="right">
-                <button class="btn btn-danger"><b>Let's Get Started</b></button>
+                <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
         <!-- Web Browser Cookies ::: END -->
 
         <!-- Web Browser Sessions ::: START -->
-        <div class="list-group">
+        <div class="list-group boxShadow">
          <div class="list-group-item"><b>Web Browser Sessions</b></div>
            <div class="list-group-item">
             <div></div>
@@ -427,7 +448,7 @@
                 <span class="label label-primary">Client-side Data Storage</span>
             </div>
             <div align="right">
-                <button class="btn btn-danger"><b>Let's Get Started</b></button>
+                <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -449,7 +470,7 @@
       <div class="col-sm-6">
 
         <!-- RabbitMQ ::: START -->
-        <div class="list-group">
+        <div class="list-group boxShadow">
          <div class="list-group-item"><b>RabbitMQ</b></div>
            <div class="list-group-item">
             <div></div>
@@ -458,7 +479,7 @@
                 <span class="label label-primary">Messaging Queues</span>
             </div>
             <div align="right">
-                <button class="btn btn-danger"><b>Let's Get Started</b></button>
+                <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -468,7 +489,7 @@
       <div class="col-sm-6">
 
         <!-- Kafka ::: START -->
-        <div class="list-group">
+        <div class="list-group boxShadow">
          <div class="list-group-item"><b>Kafka</b></div>
            <div class="list-group-item">
             <div></div>
@@ -477,7 +498,7 @@
                 <span class="label label-primary">Messaging Queues</span>
             </div>
             <div align="right">
-                <button class="btn btn-danger"><b>Let's Get Started</b></button>
+                <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -499,7 +520,7 @@
       <div class="col-sm-6">
 
         <!-- Selenium Automation Tool for Java ::: START -->
-        <div class="list-group">
+        <div class="list-group boxShadow">
          <div class="list-group-item"><b>Selenium Automation Tool for Java</b></div>
            <div class="list-group-item">
             <div></div>
@@ -508,7 +529,7 @@
                 <span class="label label-primary">Automation Tool</span>
             </div>
             <div align="right">
-                <button class="btn btn-danger"><b>Let's Get Started</b></button>
+                <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -533,7 +554,7 @@
       <div class="col-sm-6">
           
         <!-- Apache Tomcat ::: START -->
-        <div class="list-group">
+        <div class="list-group boxShadow">
          <div class="list-group-item"><b>Apache Tomcat (Java)</b></div>
            <div class="list-group-item">
             <div></div>
@@ -542,7 +563,7 @@
                 <span class="label label-primary">Web Server</span>
             </div>
             <div align="right">
-                <button class="btn btn-danger"><b>Let's Get Started</b></button>
+                <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -552,7 +573,7 @@
       <div class="col-sm-6">
 
         <!-- Apache HTTP Server ::: START -->
-        <div class="list-group">
+        <div class="list-group boxShadow">
          <div class="list-group-item"><b>Apache HTTP Server (PHP)</b></div>
            <div class="list-group-item">
             <div></div>
@@ -561,7 +582,7 @@
                 <span class="label label-primary">Web Server</span>
             </div>
             <div align="right">
-                <button class="btn btn-danger"><b>Let's Get Started</b></button>
+                <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -583,7 +604,7 @@
       <div class="col-sm-6">
           
         <!-- Godaddy.com ::: START -->
-        <div class="list-group">
+        <div class="list-group boxShadow">
          <div class="list-group-item"><b>Godaddy.com</b></div>
            <div class="list-group-item">
             <div></div>
@@ -592,7 +613,7 @@
                 <span class="label label-primary">Web Hosting Platform</span>
             </div>
             <div align="right">
-                <button class="btn btn-danger"><b>Let's Get Started</b></button>
+                <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -602,7 +623,7 @@
       <div class="col-sm-6">
 
         <!-- AWS ::: START -->
-        <div class="list-group">
+        <div class="list-group boxShadow">
          <div class="list-group-item"><b>Amazon Web Services</b></div>
            <div class="list-group-item">
             <div></div>
@@ -611,7 +632,7 @@
                 <span class="label label-primary">Web Hosting Platform</span>
             </div>
             <div align="right">
-                <button class="btn btn-danger"><b>Let's Get Started</b></button>
+                <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
@@ -633,7 +654,7 @@
       <div class="col-sm-6">
 
         <!-- Search Engine Optimization (SEO) ::: START -->
-        <div class="list-group">
+        <div class="list-group boxShadow">
          <div class="list-group-item"><b>Search Engine Optimization (SEO)</b></div>
            <div class="list-group-item">
             <div></div>
@@ -643,7 +664,7 @@
                 <span class="label label-primary">Web Marketing</span>
             </div>
             <div align="right">
-                <button class="btn btn-danger"><b>Let's Get Started</b></button>
+                <button class="btn btn-xs btn-danger"><b>Let's Get Started</b></button>
             </div>
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->

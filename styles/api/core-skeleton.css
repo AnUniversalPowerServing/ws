@@ -11,6 +11,28 @@ a.navbar-brand { font-size:14px;çolor:#d9534f; }
 .bg-hlgtGrey { background-color:#f5f5f5; }
 .bg-greyMix { background-color:#e8e5ca; }
 .bg-red { background-color:#d9534f;color:#fff; }
+
+.bg-purple { background-color:#673ab7;color:#fff;border:1px solid #673ab7; }
+.bg-lgtPurple { background-color:#c2acea;color:#000;border:1px solid #c2acea;  }
+.btn-purple-o { background-color:#fff;border:2px solid #673ab7;color:#673ab7; }
+.btn-purple { background-color:#673ab7;border:2px solid #673ab7;color:#fff; }
+
+.bg-darkLeaf { background-color:#009688;color:#fff;border:1px solid #009688; }
+.bg-lgtDarkLeaf { background-color:#a8dcd8;color:#000;border:1px solid #a8dcd8; }
+.btn-darkLeaf-o { background-color:#fff;border:2px solid #009688;color:#009688; }
+.btn-darkLeaf { background-color:#009688;border:2px solid #009688;color:#fff; }
+
+.bg-sindur { background-color:#ff5722;color:#fff;border:1px solid #ff5722; }
+.bg-lgtSindur { background-color:#f5c8ba;color:#000;border:1px solid #f5c8ba; }
+.btn-sindur-o { background-color:#fff;border:2px solid #ff5722;color:#ff5722; }
+.btn-sindur { background-color:#ff5722;border:2px solid #ff5722;color:#fff; }
+
+.bg-primary { background-color:#024279;color:#fff;border:1px solid #024279; }
+.bg-lgtPrimary { background-color:#bfdffb;color:#000;border:1px solid #bfdffb; }
+.btn-primary-o { background-color:#fff;border:2px solid #024279;color:#024279; }
+
+
+
 .font-paleBlue { color:#0eb9a9; }
 .font-paleLgtBlue { color:#5ee6da; }
 .font-paleRed {color:#f7857c; }
@@ -53,6 +75,7 @@ h5 { font-size:14px;line-height:22px; }
 .pad10p{ padding:10px; }
 .hide-block { display:none; }
 hr { margin-bottom:10px; }
+.boxShadow { box-shadow:2px 2px 4px 1px #808080; }
 
 @font-face { font-family:thirdDegree;src:url('../../fonts/third-degree.ttf'); }
 
