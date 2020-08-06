@@ -43,7 +43,7 @@
       <div><i>Web development is of:</i></div>
       <div>
          <div><b>Frontend Development</b></div>
-         <div>It deals with designing of User Interface (Web Pages that we are able to see on Screen) of an Application.</div>
+         <div>It deals with design of User Interface (Web Pages that we are able to see on Screen) of an Application.</div>
       </div>
       <div>
          <div><b>Backend Development</b></div>
