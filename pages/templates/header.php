@@ -52,11 +52,13 @@ function build_pageBreadcrumb(jsonData){
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
+      <?php if($DISPLAY_NAVBAR_MENU){ ?>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <?php } ?>
       <a class="navbar-brand" href="#"><span class="font-red"><b>WideSecond.com</b></span></a>
     </div>
     <?php if($DISPLAY_NAVBAR_MENU){ ?>
