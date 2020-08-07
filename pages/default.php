@@ -444,8 +444,9 @@
          <div class="list-group-item bg-darkLeaf"><b>Web Browser Sessions</b></div>
            <div class="list-group-item bg-lgtDarkLeaf">
             <div>
-              Session is a time period of a User access the Web Application and communicates with Web Server.
-              The Data related to the particular Session is stored at Server-Side in the form of files.
+              Session is a time period of a User to access the Web Application and communicates with 
+              the Web Server. The Data related to the particular Session is stored at Server-Side in 
+              the form of files.
             </div>
             <div class="mtop15p">
                 <span class="label btn-darkLeaf-o">Basic</span>
