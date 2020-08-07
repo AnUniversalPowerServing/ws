@@ -10,7 +10,7 @@
   <div class="col-sm-4">
 
     <!-- HTML Programming Language ::: START -->
-    <a href="#">
+    <a href="<?php echo $PROJECT_URL; ?>">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-purple"><b>HTML Programming Language</b></div>
         <div class="list-group-item bg-lgtPurple">
@@ -26,7 +26,7 @@
       <!-- HTML Programming Language ::: END -->
 
       <!-- Font-Awesome Icons ::: START -->
-      <a href="#">
+      <a href="<?php echo $PROJECT_URL; ?>">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-darkPurple"><b>Font-Awesome Icons</b></div>
         <div class="list-group-item bg-lgtDarkPurple">
@@ -41,7 +41,7 @@
       <!-- Font-Awesome Icons ::: END -->
 
       <!-- Typescript ::: START -->
-      <a href="#">
+      <a href="<?php echo $PROJECT_URL; ?>">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-primary"><b>TypeScript</b></div>
         <div class="list-group-item bg-lgtPrimary">
@@ -59,7 +59,7 @@
       <!-- Typescript ::: END -->
 
       <!-- ReactJS ::: START -->
-      <a href="#">
+      <a href="<?php echo $PROJECT_URL; ?>">
        <div class="list-group boxShadow">
         <div class="list-group-item bg-purple"><b>ReactJS</b></div>
         <div class="list-group-item bg-lgtPurple">
@@ -77,7 +77,7 @@
       <!-- ReactJS ::: END -->
 
       <!-- PHP ::: START -->
-      <a href="#">
+      <a href="<?php echo $PROJECT_URL; ?>">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-darkPurple"><b>PHP</b></div>
         <div class="list-group-item  bg-lgtDarkPurple">
@@ -100,7 +100,7 @@
   <div class="col-sm-4">
      
       <!-- Javascript ::: START -->
-      <a href="#">
+      <a href="<?php echo $PROJECT_URL; ?>">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-skyBlue"><b>Javascript</b></div>
         <div class="list-group-item bg-lgtSkyBlue">
@@ -115,7 +115,7 @@
       <!-- Javascript ::: END -->
 
       <!-- JQuery ::: START -->
-      <a href="#">
+      <a href="<?php echo $PROJECT_URL; ?>">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-mud"><b>JQuery</b></div>
         <div class="list-group-item bg-lgtMud">
@@ -130,7 +130,7 @@
       <!-- JQuery ::: END -->
 
       <!-- NodeJS ::: START -->
-      <a href="#">
+      <a href="<?php echo $PROJECT_URL; ?>">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-cement"><b>NodeJS</b></div>
         <div class="list-group-item bg-lgtCement">
@@ -148,7 +148,7 @@
       <!-- NodeJS ::: END -->
 
       <!-- Java (JSPs & Servlets) ::: START -->
-      <a href="#">
+      <a href="<?php echo $PROJECT_URL; ?>">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-mud"><b>Java (JSPs & Servlets)</b></div>
         <div class="list-group-item bg-lgtMud">
@@ -172,7 +172,7 @@
   <div class="col-sm-4">
 
    <!-- CSS ::: START -->
-   <a href="#">
+   <a href="<?php echo $PROJECT_URL; ?>">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-darkLeaf "><b>CSS</b></div>
         <div class="list-group-item bg-lgtDarkLeaf ">
@@ -187,7 +187,7 @@
       <!-- CSS ::: END -->
 
       <!-- ECMAScript ::: START -->
-      <a href="#">
+      <a href="<?php echo $PROJECT_URL; ?>">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-pink"><b>ECMAScript</b></div>
         <div class="list-group-item bg-lgtPink">
@@ -205,7 +205,7 @@
       <!-- ECMAScript ::: END -->
        
       <!-- AngularJS / Angular ::: START -->
-      <a href="#">
+      <a href="<?php echo $PROJECT_URL; ?>">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-darkLeaf"><b>AngularJS / Angular</b></div>
         <div class="list-group-item bg-lgtDarkLeaf">
@@ -226,7 +226,7 @@
       <!-- AngularJS / Angular ::: END -->
 
       <!-- Java Spring Framework ::: START -->
-      <a href="#">
+      <a href="<?php echo $PROJECT_URL; ?>">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-primary"><b>Java (Spring Framework, Spring Boot & Micro-Services) </b></div>
         <div class="list-group-item bg-lgtPrimary">

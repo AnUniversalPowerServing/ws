@@ -5,7 +5,7 @@
 <head>
   <title>WideSecond.com | Learn Tutorials</title>
   <meta name="description" content="Free Web tutorials">
-  <meta name="keywords" content="seo, seo tools, seo khazana, seo report, seositecheckup, seoclerks, seo login, seo jobs, seo services, seo images">
+  <meta name="keywords" content="widesecond, widesecond.com, tutorials, web, technologies, development, programming languages">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/vendor/bootstrap/css/bootstrap.min.css">
