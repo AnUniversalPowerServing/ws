@@ -2,6 +2,9 @@ html,body { overflow-x:hidden; }
 body::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);background-color: #F5F5F5; }
 body::-webkit-scrollbar { width: 6px;background-color: #F5F5F5; }
 body::-webkit-scrollbar-thumb { background-color: #c70d08; }
+
+.overviewHeader-red { background-color:#d9534f;padding: 5px 10px;border: 1px solid #d9534f;color:#fff;box-shadow:2px 2px 4px 1px #808080; }
+
 .navbar-default { border-radius:0px;margin-bottom:0px;border-bottom:2px solid #c70d08; }
 a.navbar-brand { font-size:14px;çolor:#c70d08; }
 @media screen and (min-width: 768px) { .container-fluid .jumbotron { padding:20px; } }
