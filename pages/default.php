@@ -594,7 +594,11 @@
         <div class="list-group boxShadow">
          <div class="list-group-item bg-mud"><b>Apache HTTP Server</b></div>
            <div class="list-group-item bg-lgtMud">
-            <div></div>
+            <div>
+            Apache HTTP Server is a Web Server that helps to deliver the web Content to access through 
+            Internet. In 2009, it became the first Web Server to server more than 100 million Websites in 
+            the world.
+            </div>
             <div class="mtop15p">
                 <span class="label btn-mud-o">Basic</span>
                 <span class="label btn-mud-o">Web Server</span>
@@ -627,7 +631,10 @@
         <div class="list-group boxShadow">
          <div class="list-group-item bg-darkleaf"><b>Godaddy.com</b></div>
            <div class="list-group-item bg-lgtDarkleaf">
-            <div></div>
+            <div>
+            Godaddy is an Internet domain registrar and web hosting platform. User can register a Domain 
+            and start web hosting to make the website available to the Users of the Internet
+            </div>
             <div class="mtop15p">
                 <span class="label btn-darkleaf-o">Basic</span>
                 <span class="label btn-darkleaf-o">Web Hosting Platform</span>
@@ -645,7 +652,11 @@
         <div class="list-group boxShadow">
          <div class="list-group-item bg-purple"><b>Amazon Web Services</b></div>
            <div class="list-group-item bg-lgtPurple">
-            <div></div>
+            <div>
+            Amazon Web Service is a platform that provides IaaS (InfraStructure As a 
+            Service), PaaS (Platform As a Service) and SaaS (Software As a Service) to the Customers 
+            Pay-As-you-Go Model. 
+            </div>
             <div class="mtop15p">
                 <span class="label btn-purple-o">Advanced</span>
                 <span class="label btn-purple-o">Web Hosting Platform</span>
@@ -678,7 +689,10 @@
         <div class="list-group boxShadow">
          <div class="list-group-item bg-pink"><b>Search Engine Optimization (SEO)</b></div>
            <div class="list-group-item bg-lgtPink">
-            <div></div>
+            <div>
+            Search Engine Optimization is a Website Market Technique applied at Search Engines to 
+            display the Website in the First Page during User Search and drives the Maximum Traffic.
+            </div>
             <div class="mtop15p">
                 <span class="label btn-pink-o">Basic</span>
                 <span class="label btn-pink-o">Advanced</span>
