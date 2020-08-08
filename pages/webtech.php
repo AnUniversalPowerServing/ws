@@ -22,11 +22,11 @@ var subMenu = '<?php if(isset($_GET["2"])){ echo $_GET["2"]; } ?>';
 <script type="text/babel">
 var pageContent = {};
 if(menu === 'html'){
-  pageContent = { "contentMenu":[{ "id":"introduction-to-html",
+  pageContent = { "contentMenu":[{ "id":"introduction-to-html-programming",
                                   "label":"Introduction to html", 
                                   "subContentMenu":[{"id":"overview-of-html",
                                                      "label":"Overview to html",  
-                                                     "url":"tutorial/html/overview-of-html" },
+                                                     "url":"tutorial/html/overview-of-html-programming" },
                                                        {"id":"history-of-html",
                                                         "label":"History of HTML",  
                                                         "url":"tutorial/html/history-of-html" }]
@@ -46,9 +46,9 @@ console.log(pageContent);
    <div class="col-sm-9">
      <?php 
        if(isset($_GET["1"]) && isset($_GET["2"])){
-          if($_GET["1"]=='html' && $_GET["2"]=='overview-of-html'){
+          if($_GET["1"]=='html' && $_GET["2"]=='overview-of-html-programming'){
             include_once 'templates/webtech/dev/html/01-introduction-to-html.php';
-          } else if($_GET["1"]=='html' && $_GET["2"]=='history-of-html'){
+          } else if($_GET["1"]=='html' && $_GET["2"]=='history-of-html-programming'){
             include_once 'templates/webtech/dev/html/02-history-of-html.php';
           }
 

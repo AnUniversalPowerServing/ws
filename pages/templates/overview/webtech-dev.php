@@ -10,7 +10,7 @@
   <div class="col-sm-4">
 
     <!-- HTML Programming Language ::: START -->
-    <a href="<?php echo $PROJECT_URL; ?>/tutorial/html/overview-of-html">
+    <a href="<?php echo $PROJECT_URL; ?>/tutorial/html/overview-of-html-programming">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-purple"><b>HTML Programming Language</b></div>
         <div class="list-group-item bg-lgtPurple">

@@ -13,6 +13,18 @@ selectMenuId="introduction-to-html" selectSubMenuId="history-of-html" />, docume
       Working Group). It was initially designed as language for describing Scientific Documents. 
       Later, it was enabled to adapt to describe other types of documents and even applications.
     </div>
+    <div><h2><b>Origin of Idea</b></h2></div>
+    <div>
+      Many of the Scientists who are working at universities and national laboratories in 
+      the different parts of the world visits <i>CERN</i>, spends sometime in 
+      research and get back to their home countries.<br/>
+      British Scientist Tim Berners-Lee was working in a computing services section of CERN found:
+      <ul>
+        <li>As many Scientists visiting CERN and researching on different aspects, maintainence of the 
+          Research Documents based on the Topic-wise 
+        </li>
+      </ul>
+    </div>
     <div class="list-group">
      <div class="list-group-item">
         <div><h2><b>Timeline of HTML and its Evolution</b></h2></div>
