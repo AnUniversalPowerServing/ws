@@ -24,12 +24,12 @@ var pageContent = {};
 if(menu === 'html'){
   pageContent = { "contentMenu":[{ "id":"introduction-to-html-programming",
                                   "label":"Introduction to html", 
-                                  "subContentMenu":[{"id":"overview-of-html",
+                                  "subContentMenu":[{"id":"overview-of-html-programming",
                                                      "label":"Overview to html",  
                                                      "url":"tutorial/html/overview-of-html-programming" },
-                                                       {"id":"history-of-html",
+                                                       {"id":"history-of-html-programming",
                                                         "label":"History of HTML",  
-                                                        "url":"tutorial/html/history-of-html" }]
+                                                        "url":"tutorial/html/history-of-html-programming" }]
                               }]
               };
 }

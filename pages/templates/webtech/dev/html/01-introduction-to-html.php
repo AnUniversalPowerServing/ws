@@ -3,7 +3,7 @@ document.title='Widesecond.com | Introduction to HTML';
 </script>
 <script type="text/babel">
 ReactDOM.render(<ContentMenu data={pageContent} 
-selectMenuId="introduction-to-html" selectSubMenuId="overview-of-html-programming" />, document.getElementById('content'));
+selectMenuId="introduction-to-html-programming" selectSubMenuId="overview-of-html-programming" />, document.getElementById('content'));
 </script>
 <div class="row">
 <div class="col-sm-7">

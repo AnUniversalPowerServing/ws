@@ -4,7 +4,7 @@ document.title='Widesecond.com | History of HTML';
 <script type="text/babel">
 console.log(pageContent);
 ReactDOM.render(<ContentMenu data={pageContent} 
-selectMenuId="introduction-to-html" selectSubMenuId="history-of-html-programming" />, document.getElementById('content'));
+selectMenuId="introduction-to-html-programming" selectSubMenuId="history-of-html-programming" />, document.getElementById('content'));
 </script>
 <div class="row">
 <div class="col-sm-7">
@@ -16,29 +16,45 @@ selectMenuId="introduction-to-html" selectSubMenuId="history-of-html-programming
     <div><h2><b>Origin of Idea</b></h2></div>
     <div>
       Many of the Scientists who are working at universities and national laboratories in 
-      the different parts of the world visits <i>CERN</i>, spends sometime in 
+      the different parts of the world visits <u><i>CERN</i></u>, spends sometime in 
       research and get back to their home countries.<br/>
-      British Scientist Tim Berners-Lee was working in a computing services section of CERN found:
+      British Scientist Tim Berners-Lee was working in a computing services section of CERN found 
+      two limitations / drawbacks:
       <ul>
-        <li>As many Scientists visiting CERN and researching on different aspects, maintainence of the 
-          Research Documents based on the Topic-wise 
+        <li>As many Scientists visiting CERN and researching on different aspects, maintainence of 
+          their Research Documents based on the Topic-wise and making these Research 
+          Documents to be available for the next Scientist who working on this Aspect became difficult.
         </li>
+        <li>There is no contact point for the Scientists working at different universities and 
+          national laboratories around the world to share the information.</li>
       </ul>
     </div>
-    <div class="list-group">
+    <div align="left">
+      This lead him to the idea of implementing <code><i>World Wide Web NeXT Application</i></code>.
+    </div>
+    <div class="list-group mtop15p">
      <div class="list-group-item">
         <div><h2><b>Timeline of HTML and its Evolution</b></h2></div>
         <div class="row">
-          <div class="col-sm-2"><b>1989:</b></div>
-          <div class="col-sm-10">British Scientist Tim Berners-Lee proposed to develop a Global 
-          hypertext system at CERN (The European Organization for Nuclear Research) and he got 
-          approval from his higher officials. <i>This resulted him to the built of World Wide Web</i>.</div>
-          
+          <div class="col-sm-2"><b>1980's:</b></div>
+          <div class="col-sm-10">Tim Berners-Lee had developed First Hyper-Text 
+            System <b>"Enquire"</b> for his own personal use.</div>
         </div><!--/.row -->
-        <div>
-        Therefore, When we open <AnyName>.html with Notepad/Notepad++, and write some text, it will be 
-        display as output, when we open same file in Web Browser.
-        </div>
+        <div class="row">
+          <div align="center" class="col-sm-12">(After Tim Berners-Lee joined CERN)</div>
+        </div><!--/.row -->
+        <div class="row">
+          <div class="col-sm-2"><b>1989:</b></div>
+          <div class="col-sm-10">Tim Berners-Lee proposed <code>Information 
+          Management: A Proposal</code> to develop a Global hypertext system at CERN (The European 
+          Organization for Nuclear Research) and he got approval from his higher officials. <i>This 
+          resulted him to the built of World Wide Web</i>.</div>
+        </div><!--/.row -->
+        <div class="row">
+          <div class="col-sm-2"><b>1990:</b></div>
+          <div class="col-sm-10">Tim Berners-Lee's prototype <b>Web browser</b> on the NeXT computer 
+          came out.</div>
+        </div><!--/.row -->
      </div><!--/.list-group-item -->
     </div><!--/.list-group -->
     <div>
