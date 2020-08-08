@@ -4,7 +4,7 @@ document.title='Widesecond.com | History of HTML';
 <script type="text/babel">
 console.log(pageContent);
 ReactDOM.render(<ContentMenu data={pageContent} 
-selectMenuId="introduction-to-html" selectSubMenuId="history-of-html" />, document.getElementById('content'));
+selectMenuId="introduction-to-html" selectSubMenuId="history-of-html-programming" />, document.getElementById('content'));
 </script>
 <div class="row">
 <div class="col-sm-7">
