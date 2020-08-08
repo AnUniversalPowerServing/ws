@@ -59,7 +59,9 @@ function build_pageBreadcrumb(jsonData){
         <span class="icon-bar"></span>
       </button>
       <?php } ?>
-      <a class="navbar-brand" href="#"><span class="font-red"><b>WideSecond.com</b></span></a>
+      <a class="navbar-brand" href="<?php echo $PROJECT_URL; ?>">
+        <span class="font-red"><b>WideSecond.com</b></span>
+      </a>
     </div>
     <?php if($DISPLAY_NAVBAR_MENU){ ?>
     <div class="collapse navbar-collapse" id="appHeaderNavBar">

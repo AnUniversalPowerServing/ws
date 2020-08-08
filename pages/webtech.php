@@ -1,3 +1,4 @@
+<?php $DISPLAY_NAVBAR_MENU = false; ?>
 <?php include_once 'templates/api.php';  ?>
 <!DOCTYPE html>
 <html lang="en">
