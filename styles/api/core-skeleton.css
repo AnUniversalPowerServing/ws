@@ -75,16 +75,18 @@ a.navbar-brand { font-size:14px;çolor:#c70d08; }
 .font-red, .font-red:hover, a.font-red:hover { color:#c70d08; }
 .font-navyBlue, .font-navyBlue:hover, a.font-navyBlue:hover { color:#024279; }
 
-h1,.h1 { font-size:18px; }
-h2,.h2 { font-size:16px; }
+h1,.h1 { font-size:18px;line-height:24px; }
+h2,.h2 { font-size:16px;line-height:24px; }
 .fs11 { font-size:11px; }
 .fs12 { font-size:12px; }
-.fs14 { font-size:14px;line-height:26px; }
+.fs14 { font-size:14px;line-height:24px; }
+.fs16 { font-size:16px;line-height:24px; }
 .fs18 { font-size:18px; }
 .fw550 { font-weight:550; }
 .mtop5p { margin-top:5px; }
 .mtop10p { margin-top:10px; }
 .mtop15p { margin-top:15px; }
+.mtop25p { margin-top:25px; }
 .mtop35p { margin-top:35px; }
 .mbot0 { margin-bottom:0px; }
 .mbot5p { margin-bottom:5px; }
