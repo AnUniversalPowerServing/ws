@@ -24,14 +24,32 @@ var subMenu = '<?php if(isset($_GET["2"])){ echo $_GET["2"]; } ?>';
 var pageContent = {};
 if(menu === 'html'){
   pageContent = { "contentMenu":[{ "id":"introduction-to-html-programming",
-                                  "label":"Introduction to html", 
-                                  "subContentMenu":[{"id":"overview-of-html-programming",
-                                                     "label":"Overview to html",  
-                                                     "url":"tutorial/html/overview-of-html-programming" },
-                                                       {"id":"history-of-html-programming",
-                                                        "label":"History of HTML",  
-                                                        "url":"tutorial/html/history-of-html-programming" }]
-                              }]
+                                   "label":"Introduction to HTML", 
+                                   "subContentMenu":[{"id":"overview-of-html-programming",
+                                                      "label":"Overview of HTML",  
+                                                      "url":"tutorial/html/overview-of-html-programming" },
+                                                     {"id":"history-of-html-programming",
+                                                      "label":"History of HTML",  
+                                                      "url":"tutorial/html/history-of-html-programming" }]
+                                },
+                                { "id":"html-fundamentals",
+                                   "label":"HTML Fundamentals", 
+                                   "subContentMenu":[{"id":"get-started-with-html-programming",
+                                                      "label":"Get Started",  
+                                                      "url":"tutorial/html/get-started-with-html-programming" },
+                                                     {"id":"tags-and-tag-attributes",
+                                                      "label":"Tags and Tag Attributes",  
+                                                      "url":"tutorial/html/tags-and-tag-attributes" },
+                                                     {"id":"html-favicon",
+                                                      "label":"HTML Favicon",  
+                                                      "url":"tutorial/html/html-favicon" },
+                                                     {"id":"html-custom-scrollbars",
+                                                      "label":"HTML Custom ScrollBars",  
+                                                      "url":"tutorial/html/html-custom-scrollbars" },
+                                                     {"id":"html-colors",
+                                                      "label":"HTML Colors",  
+                                                      "url":"tutorial/html/html-colors" }]
+                                }]
               };
 }
 console.log(pageContent);
@@ -48,7 +66,7 @@ console.log(pageContent);
      <?php 
        if(isset($_GET["1"]) && isset($_GET["2"])){
           if($_GET["1"]=='html' && $_GET["2"]=='overview-of-html-programming'){
-            include_once 'templates/webtech/dev/html/01-introduction-to-html.php';
+            include_once 'templates/webtech/dev/html/01-overview-of-html.php';
           } else if($_GET["1"]=='html' && $_GET["2"]=='history-of-html-programming'){
             include_once 'templates/webtech/dev/html/02-history-of-html.php';
           }

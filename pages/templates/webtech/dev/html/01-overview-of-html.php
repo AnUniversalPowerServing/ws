@@ -7,7 +7,7 @@ selectMenuId="introduction-to-html-programming" selectSubMenuId="overview-of-htm
 </script>
 <div class="row">
 <div class="col-sm-7">
-    <div><h1 class="font-red"><b>Introduction to HTML</b></h1></div>
+    <div><h1 class="font-red"><b>Overview of HTML</b></h1></div>
     <div>The word HTML stands for <b>H</b>yper <b>T</b>ext <b>M</b>arkup <b>L</b>anguage.<br/>
     This HTML Programming is used to design Webpages in Web-Browsers. It is also called as universal 
     language of WWW (World Wide Web) which allows the web developer to organize and define how the 
