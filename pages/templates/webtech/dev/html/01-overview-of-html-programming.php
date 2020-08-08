@@ -3,10 +3,12 @@ document.title='Widesecond.com | Introduction to HTML';
 </script>
 <script type="text/babel">
 ReactDOM.render(<ContentMenu data={pageContent} 
-selectMenuId="introduction-to-html-programming" selectSubMenuId="overview-of-html-programming" />, document.getElementById('content'));
+                             selectMenuId="introduction-to-html-programming" 
+                             selectSubMenuId="overview-of-html-programming" />, 
+                document.getElementById('content'));
 </script>
 <div class="row">
-<div class="col-sm-7">
+<div class="col-sm-7 mbot35p">
     <div><h1 class="font-red"><b>Overview of HTML Programming</b></h1></div>
     <div>The word HTML stands for <b>H</b>yper <b>T</b>ext <b>M</b>arkup <b>L</b>anguage.<br/>
     This HTML Programming is used to design Webpages in Web-Browsers. It is also called as universal 

@@ -4,10 +4,12 @@ document.title='Widesecond.com | History of HTML';
 <script type="text/babel">
 console.log(pageContent);
 ReactDOM.render(<ContentMenu data={pageContent} 
-selectMenuId="introduction-to-html-programming" selectSubMenuId="history-of-html-programming" />, document.getElementById('content'));
+                             selectMenuId="introduction-to-html-programming" 
+                             selectSubMenuId="history-of-html-programming" />, 
+                document.getElementById('content'));
 </script>
 <div class="row">
-<div class="col-sm-7">
+<div class="col-sm-7 mbot35p">
     <div><h1 class="font-red"><b>History of HTML Programming</b></h1></div>
     <div>HTML Programming language was developed by WHATWG (Web Hypertext Application Technology 
       Working Group). It was initially designed as language for describing Scientific Documents. 

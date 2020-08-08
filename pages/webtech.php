@@ -7,6 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/vendor/highlight/css/highlight-night-owl.css">
   <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/styles/api/core-skeleton.css">
   <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/vendor/font-awesome/css/font-awesome.min.css">
   <script src="<?php echo $PROJECT_URL; ?>/js/api/core-skeleton.js"></script>
@@ -16,6 +17,8 @@
   <script src="<?php echo $PROJECT_URL; ?>/vendor/react@16/react.production.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/react-dom@16/react-dom.production.min.js"></script>
   <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/component.app.content.menu.js"></script>
+  <script src="<?php echo $PROJECT_URL; ?>/vendor/highlight/js/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 <script type="text/javascript">
 var menu = '<?php if(isset($_GET["1"])){ echo $_GET["1"]; } ?>';
 var subMenu = '<?php if(isset($_GET["2"])){ echo $_GET["2"]; } ?>';
@@ -37,9 +40,9 @@ if(menu === 'html'){
                                    "subContentMenu":[{"id":"get-started-with-html-programming",
                                                       "label":"Get Started",  
                                                       "url":"tutorial/html/get-started-with-html-programming" },
-                                                     {"id":"tags-and-tag-attributes",
-                                                      "label":"Tags and Tag Attributes",  
-                                                      "url":"tutorial/html/tags-and-tag-attributes" },
+                                                     {"id":"html-tags-and-tag-attributes",
+                                                      "label":"HTML Tags and Tag Attributes",  
+                                                      "url":"tutorial/html/html-tags-and-tag-attributes" },
                                                      {"id":"html-favicon",
                                                       "label":"HTML Favicon",  
                                                       "url":"tutorial/html/html-favicon" },
@@ -66,11 +69,20 @@ console.log(pageContent);
      <?php 
        if(isset($_GET["1"]) && isset($_GET["2"])){
           if($_GET["1"]=='html' && $_GET["2"]=='overview-of-html-programming'){
-            include_once 'templates/webtech/dev/html/01-overview-of-html.php';
+            include_once 'templates/webtech/dev/html/01-overview-of-html-programming.php';
           } else if($_GET["1"]=='html' && $_GET["2"]=='history-of-html-programming'){
-            include_once 'templates/webtech/dev/html/02-history-of-html.php';
+            include_once 'templates/webtech/dev/html/02-history-of-html-programming.php';
+          } else if($_GET["1"]=='html' && $_GET["2"]=='get-started-with-html-programming'){
+            include_once 'templates/webtech/dev/html/03-get-started-with-html-programming.php';
+          } else if($_GET["1"]=='html' && $_GET["2"]=='html-tags-and-tag-attributes'){
+            include_once 'templates/webtech/dev/html/04-html-tags-and-tag-attributes.php';
+          } else if($_GET["1"]=='html' && $_GET["2"]=='html-favicon'){
+            include_once 'templates/webtech/dev/html/05-html-favicon.php';
+          } else if($_GET["1"]=='html' && $_GET["2"]=='html-custom-scrollbars'){
+            include_once 'templates/webtech/dev/html/06-html-custom-scrollbars.php';
+          } else if($_GET["1"]=='html' && $_GET["2"]=='html-colors'){
+            include_once 'templates/webtech/dev/html/07-html-colors.php';
           }
-
        }
        
      ?>
