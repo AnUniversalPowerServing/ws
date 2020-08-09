@@ -1,6 +1,3 @@
-<script type="text/javascript">
-document.title='Widesecond.com | Introduction to HTML';
-</script>
 <script type="text/babel">
 ReactDOM.render(<ContentMenu data={pageContent} 
                              selectMenuId="introduction-to-html-programming" 

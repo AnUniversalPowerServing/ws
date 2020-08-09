@@ -1,6 +1,3 @@
-<script type="text/javascript">
-document.title='Widesecond.com | Get Started with HTML Programming';
-</script>
 <script type="text/babel">
 console.log(pageContent);
 ReactDOM.render(<ContentMenu data={pageContent} 
