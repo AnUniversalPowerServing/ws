@@ -38,14 +38,17 @@ ReactDOM.render(<ContentMenu data={pageContent}
     &lt;!DOCTYPE html&gt;
     &lt;html&gt;
     &lt;head&gt;
-    &lt;-- Header Section --&gt;
+    &lt;-- Header Section ::: START --&gt;
+    &lt;-- Header Section ::: END --&gt;
     &lt;/head&gt;
     &lt;body&gt;
-    &lt;-- Body Section --&gt;
+    &lt;-- Body Section ::: START --&gt;
+    &lt;-- Body Section ::: END --&gt;
     &lt;/body&gt;
     &lt;/html&gt;
     </code>
     </pre>
+    <div align="center" class="mbot15p"><b>index.html</b></div>
     <!-- -->
     <div class="row">
       <div class="col-sm-3"><code><b>&lt;!DOCTYPE html&gt;</b></code></div>

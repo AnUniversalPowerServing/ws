@@ -75,6 +75,7 @@ a.navbar-brand { font-size:14px;çolor:#c70d08; }
 .font-red, .font-red:hover, a.font-red:hover { color:#c70d08; }
 .font-navyBlue, .font-navyBlue:hover, a.font-navyBlue:hover { color:#024279; }
 
+.img20s { width:20px;height:20px; }
 h1,.h1 { font-size:18px;line-height:24px; }
 h2,.h2 { font-size:16px;line-height:24px; }
 .fs11 { font-size:11px; }
@@ -91,6 +92,7 @@ h2,.h2 { font-size:16px;line-height:24px; }
 .mbot0 { margin-bottom:0px; }
 .mbot5p { margin-bottom:5px; }
 .mbot10p { margin-bottom:10px; }
+.mbot15p { margin-bottom:15px; }
 .mbot35p { margin-bottom:35px; }
 .noListStyle { list-style-type:none; }
 .code-htmlTags { font-size: 0;line-height:18px; }
