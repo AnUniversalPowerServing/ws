@@ -74,11 +74,15 @@ console.log(pageContent);
 <?php include_once 'templates/header.php'; ?>
 
 <div class="container-fluid fs14 mtop15p">
+<?php if(isset($_GET["1"]) && isset($_GET["2"])){  
+   if($_GET["1"]==$WEBTECH_ANGULAR && $_GET["2"]==$WEBTECH_ANGULAR_ANGULARJS){
+      include_once 'templates/webtech/dev/angular/00-angular-and-angular-js.php';
+  } else { ?>
+
   <div class="row">
    <div id="content" class="col-sm-3"></div>
    <div class="col-sm-9">
      <?php 
-       if(isset($_GET["1"]) && isset($_GET["2"])){
           if($_GET["1"]==$WEBTECH_HTML && $_GET["2"]==$WEBTECH_HTML_OVERVIEW){
             include_once 'templates/webtech/dev/html/01-overview-of-html-programming.php';
           } else if($_GET["1"]==$WEBTECH_HTML && $_GET["2"]==$WEBTECH_HTML_HISTORY){
@@ -103,12 +107,11 @@ console.log(pageContent);
           } else if($_GET["1"]==$WEBTECH_ANGULAR && $_GET["2"]==$WEBTECH_ANGULAR_ARCHITECTURE){
             include_once 'templates/webtech/dev/angular/02-architecture-of-angular.php';
           }
-       }
-       
+
      ?>
    </div>
   </div>
+<?php } } ?>
 </div>
-
 </body>
 </html>
