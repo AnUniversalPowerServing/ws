@@ -30,30 +30,41 @@ if(menu === 'html'){
                                    "label":"Introduction to HTML", 
                                    "subContentMenu":[{"id":"overview-of-html-programming",
                                                       "label":"Overview of HTML",  
-                                                      "url":"tutorial/html/overview-of-html-programming" },
+                                                      "url":"tutorial/webtech/html/overview-of-html-programming" },
                                                      {"id":"history-of-html-programming",
                                                       "label":"History of HTML",  
-                                                      "url":"tutorial/html/history-of-html-programming" }]
+                                                      "url":"tutorial/webtech/html/history-of-html-programming" }]
                                 },
                                 { "id":"html-fundamentals",
                                    "label":"HTML Fundamentals", 
                                    "subContentMenu":[{"id":"get-started-with-html-programming",
                                                       "label":"Get Started",  
-                                                      "url":"tutorial/html/get-started-with-html-programming" },
+                                                      "url":"tutorial/webtech/html/get-started-with-html-programming" },
                                                      {"id":"html-tags-and-tag-attributes",
                                                       "label":"HTML Tags and Tag Attributes",  
-                                                      "url":"tutorial/html/html-tags-and-tag-attributes" },
+                                                      "url":"tutorial/webtech/html/html-tags-and-tag-attributes" },
                                                      {"id":"html-favicon",
                                                       "label":"HTML Favicon",  
-                                                      "url":"tutorial/html/html-favicon" },
+                                                      "url":"tutorial/webtech/html/html-favicon" },
                                                      {"id":"html-custom-scrollbars",
                                                       "label":"HTML Custom ScrollBars",  
-                                                      "url":"tutorial/html/html-custom-scrollbars" },
+                                                      "url":"tutorial/webtech/html/html-custom-scrollbars" },
                                                      {"id":"html-colors",
                                                       "label":"HTML Colors",  
-                                                      "url":"tutorial/html/html-colors" }]
+                                                      "url":"tutorial/webtech/html/html-colors" }]
                                 }]
               };
+} else if(menu === 'angular'){
+  pageContent = { "contentMenu":[{ "id":"introduction-to-angular-framework",
+                                   "label":"Introduction to Angular Framework", 
+                                   "subContentMenu":[{"id":"overview-of-angular-framework",
+                                                      "label":"Overview of Angular Framework",  
+                                                      "url":"tutorial/webtech/angular/overview-of-angular-framework" },
+                                                      {"id":"architecture-of-angular-application",
+                                                      "label":"Architecture of Angular Application",  
+                                                      "url":"tutorial/webtech/angular/architecture-of-angular-application" }]
+                                }]
+                };
 }
 console.log(pageContent);
 </script>
@@ -82,6 +93,15 @@ console.log(pageContent);
             include_once 'templates/webtech/dev/html/06-html-custom-scrollbars.php';
           } else if($_GET["1"]==$WEBTECH_HTML && $_GET["2"]==$WEBTECH_HTML_COLORS){
             include_once 'templates/webtech/dev/html/07-html-colors.php';
+          }
+
+          /**
+           * Angular Tutorials
+           */
+          else if($_GET["1"]==$WEBTECH_ANGULAR && $_GET["2"]==$WEBTECH_ANGULAR_OVERVIEW){
+            include_once 'templates/webtech/dev/angular/01-overview-of-angular.php';
+          } else if($_GET["1"]==$WEBTECH_ANGULAR && $_GET["2"]==$WEBTECH_ANGULAR_ARCHITECTURE){
+            include_once 'templates/webtech/dev/angular/02-architecture-of-angular.php';
           }
        }
        

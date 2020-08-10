@@ -9,7 +9,8 @@ DirectoryIndex pages/default.php
 RewriteEngine on
 
 # Rewrite URLs'
-RewriteRule tutorial/([^/]+)/([^/]+)$ pages/webtech.php?1=$1&2=$2 [QSA,L]
+RewriteRule tutorial/webtech/([^/]+)/([^/]+)$ pages/webtech.php?1=$1&2=$2 [QSA,L]
+RewriteRule tutorial/apptech/([^/]+)/([^/]+)$ pages/apptech.php?1=$1&2=$2 [QSA,L]
 
 # RewriteRule tutorial/reactjs/([^/]+)$ pages/reactjs.php?1=$1 [QSA,L]
 # RewriteRule tutorial/seo/([^/]+)$ pages/seo.php?1=$1 [QSA,L]

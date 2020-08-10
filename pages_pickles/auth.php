@@ -10,6 +10,10 @@
   <script src="<?php echo $PROJECT_URL; ?>/js/api/core-skeleton.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/jquery/jquery.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="<?php echo $PROJECT_URL; ?>/vendor/babel-standalone@6/babel.min.js"></script>
+  <script src="<?php echo $PROJECT_URL; ?>/vendor/react@16/react.production.min.js"></script>
+  <script src="<?php echo $PROJECT_URL; ?>/vendor/react-dom@16/react-dom.production.min.js"></script>
+  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/component.auth.register.js"></script>
 <style>
 
 </style>
@@ -18,10 +22,15 @@ $(document).ready(function(){
  $('#pickles-auth').addClass('active');
 });
 </script>
+<script type="text/babel">
+ReactDOM.render(<AuthRegister />, document.getElementById('root'));
+</script>
 </head>
 <body>
 
 <?php include_once 'templates/header.php'; ?>
+
+<div id="root"></div>
 
 </body>
 </html>

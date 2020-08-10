@@ -115,7 +115,12 @@ h5 { font-size:14px;line-height:22px; }
 hr { margin-bottom:10px; }
 .boxShadow { box-shadow:2px 2px 4px 1px #808080; }
 
+.bordRad0 { border-radius:0px; }
+
 @font-face { font-family:thirdDegree;src:url('../../fonts/third-degree.ttf'); }
+
+.form-group>label { position:relative;width:100%; }
+.form-group>label>span { position:absolute;right:0;color:#999;font-size:11px; }
 
 /* images: zoom-hover Effect within Divsion */
 div.img-hover-zoom { position: relative;height: 300px;overflow: hidden; }

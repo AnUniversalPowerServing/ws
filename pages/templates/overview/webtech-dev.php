@@ -10,7 +10,7 @@
   <div class="col-sm-4">
 
     <!-- HTML Programming Language ::: START -->
-    <a href="<?php echo $PROJECT_URL; ?>/tutorial/html/overview-of-html-programming">
+    <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/html/overview-of-html-programming">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-purple"><b>HTML Programming Language</b></div>
         <div class="list-group-item bg-lgtPurple">
@@ -205,7 +205,7 @@
       <!-- ECMAScript ::: END -->
        
       <!-- AngularJS / Angular ::: START -->
-      <a href="<?php echo $PROJECT_URL; ?>">
+      <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/angular/overview-of-angular-framework">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-darkLeaf"><b>AngularJS / Angular</b></div>
         <div class="list-group-item bg-lgtDarkLeaf">
