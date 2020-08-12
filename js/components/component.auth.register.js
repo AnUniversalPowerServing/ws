@@ -5,17 +5,17 @@ class AuthRegister extends React.Component {
           <div className="col-sm-4">
 
             <div className="form-group">
-              <label>Surname <span>REQUIRED</span></label>
+              <label>Surname <span>Required</span></label>
               <input className="form-control" placeholder="Enter Surname" />
             </div>
 
             <div className="form-group">
-              <label>Name <span>REQUIRED</span></label>
+              <label>Name <span>Required</span></label>
               <input className="form-control" placeholder="Enter Name" />
             </div>
             
             <div className="form-group">
-              <label>Gender <span>REQUIRED</span></label>
+              <label>Gender <span>Required</span></label>
               <select className="form-control">
                 <option value="">Select Gender</option>
                 <option value="MALE">Male</option>
@@ -24,12 +24,12 @@ class AuthRegister extends React.Component {
             </div>
 
             <div className="form-group">
-              <label>Email Address <span>REQUIRED</span></label>
+              <label>Email Address <span>Required</span></label>
               <input className="form-control" placeholder="Enter Email Address" />
             </div>
 
             <div className="form-group">
-              <label>Mobile Number <span>REQUIRED</span></label>
+              <label>Mobile Number <span>Required</span></label>
               <div className="input-group">
                 <div className="input-group-btn">
                     <div className="dropdown">
