@@ -3,6 +3,20 @@ class AuthRegister extends React.Component {
     return (<div className="container-fluid mtop15p">
       <div className="row">
           <div className="col-sm-4">
+            <div align="center">
+              <h4><b>Create an Account</b></h4>
+            </div>
+            <div className="step-badges mtop15p mbot15p">
+            <div align="center" className="col-xs-4">
+              <span id="badge-auth-reg-genInfo" className="badge active"onclick="javascript:sel_auth_badges(this.id);">1</span>
+            </div>
+            <div align="center" className="col-xs-4">
+              <span id="badge-auth-reg-setPassword" className="badge" onclick="javascript:sel_auth_badges(this.id);">2</span>
+            </div>
+            <div align="center" className="col-xs-4">
+              <span id="badge-auth-reg-securityQ" className="badge" onclick="javascript:sel_auth_badges(this.id);">3</span>
+            </div>
+            </div>
 
             <div className="form-group">
               <label>Surname <span>Required</span></label>
@@ -51,11 +65,11 @@ class AuthRegister extends React.Component {
               </div>
             </div>
 
-            <div class="row">
-              <div class="col-sm-6">
+            <div className="row">
+              <div className="col-sm-6">
                 <button className="btn btn-default form-control"><b>Next</b></button>
               </div>
-              <div class="col-sm-6">
+              <div className="col-sm-6">
                 <button className="btn btn-default form-control"><b>Reset</b></button>
               </div>
             </div>
