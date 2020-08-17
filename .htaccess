@@ -6,6 +6,8 @@ php_value date.timezone 'Asia/kolkata'
 
 DirectoryIndex pages/default.php
 
+Redirect 404 / http://widesecond.com/
+
 RewriteEngine on
 
 # Rewrite URLs'
