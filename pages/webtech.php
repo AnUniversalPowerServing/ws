@@ -96,8 +96,8 @@ console.log(pageContent);
   } else { ?>
 
   <div class="row">
-   <div id="content" class="col-sm-3"></div>
-   <div class="col-sm-9">
+   <div id="content" class="col-sm-4"></div>
+   <div class="col-sm-8">
      <?php 
           if($_GET["1"]==$WEBTECH_HTML && $_GET["2"]==$WEBTECH_HTML_OVERVIEW){
             include_once 'templates/webtech/dev/html/01-overview-of-html-programming.php';
