@@ -226,7 +226,7 @@
       <!-- AngularJS / Angular ::: END -->
 
       <!-- Java Spring Framework ::: START -->
-      <a href="<?php echo $PROJECT_URL; ?>">
+      <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/java-spring-framework/overview-of-java-spring-framework">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-primary"><b>Java (Spring Framework, Spring Boot & Micro-Services) </b></div>
         <div class="list-group-item bg-lgtPrimary">

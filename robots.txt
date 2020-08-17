@@ -2,3 +2,4 @@ User-agent: *
 Allow: /*
 Sitemap: http://widesecond.com/sm/tutorials.webtech.html.xml
 Sitemap: http://widesecond.com/sm/tutorials.webtech.java.xml
+Sitemap: http://widesecond.com/sm/tutorials.webtech.java.spring.xml
