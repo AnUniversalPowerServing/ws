@@ -65,6 +65,14 @@ if(menu === 'html'){
                                                       "url":"tutorial/webtech/angular/architecture-of-angular-application" }]
                                 }]
                 };
+} else if(menu === 'java'){
+  pageContent = { "contentMenu":[{ "id":"introduction-to-datetime",
+                                   "label":"Date Time", 
+                                   "subContentMenu":[{"id":"java-to-oracle-database-date-time",
+                                                      "label":"Oracle Database Date Time",  
+                                                      "url":"tutorial/webtech/java/java-to-oracle-database-date-time" }]
+                                }]
+                };
 }
 console.log(pageContent);
 </script>
@@ -108,6 +116,12 @@ console.log(pageContent);
             include_once 'templates/webtech/dev/angular/02-architecture-of-angular.php';
           }
 
+          /**
+           * Java tutorials
+           */
+          else if($_GET["1"]==$WEBTECH_JAVA && $_GET["2"]==$WEBTECH_ORACLEDB_DATETIME){
+            include_once 'templates/webtech/dev/java/01-dateTime.php';
+          }
      ?>
    </div>
   </div>

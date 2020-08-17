@@ -1,54 +1,102 @@
 class AuthRegister extends React.Component {
-  render(){
-    return (<div className="container-fluid mtop15p">
+  constructor(props) {
+    super(props);
+    this.state = { style: { form:{ color:'#444242' },
+                            badge: { active: { backgroundColor:'#444242', color:'#fff' },
+                                     nonActive: { backgroundColor:'#fff', color:'#444242' } },
+                            formElement:{ height:'40px' }
+                          },
+                   badges:[{menu:'badge-auth-reg-emailMobile', 
+                            content:'content-auth-reg-emailMobile', isActive:true },
+                           {menu:'badge-auth-reg-genInfo', 
+                            content:'content-auth-reg-genInfo', isActive:false },
+                           {menu:'badge-auth-reg-setPassword', 
+                            content:'content-auth-reg-setPassword', isActive:false},
+                           {menu:'badge-auth-reg-securityQ',
+                            content:'content-auth-reg-securityQ', isActive:false}]
+                };
+    this.sel_BadgeMenu = this.sel_BadgeMenu.bind(this);
+  }
+  
+  ui_viewBadgeMenu(menu){
+    let html = [];
+    let badges = this.state.badges;
+    for(var i = 0; i<badges.length; i++){
+      if(badges[i].isActive){
+        html.push(<div align="center" className="col-xs-3">
+                <span id={badges[i].menu} className="badge" 
+                onClick={(event)=>this.sel_BadgeMenu(event.target.id)}
+                style={this.state.style.badge.active}>{i+1}
+                </span>
+              </div>);
+      } else {
+        html.push(<div align="center" className="col-xs-3">
+                <span id={badges[i].menu} className="badge" 
+                style={this.state.style.badge.nonActive}
+                onClick={(event)=>this.sel_BadgeMenu(event.target.id)}>{i+1}
+                </span>
+              </div>);
+      }
+    }
+    console.log(badges);
+    return html;
+  }
+
+  sel_BadgeMenu(menu){
+    let badges = this.state.badges;
+    for(var i = 0; i<badges.length; i++){
+      if(menu!==-1){
+        if(menu === badges[i].menu){ 
+          badges[i].isActive = true; 
+          document.getElementById(badges[i].content).style.display='block';
+        }
+        else { 
+          badges[i].isActive = false;
+          document.getElementById(badges[i].content).style.display='none';
+        }
+      }
+    }
+    this.setState({ badges });
+  }
+
+  ui_viewEmailMob(){
+    return (<div>
       <div className="row">
-          <div className="col-sm-4">
-            <div align="center">
-              <h4><b>Create an Account</b></h4>
-            </div>
-            <div className="step-badges mtop15p mbot15p">
-            <div align="center" className="col-xs-4">
-              <span id="badge-auth-reg-genInfo" className="badge active"onclick="javascript:sel_auth_badges(this.id);">1</span>
-            </div>
-            <div align="center" className="col-xs-4">
-              <span id="badge-auth-reg-setPassword" className="badge" onclick="javascript:sel_auth_badges(this.id);">2</span>
-            </div>
-            <div align="center" className="col-xs-4">
-              <span id="badge-auth-reg-securityQ" className="badge" onclick="javascript:sel_auth_badges(this.id);">3</span>
-            </div>
-            </div>
+      <div className="col-sm-12">
+      <div align="center" className="form-group mtop15p mbot15p">
+	      <h5><b>Provide Your Communication Details</b></h5>
+      </div>
 
-            <div className="form-group">
-              <label>Surname <span>Required</span></label>
-              <input className="form-control" placeholder="Enter Surname" />
-            </div>
+      <div className="form-group">
+        <label>Email Address <span>Required</span></label>
+        <div className="input-group">
+          <input className="form-control" placeholder="Enter Email Address" 
+                style={this.state.style.formElement} />
+          <div className="input-group-btn">
+            <button className="btn btn-primary" style={this.state.style.formElement}><b>Verify</b></button>
+          </div>
+        </div>
+      </div>
 
-            <div className="form-group">
-              <label>Name <span>Required</span></label>
-              <input className="form-control" placeholder="Enter Name" />
-            </div>
-            
-            <div className="form-group">
-              <label>Gender <span>Required</span></label>
-              <select className="form-control">
-                <option value="">Select Gender</option>
-                <option value="MALE">Male</option>
-                <option value="FEMALE">Female</option>
-              </select>
-            </div>
+      <div className="form-group">
+        <label>OTP Code (To verify Email Address)<span>Required</span></label>
+        <div className="input-group">
+          <input className="form-control" placeholder="Enter Email Address" 
+                style={this.state.style.formElement} />
+          <div className="input-group-btn">
+            <button className="btn btn-primary" style={this.state.style.formElement}><b>Validate</b></button>
+          </div>
+        </div>
+      </div>
 
-            <div className="form-group">
-              <label>Email Address <span>Required</span></label>
-              <input className="form-control" placeholder="Enter Email Address" />
-            </div>
-
-            <div className="form-group">
-              <label>Mobile Number <span>Required</span></label>
-              <div className="input-group">
-                <div className="input-group-btn">
-                    <div className="dropdown">
-                        <button className="btn btn-default dropdown-toggle bordRad0" 
-                         type="button" data-toggle="dropdown">+91
+      <div className="form-group">
+        <label>Mobile Number <span>Required</span></label>
+        <div className="input-group">
+          <div className="input-group-btn">
+            <div className="dropdown">
+              <button className="btn btn-default dropdown-toggle bordRad0" 
+                        style={this.state.style.formElement} 
+                         type="button" data-toggle="dropdown">+91 &nbsp;
                         <span className="caret"></span></button>
                         <ul className="dropdown-menu">
                             <li><a href="#">+91</a></li>
@@ -56,14 +104,73 @@ class AuthRegister extends React.Component {
                     </div>
                 </div>
                 <input id="auth-reg-genInfo-mobile" className="form-control" 
-                placeholder="Enter Mobile Number" 
+                placeholder="Enter Mobile Number" style={this.state.style.formElement}
                     onkeypress="javascript:return core_validate_allowOnlyNumeric(event);"/>
                 <div className="input-group-btn">
-                    <button id="auth-reg-genInfo-mobile-verifyBtn" className="btn btn-default hide-block" onclick="javascript:submit_auth_reg_verifyMobile();"><b>Verify</b></button>
-                    <button id="auth-reg-genInfo-mobile-changeBtn" className="btn btn-default hide-block" onclick="javascript:submit_auth_reg_changeMobile();"><b>Change</b></button>
+                  <button className="btn btn-primary" style={this.state.style.formElement}><b>Verify</b></button>
                 </div>
-              </div>
+        </div>
+      </div>
+
+      <div className="form-group">
+        <label>OTP Code (To verify Email Address)<span>Required</span></label>
+        <div className="input-group">
+          <input className="form-control" placeholder="Enter Email Address" 
+                style={this.state.style.formElement} />
+          <div className="input-group-btn">
+            <button className="btn btn-primary" style={this.state.style.formElement}><b>Validate</b></button>
+          </div>
+        </div>
+      </div>
+
+      </div>
+      </div>
+      <div className="row">
+        <div className="col-sm-1"></div>
+        <div className="col-sm-10">
+          <div className="form-group">
+            <button className="btn btn-primary form-control"><b>Next</b></button>
+          </div>
+        </div>
+        <div className="col-sm-1"></div>
+      </div>
+    </div>);
+  }
+
+  ui_viewGenInfo(){
+    return (<div>
+      <div align="center" className="form-group mtop15p mbot15p">
+	      <h5><b>Provide Basic Information to Create Account</b></h5>
+      </div>
+
+      <div className="form-group">
+              <label>Surname <span>Required</span></label>
+              <input className="form-control" placeholder="Enter Surname" 
+              style={this.state.style.formElement} />
             </div>
+
+            <div className="form-group">
+              <label>Name <span>Required</span></label>
+              <input className="form-control" placeholder="Enter Name" 
+              style={this.state.style.formElement} />
+            </div>
+            
+            <div className="form-group">
+              <label>Gender <span>Required</span></label>
+              <select className="form-control" style={this.state.style.formElement}>
+                <option value="">Select Gender</option>
+                <option value="MALE">Male</option>
+                <option value="FEMALE">Female</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label>Date of Birth <span>Required</span></label>
+              <input type="date" className="form-control" placeholder="Enter Name" 
+              style={this.state.style.formElement} />
+            </div>
+ 
+           
 
             <div className="row">
               <div className="col-sm-6">
@@ -73,6 +180,27 @@ class AuthRegister extends React.Component {
                 <button className="btn btn-default form-control"><b>Reset</b></button>
               </div>
             </div>
+      </div>);
+  }
+
+  render(){
+    return (<div className="container-fluid mtop15p" style={this.state.style.form}>
+      <div className="row">
+          <div className="col-sm-4">
+
+            <div align="center">
+              <h4><b>Create an Account</b></h4>
+            </div>
+            <div className="step-badges mtop15p mbot15p">
+            {this.ui_viewBadgeMenu(-1)}
+            </div>
+
+            <div id="content-auth-reg-emailMobile">{this.ui_viewEmailMob()}</div>
+            <div id="content-auth-reg-genInfo" style={{display:'none'}}>{this.ui_viewGenInfo()}</div>
+            <div id="content-auth-reg-setPassword" style={{display:'none'}}>223334</div>
+            <div id="content-auth-reg-securityQ" style={{display:'none'}}>76444</div>
+               
+            
 
           </div>
       </div>

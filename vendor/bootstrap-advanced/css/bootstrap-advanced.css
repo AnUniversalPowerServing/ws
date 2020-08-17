@@ -8,7 +8,7 @@
 .curpoint { cursor:pointer; }
 /* Page Related CSS ::: Start */
 .step-badges { height:40px;cursor:pointer;margin-top:15px; }
-.step-badges>div>span.badge { font-size:30px;background-color:#c70d08;color:#fff5c4; }
-.step-badges>div>span.badge.active { font-size:30px;background-color:#fff5c4;color:#c70d08; }
+.step-badges>div>span.badge { font-size:30px; }
+.step-badges>div>span.badge.active { font-size:30px; }
 .hide-block { display:none; }
 /* Page Related CSS ::: End */
