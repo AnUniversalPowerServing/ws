@@ -27,7 +27,7 @@ ReactDOM.render(<ContentMenu data={pageContent}
 <div class="col-sm-5">
 <div class="list-group">
 <div class="list-group-item">
-<div><h5><b>Spring Framework Test Support</b></h5></div>
+<div><h4><b>Spring Framework Test Support</b></h4></div>
 <div>Spring Framework supports the JUNIT and TestNG Testing Frameworks.</div>
 </div><!--/.list-group-item -->
 </div><!--/.list-group -->
