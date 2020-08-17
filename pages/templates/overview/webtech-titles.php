@@ -15,6 +15,10 @@ $WEBTECH_ANGULAR_ARCHITECTURE = 'architecture-of-angular-application';
 
 $WEBTECH_JAVA = 'java';
 $WEBTECH_ORACLEDB_DATETIME = 'java-to-oracle-database-date-time';
+
+$WEBTECH_JAVASPRING = 'java-spring-framework';
+$WEBTECH_JAVASPRING_OVERVIEW = 'overview-of-java-spring-framework';
+
 ?>
 <?php 
   if(isset($_GET["1"]) && isset($_GET["2"])){
@@ -46,10 +50,18 @@ $WEBTECH_ORACLEDB_DATETIME = 'java-to-oracle-database-date-time';
     }
 
     /**
-     * Java tutorials
+     * Java Tutorials
      */
     else if($_GET["1"]==$WEBTECH_JAVA && $_GET["2"]==$WEBTECH_ORACLEDB_DATETIME){
       echo '<title>Widesecond.com | Oracle Database Date Time</title>';
     }
+
+    /**
+     * Java Spring Framework
+     */
+    else if($_GET["1"]==$WEBTECH_JAVASPRING && $_GET["2"]==$WEBTECH_JAVASPRING_OVERVIEW){
+      echo '<title>Widesecond.com | Overview of Java Spring Framework</title>';
+    }
+
   }
 ?>

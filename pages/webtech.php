@@ -73,6 +73,14 @@ if(menu === 'html'){
                                                       "url":"tutorial/webtech/java/java-to-oracle-database-date-time" }]
                                 }]
                 };
+} else if(menu === 'java-spring-framework'){
+  pageContent = { "contentMenu":[{ "id":"introduction-to-java-spring-framework",
+                                   "label":"Introduction to Java Spring Framework", 
+                                   "subContentMenu":[{"id":"overview-of-java-spring-framework",
+                                                      "label":"Overview of Java Spring Framework",  
+                                                      "url":"tutorial/webtech/java-spring-framework/overview-of-java-spring-framework" }]
+                                }]
+                };
 }
 console.log(pageContent);
 </script>
@@ -121,6 +129,13 @@ console.log(pageContent);
            */
           else if($_GET["1"]==$WEBTECH_JAVA && $_GET["2"]==$WEBTECH_ORACLEDB_DATETIME){
             include_once 'templates/webtech/dev/java/01-dateTime.php';
+          }
+
+          /**
+           * Java Spring Framework
+           */
+          else if($_GET["1"]==$WEBTECH_JAVASPRING && $_GET["2"]==$WEBTECH_JAVASPRING_OVERVIEW){
+            include_once 'templates/webtech/dev/java-spring/01-introduction-to-java-spring-framework.php';
           }
      ?>
    </div>
