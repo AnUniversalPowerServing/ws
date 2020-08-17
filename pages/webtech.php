@@ -75,7 +75,7 @@ if(menu === 'html'){
                 };
 } else if(menu === 'java-spring-framework'){
   pageContent = { "contentMenu":[{ "id":"introduction-to-java-spring-framework",
-                                   "label":"Introduction to Java Spring Framework", 
+                                   "label":"Introduction to Spring Framework", 
                                    "subContentMenu":[{"id":"overview-of-java-spring-framework",
                                                       "label":"Overview of Java Spring Framework",  
                                                       "url":"tutorial/webtech/java-spring-framework/overview-of-java-spring-framework" }]
@@ -96,8 +96,8 @@ console.log(pageContent);
   } else { ?>
 
   <div class="row">
-   <div id="content" class="col-sm-4"></div>
-   <div class="col-sm-8">
+   <div id="content" class="col-sm-3"></div>
+   <div class="col-sm-9">
      <?php 
           if($_GET["1"]==$WEBTECH_HTML && $_GET["2"]==$WEBTECH_HTML_OVERVIEW){
             include_once 'templates/webtech/dev/html/01-overview-of-html-programming.php';
