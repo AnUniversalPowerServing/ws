@@ -78,7 +78,10 @@ if(menu === 'html'){
                                    "label":"Introduction to Spring Framework", 
                                    "subContentMenu":[{"id":"overview-of-java-spring-framework",
                                                       "label":"Overview of Java Spring Framework",  
-                                                      "url":"tutorial/webtech/java-spring-framework/overview-of-java-spring-framework" }]
+                                                      "url":"tutorial/webtech/java-spring-framework/overview-of-java-spring-framework" },
+                                                      {"id":"modules-of-java-spring-framework",
+                                                      "label":"Modules of Java Spring Framework",  
+                                                      "url":"tutorial/webtech/java-spring-framework/modules-of-java-spring-framework" }]
                                 }]
                 };
 }
@@ -136,6 +139,8 @@ console.log(pageContent);
            */
           else if($_GET["1"]==$WEBTECH_JAVASPRING && $_GET["2"]==$WEBTECH_JAVASPRING_OVERVIEW){
             include_once 'templates/webtech/dev/java-spring/01-introduction-to-java-spring-framework.php';
+          } else if($_GET["1"]==$WEBTECH_JAVASPRING && $_GET["2"]==$WEBTECH_JAVASPRING_MODULES){
+            include_once 'templates/webtech/dev/java-spring/02-modules-of-spring.php';
           }
      ?>
    </div>
