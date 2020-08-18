@@ -1,7 +1,9 @@
 <?php 
 $PROJECT_MODE='PROD';
 $PROJECT_URL = 'http://localhost/ws';
-if($PROJECT_MODE=='PROD'){ $PROJECT_URL = 'http://widesecond.com'; }
+if($PROJECT_MODE=='PROD'){ 
+ $PROJECT_URL = (isset($_SERVER['HTTPS'])&&$_SERVER['HTTPS']==='on'?"https":"http")."://".$_SERVER['HTTP_HOST']; 
+}
 ?>
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo $PROJECT_URL; ?>/favicon.ico?v=2"/>
 <script type="text/javascript">

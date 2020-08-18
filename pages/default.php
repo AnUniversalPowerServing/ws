@@ -41,8 +41,8 @@
   </div><!--/.col-sm-8 -->
   <div class="col-sm-4">
    <!-- -->
-   <a href="http://www.widesecond.com/tutorial/webtech/java/java-to-oracle-database-date-time">
-      <div class="list-group boxShadow">
+   <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/java/java-to-oracle-database-date-time">
+      <div class="list-group mtop15p boxShadow">
         <div class="list-group-item bg-pink"><b>Java programming Language</b></div>
         <div class="list-group-item bg-lgtPink">
           <div>
