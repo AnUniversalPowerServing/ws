@@ -72,7 +72,7 @@ if(menu === 'html'){
                                                       "label":"Oracle Database Date Time",  
                                                       "url":"tutorial/webtech/java/java-to-oracle-database-date-time" },
                                                      {"id":"java-interfaces-comparable-and-comparator",
-                                                      "label":"Oracle Database Date Time",  
+                                                      "label":"Comparable and Comparator",  
                                                       "url":"tutorial/webtech/java/java-interfaces-comparable-and-comparator" }]
                                 }]
                 };
