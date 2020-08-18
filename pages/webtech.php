@@ -70,7 +70,10 @@ if(menu === 'html'){
                                    "label":"Date Time", 
                                    "subContentMenu":[{"id":"java-to-oracle-database-date-time",
                                                       "label":"Oracle Database Date Time",  
-                                                      "url":"tutorial/webtech/java/java-to-oracle-database-date-time" }]
+                                                      "url":"tutorial/webtech/java/java-to-oracle-database-date-time" },
+                                                     {"id":"java-interfaces-comparable-and-comparator",
+                                                      "label":"Oracle Database Date Time",  
+                                                      "url":"tutorial/webtech/java/java-interfaces-comparable-and-comparator" }]
                                 }]
                 };
 } else if(menu === 'java-spring-framework'){
@@ -132,7 +135,10 @@ console.log(pageContent);
            */
           else if($_GET["1"]==$WEBTECH_JAVA && $_GET["2"]==$WEBTECH_ORACLEDB_DATETIME){
             include_once 'templates/webtech/dev/java/01-dateTime.php';
+          } else if($_GET["1"]==$WEBTECH_JAVA && $_GET["2"]==$WEBTECH_JAVAINTFC_COMPARABLE_COMPARATOR){
+            include_once 'templates/webtech/dev/java/02-java-interfaces-comparable-and-comparator.php';
           }
+      
 
           /**
            * Java Spring Framework
