@@ -1,6 +1,6 @@
 <script type="text/babel">
 ReactDOM.render(<ContentMenu data={pageContent} 
-                             selectMenuId="introduction-to-datetime" 
+                             selectMenuId="java-interfaces" 
                              selectSubMenuId="java-interfaces-comparable-and-comparator" />, 
                 document.getElementById('content'));
 </script>
