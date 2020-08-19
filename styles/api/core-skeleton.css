@@ -61,7 +61,7 @@ a.navbar-brand { font-size:14px;çolor:#c70d08; }
 .bg-lgtPrimary { background-color:#bfdffb;color:#000;border:1px solid #bfdffb; }
 .btn-primary-o, .btn-primary:hover, .btn-primary:active { background-color:#fff;border:2px solid #024279;color:#024279; }
 
-
+.hide-block { display:none }
 
 .font-paleBlue { color:#0eb9a9; }
 .font-paleLgtBlue { color:#5ee6da; }

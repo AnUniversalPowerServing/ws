@@ -8,8 +8,13 @@ ReactDOM.render(<ContentMenu data={pageContent}
 <div class="col-sm-7 mbot35p">
   <div><h1 class="font-red"><b>Java Interfaces - Comparable and Comparator</b></h1></div>
   <div>
-  Comparable and Comparator are used to sort the Collection Elements.
+  Comparable and Comparator are the two interfaces used to sort the Collection Elements.
   </div>
+  <div class="list-group mtop15p">
+   <div class="list-group-item">
+    <b>Comparable</b> interface helps to compare an object with another Object of same Type.
+   </div><!--/.list-group-item -->
+  </div><!--/.list-group -->
   <!-- -->
   <pre class="code">
   <code class="java">

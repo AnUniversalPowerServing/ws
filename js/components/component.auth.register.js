@@ -6,6 +6,13 @@ class AuthRegister extends React.Component {
                                      nonActive: { backgroundColor:'#fff', color:'#444242' } },
                             formElement:{ height:'40px' }
                           },
+                   authRegform: { auth_reg_emailMobile_emailVerifyBtn:true,
+                                  auth_reg_emailMobile_emailChangeBtn:false,
+                                  auth_reg_emailMobile_emailOTPForm: false,
+                                  auth_reg_emailMobile_mobileVerifyBtn: true,
+                                  auth_reg_emailMobile_mobileChangeBtn: false,
+                                  auth_reg_emailMobile_mobileOTPForm: false
+                                 }, 
                    badges:[{menu:'badge-auth-reg-emailMobile', 
                             content:'content-auth-reg-emailMobile', isActive:true },
                            {menu:'badge-auth-reg-genInfo', 
@@ -38,7 +45,6 @@ class AuthRegister extends React.Component {
               </div>);
       }
     }
-    console.log(badges);
     return html;
   }
 
@@ -73,11 +79,18 @@ class AuthRegister extends React.Component {
           <input className="form-control" placeholder="Enter Email Address" 
                 style={this.state.style.formElement} />
           <div className="input-group-btn">
-            <button className="btn btn-primary" style={this.state.style.formElement}><b>Verify</b></button>
+            {this.state.authRegform.auth_reg_emailMobile_emailVerifyBtn && (
+            <button className="btn btn-primary" style={this.state.style.formElement}>
+              <b>Verify</b></button>
+            )}
+            {this.state.authRegform.auth_reg_emailMobile_emailChangeBtn && (
+            <button className="btn btn-primary" style={this.state.style.formElement}>
+              <b>Change</b></button>
+            )}
           </div>
         </div>
       </div>
-
+      {this.state.authRegform.auth_reg_emailMobile_emailOTPForm && (
       <div className="form-group">
         <label>OTP Code (To verify Email Address)<span>Required</span></label>
         <div className="input-group">
@@ -88,7 +101,7 @@ class AuthRegister extends React.Component {
           </div>
         </div>
       </div>
-
+      )}
       <div className="form-group">
         <label>Mobile Number <span>Required</span></label>
         <div className="input-group">
@@ -107,13 +120,21 @@ class AuthRegister extends React.Component {
                 placeholder="Enter Mobile Number" style={this.state.style.formElement}
                     onkeypress="javascript:return core_validate_allowOnlyNumeric(event);"/>
                 <div className="input-group-btn">
-                  <button className="btn btn-primary" style={this.state.style.formElement}><b>Verify</b></button>
+                  {this.state.authRegform.auth_reg_emailMobile_mobileVerifyBtn && (
+                    <button className="btn btn-primary" style={this.state.style.formElement}>
+                      <b>Verify</b></button>
+                  )}
+                  {this.state.authRegform.auth_reg_emailMobile_mobileChangeBtn && (
+                    <button className="btn btn-primary" style={this.state.style.formElement}>
+                      <b>Change</b></button>
+                  )}
                 </div>
         </div>
       </div>
 
+      {this.state.authRegform.auth_reg_emailMobile_mobileOTPForm && (
       <div className="form-group">
-        <label>OTP Code (To verify Email Address)<span>Required</span></label>
+        <label>OTP Code (To verify Mobile Number)<span>Required</span></label>
         <div className="input-group">
           <input className="form-control" placeholder="Enter Email Address" 
                 style={this.state.style.formElement} />
@@ -121,15 +142,21 @@ class AuthRegister extends React.Component {
             <button className="btn btn-primary" style={this.state.style.formElement}><b>Validate</b></button>
           </div>
         </div>
-      </div>
+      </div>)}
 
       </div>
       </div>
       <div className="row">
         <div className="col-sm-1"></div>
-        <div className="col-sm-10">
+        <div className="col-sm-5">
           <div className="form-group">
-            <button className="btn btn-primary form-control"><b>Next</b></button>
+            <button className="btn btn-primary form-control" 
+             onClick={()=>this.sel_BadgeMenu('badge-auth-reg-genInfo')}><b>Next</b></button>
+          </div>
+        </div>
+        <div className="col-sm-5">
+          <div className="form-group">
+            <button className="btn btn-primary-o form-control"><b>Reset</b></button>
           </div>
         </div>
         <div className="col-sm-1"></div>
