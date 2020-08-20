@@ -6,9 +6,12 @@ class AuthRegister extends React.Component {
                                      nonActive: { backgroundColor:'#fff', color:'#444242' } },
                             formElement:{ height:'40px' }
                           },
-                   authRegform: { auth_reg_emailMobile_emailVerifyBtn:true,
+                   authRegform: { auth_reg_emailMobile_emailFldEdit:false,
+                                  auth_reg_emailMobile_emailVerifyBtn:true,
                                   auth_reg_emailMobile_emailChangeBtn:false,
                                   auth_reg_emailMobile_emailOTPForm: false,
+                                  auth_reg_emailMobile_mobCodeFldEdit:false,
+                                  auth_reg_emailMobile_mobileFldEdit:false,
                                   auth_reg_emailMobile_mobileVerifyBtn: true,
                                   auth_reg_emailMobile_mobileChangeBtn: false,
                                   auth_reg_emailMobile_mobileOTPForm: false
@@ -65,6 +68,25 @@ class AuthRegister extends React.Component {
     this.setState({ badges });
   }
 
+  verify_emailAddress(){
+    let authRegform = this.state.authRegform;
+        authRegform.auth_reg_emailMobile_emailFldEdit = true;
+        authRegform.auth_reg_emailMobile_emailVerifyBtn = false;
+        authRegform.auth_reg_emailMobile_emailChangeBtn = true;
+        authRegform.auth_reg_emailMobile_emailOTPForm = true;
+    this.setState({ authRegform });
+  }
+
+  verify_mobileNumber(){
+    let authRegform = this.state.authRegform;
+        authRegform.auth_reg_emailMobile_mobCodeFldEdit = true;
+        authRegform.auth_reg_emailMobile_mobileFldEdit = true;
+        authRegform.auth_reg_emailMobile_mobileVerifyBtn = false;
+        authRegform.auth_reg_emailMobile_mobileChangeBtn = true;
+        authRegform.auth_reg_emailMobile_mobileOTPForm = true;
+    this.setState({ authRegform });
+  }
+
   ui_viewEmailMob(){
     return (<div>
       <div className="row">
@@ -77,10 +99,12 @@ class AuthRegister extends React.Component {
         <label>Email Address <span>Required</span></label>
         <div className="input-group">
           <input className="form-control" placeholder="Enter Email Address" 
-                style={this.state.style.formElement} />
+                style={this.state.style.formElement} 
+                disabled={this.state.authRegform.auth_reg_emailMobile_emailFldEdit} />
           <div className="input-group-btn">
             {this.state.authRegform.auth_reg_emailMobile_emailVerifyBtn && (
-            <button className="btn btn-primary" style={this.state.style.formElement}>
+            <button className="btn btn-primary" style={this.state.style.formElement} 
+              onClick={()=>this.verify_emailAddress()}>
               <b>Verify</b></button>
             )}
             {this.state.authRegform.auth_reg_emailMobile_emailChangeBtn && (
@@ -90,18 +114,48 @@ class AuthRegister extends React.Component {
           </div>
         </div>
       </div>
+
       {this.state.authRegform.auth_reg_emailMobile_emailOTPForm && (
+      <div className="list-group">
+      <div className="list-group-item pad0 boxShadow borderRadTopRight5p 
+                      borderRadBotRight5p borderRadBotLeft5p">
+      <div>
+        <span className="label label-danger pad10p fs12 borderRadTopLeft0 borderRadBotLeft0">
+        Validate your Email Address !!!</span>
+      </div>
+        
+      <div className="container-fluid mtop15p">
+      <div className="row">
+      <div className="col-sm-12">
+        
+      <div className="alert alert-danger alert-dismissible">
+        <a href="#" className="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Alert Message !</strong><br/>
+         An Email with OTP Code is sent to your Email Address. Please check it and 
+         Enter that OTP Code in the given below field:
+      </div>
+
       <div className="form-group">
-        <label>OTP Code (To verify Email Address)<span>Required</span></label>
+        <label>OTP Code<span>Required</span></label>
         <div className="input-group">
-          <input className="form-control" placeholder="Enter Email Address" 
+          <input className="form-control" placeholder="Enter OTP Code" 
                 style={this.state.style.formElement} />
           <div className="input-group-btn">
             <button className="btn btn-primary" style={this.state.style.formElement}><b>Validate</b></button>
           </div>
         </div>
       </div>
+
+
+      </div> 
+      </div> 
+      </div>
+
+      </div>
+      </div>
       )}
+
+
       <div className="form-group">
         <label>Mobile Number <span>Required</span></label>
         <div className="input-group">
@@ -109,6 +163,7 @@ class AuthRegister extends React.Component {
             <div className="dropdown">
               <button className="btn btn-default dropdown-toggle bordRad0" 
                         style={this.state.style.formElement} 
+                        disabled={this.state.authRegform.auth_reg_emailMobile_mobCodeFldEdit}
                          type="button" data-toggle="dropdown">+91 &nbsp;
                         <span className="caret"></span></button>
                         <ul className="dropdown-menu">
@@ -118,10 +173,12 @@ class AuthRegister extends React.Component {
                 </div>
                 <input id="auth-reg-genInfo-mobile" className="form-control" 
                 placeholder="Enter Mobile Number" style={this.state.style.formElement}
+                   disabled={this.state.authRegform.auth_reg_emailMobile_mobileFldEdit}
                     onkeypress="javascript:return core_validate_allowOnlyNumeric(event);"/>
                 <div className="input-group-btn">
                   {this.state.authRegform.auth_reg_emailMobile_mobileVerifyBtn && (
-                    <button className="btn btn-primary" style={this.state.style.formElement}>
+                    <button className="btn btn-primary" style={this.state.style.formElement}
+                    onClick={()=>this.verify_mobileNumber()}>
                       <b>Verify</b></button>
                   )}
                   {this.state.authRegform.auth_reg_emailMobile_mobileChangeBtn && (
@@ -132,17 +189,46 @@ class AuthRegister extends React.Component {
         </div>
       </div>
 
+      
       {this.state.authRegform.auth_reg_emailMobile_mobileOTPForm && (
+      <div className="list-group">
+      <div className="list-group-item pad0 boxShadow borderRadTopRight5p 
+                      borderRadBotRight5p borderRadBotLeft5p">
+      <div>
+        <span className="label label-danger pad10p fs12 borderRadTopLeft0 borderRadBotLeft0">
+        Validate your Mobile Number !!!</span>
+      </div>
+        
+      <div className="container-fluid mtop15p">
+      <div className="row">
+      <div className="col-sm-12">
+        
+      <div className="alert alert-danger alert-dismissible">
+        <a href="#" className="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Alert Message !</strong><br/>
+         An OTP Code is sent to your Mobile. Please check it and 
+         Enter that OTP Code in the given below field:
+      </div>
+
       <div className="form-group">
-        <label>OTP Code (To verify Mobile Number)<span>Required</span></label>
+        <label>OTP Code<span>Required</span></label>
         <div className="input-group">
-          <input className="form-control" placeholder="Enter Email Address" 
+          <input className="form-control" placeholder="Enter OTP Code" 
                 style={this.state.style.formElement} />
           <div className="input-group-btn">
             <button className="btn btn-primary" style={this.state.style.formElement}><b>Validate</b></button>
           </div>
         </div>
-      </div>)}
+      </div>
+
+
+      </div> 
+      </div> 
+      </div>
+
+      </div>
+      </div>
+      )}
 
       </div>
       </div>

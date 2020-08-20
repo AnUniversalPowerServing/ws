@@ -111,6 +111,17 @@ h5 { font-size:14px;line-height:22px; }
 .padInlineStart20p { padding-inline-start: 20px; }
 .borderBot2p-primary { border-bottom: 2px solid #02428a; }
 .borderBot2p-red { border-bottom: 2px solid #c70d08; }
+
+.borderRadTopLeft0 { border-top-left-radius: 0px; }
+.borderRadBotLeft0 { border-bottom-left-radius: 0px; }
+.borderRadTopRight0 { border-top-right-radius: 0px; }
+.borderRadBotRight0 { border-bottom-right-radius: 0px; }
+
+.borderRadTopLeft5p { border-top-left-radius: 5px; }
+.borderRadBotLeft5p { border-bottom-left-radius: 5px; }
+.borderRadTopRight5p { border-top-right-radius: 5px; }
+.borderRadBotRight5p { border-bottom-right-radius: 5px; }
+
 .pad0{ padding:0px; }
 .pad5p { padding:5px; }
 .pad8p { padding:8px; }
