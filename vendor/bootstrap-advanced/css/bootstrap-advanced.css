@@ -6,7 +6,19 @@
 .input-group-addon-warning:active:hover { background-color:#8a6d3b;color:#fff;border:1px solid #8a6d3b; }
 .input-group-addon-error,.input-group-addon-error:hover,.input-group-addon-error:active,.input-group-addon-error:focus,
 .input-group-addon-error:active:hover { background-color:#a94442;color:#fff;border:1px solid #a94442; }
-@media only screen and (max-width: 768px) { /* Mobiles */
+@media only screen and (max-width: 330px) { /* Mobiles */
+    .input-group>div.has-feedback>input { margin-top:2.5%; }
+    .form-control-feedback { margin-top:1.5%; }
+}
+@media (min-width: 331px) and (max-width: 482px) { /* Mobiles */
+    .input-group>div.has-feedback>input { margin-top:1.8%; }
+    .form-control-feedback { margin-top:1.5%; }
+}
+@media (min-width: 483px) and (max-width: 5209px) { /* Mobiles */
+    .input-group>div.has-feedback>input { margin-top:1%; }
+    .form-control-feedback { margin-top:1.4%; }
+}
+@media (min-width: 530px) and (max-width: 768px) { /* Mobiles */
     .input-group>div.has-feedback>input { margin-top:1%; }
     .form-control-feedback { margin-top:1.5%; }
 }
