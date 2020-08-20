@@ -19,7 +19,7 @@
   <script src="<?php echo $PROJECT_URL; ?>/vendor/react-dom@16/react-dom.production.min.js"></script>
   <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/component.auth.register.js"></script>
 <style>
-body { background-color:#009688;color:#fff; }
+body { background-color:#fff;color:#000; }
 </style>
 <script type="text/javascript">
 $(document).ready(function(){
