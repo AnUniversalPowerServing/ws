@@ -68,7 +68,7 @@ class AuthRegister extends React.Component {
     this.setState({ badges });
   }
 
-  verify_emailAddress(){
+  authRegEmailMobile_verify_emailAddress(){
     let authRegform = this.state.authRegform;
         authRegform.auth_reg_emailMobile_emailFldEdit = true;
         authRegform.auth_reg_emailMobile_emailVerifyBtn = false;
@@ -78,7 +78,7 @@ class AuthRegister extends React.Component {
     bootstrap_formField_trigger('success','auth-reg-emailMobile-emailAddress');
   }
 
-  verify_mobileNumber(){
+  authRegEmailMobile_verify_mobileNumber(){
     let authRegform = this.state.authRegform;
         authRegform.auth_reg_emailMobile_mobCodeFldEdit = true;
         authRegform.auth_reg_emailMobile_mobileFldEdit = true;
@@ -98,7 +98,7 @@ class AuthRegister extends React.Component {
       <div className="input-group-btn">
         {this.state.authRegform.auth_reg_emailMobile_emailVerifyBtn && (
         <button className="btn btn-primary-o" 
-          onClick={()=>this.verify_emailAddress()}>
+          onClick={()=>this.authRegEmailMobile_verify_emailAddress()}>
           <b>Verify</b></button>
         )}
         {this.state.authRegform.auth_reg_emailMobile_emailChangeBtn && (
@@ -177,7 +177,7 @@ class AuthRegister extends React.Component {
            <div className="input-group-btn">
              {this.state.authRegform.auth_reg_emailMobile_mobileVerifyBtn && (
                <button className="btn btn-primary-o" style={this.state.style.formElement}
-               onClick={()=>this.verify_mobileNumber()}>
+               onClick={()=>this.authRegEmailMobile_verify_mobileNumber()}>
                  <b>Verify</b></button>
              )}
              {this.state.authRegform.auth_reg_emailMobile_mobileChangeBtn && (
