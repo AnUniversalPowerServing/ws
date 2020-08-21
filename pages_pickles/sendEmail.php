@@ -1,8 +1,11 @@
+
+
 <?php
   $to = "nellutlalnrao@gmail.com";
   $subject = "This is subject";
          
-         $message = "<b>This is HTML message.</b>";
+         $message = "<a href=\"\" style=\"font-family:thirdDegree;font-size:32px;letter-spacing:1px;    color: #c70d08\"";
+         $message .= ">Native Pickles.</b>";
          $message .= "<h1>This is headline.</h1>";
          
          $header = "From:mail@widesecond.com \r\n";
