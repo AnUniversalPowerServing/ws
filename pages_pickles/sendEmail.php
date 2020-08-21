@@ -2,9 +2,9 @@
 
 <?php
   $to = "nellutlalnrao@gmail.com";
-  $subject = "This is subject"
+  $subject = "This is subject";
   $message = "<style>@font-face { font-family:thirdDegree;src:url('http://widesecond.com/fonts/third-degree.ttf'); }</style>";     
-         $message.= "<a href=\"\" style=\"font-family:thirdDegree;font-size:32px;letter-spacing:1px;color: #c70d08\"";
+         $message .= "<a href=\"\" style=\"font-family:thirdDegree;font-size:32px;letter-spacing:1px;color: #c70d08\"";
          $message .= ">Native Pickles.</a>";
          $message .= "<img src=\"http://widesecond.com/pages_pickles/logo.jpg\"/>";
          $message .= "<h1>This is headline.</h1>";
