@@ -6,12 +6,17 @@ class AuthRegister extends React.Component {
                                      nonActive: { backgroundColor:'#fff', color:'#444242' } },
                             formElement:{ height:'40px' }
                           },
-                   authRegform: { auth_reg_emailMobile_emailFldEdit:false,
+                   authRegform: { auth_reg_emailMobile_alertFldView:false,
+                                  auth_reg_emailMobile_alertFldVal:'',
+                                  auth_reg_emailMobile_emailFldEdit:false,
+                                  auth_reg_emailMobile_emailFldVal:'',
                                   auth_reg_emailMobile_emailVerifyBtn:true,
                                   auth_reg_emailMobile_emailChangeBtn:false,
                                   auth_reg_emailMobile_emailOTPForm: false,
                                   auth_reg_emailMobile_mobCodeFldEdit:false,
+                                  auth_reg_emailMobile_mobCodeFldVal:'',
                                   auth_reg_emailMobile_mobileFldEdit:false,
+                                  auth_reg_emailMobile_mobileFldVal:'',
                                   auth_reg_emailMobile_mobileVerifyBtn: true,
                                   auth_reg_emailMobile_mobileChangeBtn: false,
                                   auth_reg_emailMobile_mobileOTPForm: false
@@ -70,12 +75,17 @@ class AuthRegister extends React.Component {
 
   authRegEmailMobile_verify_emailAddress(){
     let authRegform = this.state.authRegform;
-        authRegform.auth_reg_emailMobile_emailFldEdit = true;
+    let emailStatus = 'error';
+    if(authRegform.auth_reg_emailMobile_emailFldVal.length>0){
+      authRegform.auth_reg_emailMobile_emailFldEdit = true;
         authRegform.auth_reg_emailMobile_emailVerifyBtn = false;
         authRegform.auth_reg_emailMobile_emailChangeBtn = true;
         authRegform.auth_reg_emailMobile_emailOTPForm = true;
-    this.setState({ authRegform });
-    bootstrap_formField_trigger('success','auth-reg-emailMobile-emailAddress');
+      this.setState({ authRegform });
+      emailStatus = 'success';
+    }
+        
+    bootstrap_formField_trigger(emailStatus,'auth-reg-emailMobile-emailAddress');
   }
 
   authRegEmailMobile_verify_mobileNumber(){
@@ -92,17 +102,20 @@ class AuthRegister extends React.Component {
     return (<div className="form-group">
     <label>Email Address <span>Required</span></label>
     <div className="input-group">
-      <input id="auth-reg-emailMobile-emailAddress" className="form-control" placeholder="Enter Email Address" 
-            style={this.state.style.formElement} 
+      <input id="auth-reg-emailMobile-emailAddress" className="form-control border1px-skyBlue" 
+      placeholder="Enter Email Address" 
+            onChange={(event)=>{
+              this.state.authRegform.auth_reg_emailMobile_emailFldVal = event.target.value;
+            }}
             disabled={this.state.authRegform.auth_reg_emailMobile_emailFldEdit} />
       <div className="input-group-btn">
         {this.state.authRegform.auth_reg_emailMobile_emailVerifyBtn && (
-        <button className="btn btn-primary-o" 
+        <button className="btn bg-skyBlue"
           onClick={()=>this.authRegEmailMobile_verify_emailAddress()}>
           <b>Verify</b></button>
         )}
         {this.state.authRegform.auth_reg_emailMobile_emailChangeBtn && (
-        <button className="btn btn-primary-o">
+        <button className="btn bg-skyBlue">
           <b>Change</b></button>
         )}
       </div>
@@ -160,8 +173,7 @@ class AuthRegister extends React.Component {
    <div className="input-group">
      <div className="input-group-btn">
        <div className="dropdown">
-         <button className="btn btn-default dropdown-toggle bordRad0" 
-                   style={this.state.style.formElement} 
+         <button className="btn btn-default dropdown-toggle bordRad0 border1px-skyBlue" 
                    disabled={this.state.authRegform.auth_reg_emailMobile_mobCodeFldEdit}
                     type="button" data-toggle="dropdown">+91 &nbsp;
                    <span className="caret"></span></button>
@@ -170,18 +182,18 @@ class AuthRegister extends React.Component {
                    </ul>
                </div>
            </div>
-           <input id="auth-reg-genInfo-mobile" className="form-control" 
-           placeholder="Enter Mobile Number" style={this.state.style.formElement}
+           <input id="auth-reg-genInfo-mobile" className="form-control border1px-skyBlue" 
+           placeholder="Enter Mobile Number"
               disabled={this.state.authRegform.auth_reg_emailMobile_mobileFldEdit}
                onkeypress="javascript:return core_validate_allowOnlyNumeric(event);"/>
            <div className="input-group-btn">
              {this.state.authRegform.auth_reg_emailMobile_mobileVerifyBtn && (
-               <button className="btn btn-primary-o" style={this.state.style.formElement}
+               <button className="btn bg-skyBlue"
                onClick={()=>this.authRegEmailMobile_verify_mobileNumber()}>
                  <b>Verify</b></button>
              )}
              {this.state.authRegform.auth_reg_emailMobile_mobileChangeBtn && (
-               <button className="btn btn-primary-o" style={this.state.style.formElement}>
+               <button className="btn bg-skyBlue">
                  <b>Change</b></button>
              )}
            </div>
@@ -240,6 +252,14 @@ class AuthRegister extends React.Component {
 	      <h5><b>Provide Your Communication Details</b></h5>
       </div>
 
+      {this.state.authRegform.auth_reg_emailMobile_alertFldView && (
+      <div class="alert alert-success alert-dismissible">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Alert Message !</strong><br/> 
+        {this.state.authRegform.auth_reg_emailMobile_alertFldVal}
+      </div>
+      )}
+    
       {this.authRegEmailMobile_viewField_emailAddress()}
       {this.authRegEmailMobile_viewField_emailOTPForm()}
       {this.authRegEmailMobile_viewField_mobile()}
@@ -312,7 +332,7 @@ class AuthRegister extends React.Component {
   }
 
   render(){
-    return (<div className="container-fluid mtop15p" style={this.state.style.form}>
+    return (<div className="container-fluid mtop15p">
       <div className="row">
           <div className="col-sm-4">
 

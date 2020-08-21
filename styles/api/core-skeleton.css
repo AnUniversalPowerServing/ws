@@ -40,6 +40,7 @@ a.navbar-brand { font-size:14px;çolor:#c70d08; }
 .btn-pink-o, .btn-pink-o:hover, .btn-pink-o:active { background-color:#fff;border:2px solid #cc0448;color:#cc0448; }
 .btn-pink, .btn-pink:hover, .btn-pink:active { background-color:#cc0448;border:2px solid #cc0448;color:#fff; }
 
+.border1px-skyBlue { border:1px solid #026ec3; }
 .bg-skyBlue { background-color:#026ec3;color:#fff;border:1px solid #026ec3; }
 .bg-lgtSkyBlue { background-color:#dce9ef;color:#000;border:1px solid #dce9ef;  }
 .btn-skyBlue-o, .btn-skyBlue-o:hover, .btn-skyBlue-o:active  { background-color:#fff;border:2px solid #026ec3;color:#026ec3; }
@@ -125,7 +126,7 @@ h5 { font-size:14px;line-height:22px; }
 .pad0{ padding:0px; }
 .pad5p { padding:5px; }
 .pad8p { padding:8px; }
-.pad10p{ padding:10px; }
+.pad10p{ padding:10px; }f
 .hide-block { display:none; }
 hr { margin-bottom:10px; }
 .boxShadow { box-shadow:2px 2px 4px 1px #808080; }
@@ -135,7 +136,7 @@ hr { margin-bottom:10px; }
 @font-face { font-family:thirdDegree;src:url('../../fonts/third-degree.ttf'); }
 
 .form-group>label { position:relative;width:100%; }
-.form-group>label>span { position:absolute;right:0;font-weight:500;font-size:11px;letter-spacing:0.8px; }
+.form-group>label>span, .form-group>.has-feedback>label>span { position:absolute;right:0;font-weight:500;font-size:11px;letter-spacing:0.8px; }
 
 /* images: zoom-hover Effect within Divsion */
 div.img-hover-zoom { position: relative;height: 300px;overflow: hidden; }
