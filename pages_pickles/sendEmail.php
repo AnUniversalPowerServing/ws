@@ -4,7 +4,7 @@
   $to = "nellutlalnrao@gmail.com";
   $subject = "This is subject";
   $message= "<img src=\"http://widesecond.com/pages_pickles/logo.jpg\"/>";
-  $message .= "<h3><b><i>Thanks for Visiting our Website and choosing to Register an Account, ";
+  $message .= "<h3><b><i>Thanks for Visiting our Website and choosing to Register an Account, <br/>";
   $message .= "we have received your request to validate your Email Address for Signup.</i></b></h3><br/>";
   $message .= "<h1><b>Your OTP Code : 123456</b></h1>";
   $message .= "<div align=\"center\" style=\"font-size:9px;\">To ensure delivery to your inbox, add ";
