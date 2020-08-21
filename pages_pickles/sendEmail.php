@@ -13,7 +13,7 @@
   $message .= "<div align=\"left\" style=\"font-size:10px;\">To ensure delivery to your inbox, add ";
   $message .= "mail@widesecond.com to your address book.</div>";
   echo $message;   
-   /*      $header = "From:mail@widesecond.com \r\n";
+        $header = "From:mail@widesecond.com \r\n";
          $header .= "Cc:nlnrao228@gmail.com \r\n";
          $header .= "MIME-Version: 1.0\r\n";
          $header .= "Content-type: text/html\r\n";
@@ -24,5 +24,5 @@
             echo "Message sent successfully...";
          }else {
             echo "Message could not be sent...";
-         }*/
+         }
 ?>
