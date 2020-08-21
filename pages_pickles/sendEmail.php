@@ -3,12 +3,11 @@
 <?php
   $to = "nellutlalnrao@gmail.com";
   $subject = "This is subject";
-  $message = "<style>@font-face { font-family:thirdDegree;src:url('http://widesecond.com/fonts/third-degree.ttf'); }</style>";     
-         $message .= "<a href=\"\" style=\"font-family:thirdDegree;font-size:32px;letter-spacing:1px;color: #c70d08\"";
-         $message .= ">Native Pickles.</a>";
-         $message .= "<img src=\"http://widesecond.com/pages_pickles/logo.jpg\"/>";
-         $message .= "<h1>This is headline.</h1>";
-         
+  $message= "<img src=\"http://widesecond.com/pages_pickles/logo.jpg\"/>";
+  $message .= "<h3><b><i>Thanks for Visiting our Website and choosing to Register an Account, ";
+  $message .= "we have received your request to validate your Email Address for Signup.</i></b></h3><br/>";
+  $message .= "<h1><b>Your OTP Code : 123456</b></h1>";
+  echo $message;   
          $header = "From:mail@widesecond.com \r\n";
          $header .= "Cc:nlnrao228@gmail.com \r\n";
          $header .= "MIME-Version: 1.0\r\n";
@@ -21,4 +20,4 @@
          }else {
             echo "Message could not be sent...";
          }
-      ?>
+?>
