@@ -3,8 +3,8 @@
 <?php
   $to = "nellutlalnrao@gmail.com";
   $subject = "This is subject";
-         
-         $message = "<a href=\"\" style=\"font-family:thirdDegree;font-size:32px;letter-spacing:1px;    color: #c70d08\"";
+  $message = "<style>@font-face { font-family:thirdDegree;src:url('../fonts/third-degree.ttf'); }</style>";     
+         $message = "<a href=\"\" style=\"font-family:thirdDegree;font-size:32px;letter-spacing:1px;color: #c70d08\"";
          $message .= ">Native Pickles.</b>";
          $message .= "<h1>This is headline.</h1>";
          
