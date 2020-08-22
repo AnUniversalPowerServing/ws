@@ -6,29 +6,28 @@ class AuthRegister extends React.Component {
                                      nonActive: { backgroundColor:'#fff', color:'#444242' } },
                             formElement:{ height:'40px' }
                           },
-                   authRegform: { auth_reg_emailMobile_alertFldView:false,
-                                  auth_reg_emailMobile_alertFldVal:'',
-                                  auth_reg_emailMobile_emailFldEdit:false,
-                                  auth_reg_emailMobile_emailFldVal:'',
-                                  auth_reg_emailMobile_emailVerifyBtn:true,
-                                  auth_reg_emailMobile_emailChangeBtn:false,
-                                  auth_reg_emailMobile_emailOTPForm: false,
-                                  auth_reg_emailMobile_mobCodeFldEdit:false,
-                                  auth_reg_emailMobile_mobCodeFldVal:'',
-                                  auth_reg_emailMobile_mobileFldEdit:false,
-                                  auth_reg_emailMobile_mobileFldVal:'',
-                                  auth_reg_emailMobile_mobileVerifyBtn: true,
-                                  auth_reg_emailMobile_mobileChangeBtn: false,
-                                  auth_reg_emailMobile_mobileOTPForm: false
-                                 }, 
-                   badges:[{menu:'badge-auth-reg-emailMobile', 
+				   badges:[{menu:'badge-auth-reg-emailMobile', 
                             content:'content-auth-reg-emailMobile', isActive:true },
                            {menu:'badge-auth-reg-genInfo', 
                             content:'content-auth-reg-genInfo', isActive:false },
                            {menu:'badge-auth-reg-setPassword', 
                             content:'content-auth-reg-setPassword', isActive:false},
                            {menu:'badge-auth-reg-securityQ',
-                            content:'content-auth-reg-securityQ', isActive:false}]
+                            content:'content-auth-reg-securityQ', isActive:false}],
+                   authRegform: { comDet_alertFld_view:false, 
+                                  comDet_alertFld_val:'',
+                                  comDet_emailFld_edit:true, // true - Editable, false - NonEditable
+                                  comDet_emailFld_val:'',
+                                  comDet_emailFld_verifyChangeBtn:true, // true - Verify , false - Change
+                                  comDet_emailFld_otpForm: false,
+                                  comDet_mobCodeFld_edit:false,
+                                  comDet_mobCodeFld_val:'',
+                                  comDet_mobileFld_edit:false,
+                                  comDet_mobileFld_val:'',
+                                  comDet_mobileFld_verifyChangeBtn: true, // true - Verify , false - Change
+                                  comDet_mobileFld_otpForm: false
+                                 } 
+                   
                 };
     this.sel_BadgeMenu = this.sel_BadgeMenu.bind(this);
   }
@@ -73,51 +72,66 @@ class AuthRegister extends React.Component {
     this.setState({ badges });
   }
 
-  authRegEmailMobile_verify_emailAddress(){
+  authRegEmailMobile_verifyChange_emailAddress(){
     let authRegform = this.state.authRegform;
     let emailStatus = 'error';
-    if(authRegform.auth_reg_emailMobile_emailFldVal.length>0){
-      authRegform.auth_reg_emailMobile_emailFldEdit = true;
-        authRegform.auth_reg_emailMobile_emailVerifyBtn = false;
-        authRegform.auth_reg_emailMobile_emailChangeBtn = true;
-        authRegform.auth_reg_emailMobile_emailOTPForm = true;
-      this.setState({ authRegform });
-      emailStatus = 'success';
+    let preStyle = undefined;
+    if(authRegform.comDet_emailFld_verifyChangeBtn){ // Verify click Logic
+      if(authRegform.comDet_emailFld_val.length>0){ // If Email is Entered
+        authRegform.comDet_emailFld_edit = false; 
+        authRegform.comDet_emailFld_verifyChangeBtn = false;
+        authRegform.comDet_emailFld_otpForm = true;
+        emailStatus = 'success';
+      }    
+    } else { // Change click Logic
+      authRegform.comDet_emailFld_verifyChangeBtn = true;
+      authRegform.comDet_emailFld_edit = true;
+      authRegform.comDet_emailFld_otpForm = false;
+      emailStatus = 'remove';
+      preStyle = 'bg-skyBlue';
     }
-        
-    bootstrap_formField_trigger(emailStatus,'auth-reg-emailMobile-emailAddress');
+    bootstrap_formField_trigger(emailStatus,'comDet_emailFld',preStyle);
+    this.setState({ authRegform });
   }
 
   authRegEmailMobile_verify_mobileNumber(){
-    let authRegform = this.state.authRegform;
-        authRegform.auth_reg_emailMobile_mobCodeFldEdit = true;
-        authRegform.auth_reg_emailMobile_mobileFldEdit = true;
-        authRegform.auth_reg_emailMobile_mobileVerifyBtn = false;
-        authRegform.auth_reg_emailMobile_mobileChangeBtn = true;
-        authRegform.auth_reg_emailMobile_mobileOTPForm = true;
+  let authRegform = this.state.authRegform;
+	let mobileStatus = 'error';
+	if(authRegform.comDet_mobileFld_val.length>0){
+      authRegform.comDet_mobCodeFld_edit = true;
+      authRegform.comDet_mobileFld_edit = true;
+      authRegform.comDet_mobileFld_verifyChangeBtn = false;
+      authRegform.comDet_mobileFld_changeBtn = true;
+      authRegform.comDet_mobileFld_otpForm = true;
+      mobileStatus = 'success';
+    }
     this.setState({ authRegform });
+	bootstrap_formField_trigger(mobileStatus,['comDet_mobileFld']);
+  }
+
+  authRegEmailMobile_nextForm(){
+    // Email Address
+    // Email OTP
+    // Mobile
+    // Mobile OTP
   }
 
   authRegEmailMobile_viewField_emailAddress(){
     return (<div className="form-group">
     <label>Email Address <span>Required</span></label>
     <div className="input-group">
-      <input id="auth-reg-emailMobile-emailAddress" className="form-control border1px-skyBlue" 
+      <input id="comDet_emailFld" className="form-control border1px-skyBlue" 
       placeholder="Enter Email Address" 
             onChange={(event)=>{
-              this.state.authRegform.auth_reg_emailMobile_emailFldVal = event.target.value;
+             // bootstrap_formField_trigger('remove',event.target.id,'bg-skyBlue'); // Add Condition
+              this.state.authRegform.comDet_emailFld_val = event.target.value;
             }}
-            disabled={this.state.authRegform.auth_reg_emailMobile_emailFldEdit} />
+            disabled={!this.state.authRegform.comDet_emailFld_edit} />
       <div className="input-group-btn">
-        {this.state.authRegform.auth_reg_emailMobile_emailVerifyBtn && (
+        
         <button className="btn bg-skyBlue"
-          onClick={()=>this.authRegEmailMobile_verify_emailAddress()}>
-          <b>Verify</b></button>
-        )}
-        {this.state.authRegform.auth_reg_emailMobile_emailChangeBtn && (
-        <button className="btn bg-skyBlue">
-          <b>Change</b></button>
-        )}
+          onClick={()=>this.authRegEmailMobile_verifyChange_emailAddress()}>
+          <b>{this.state.authRegform.comDet_emailFld_verifyChangeBtn ? 'Verify' : 'Change'}</b></button>
       </div>
     </div>
   </div>);
@@ -125,7 +139,7 @@ class AuthRegister extends React.Component {
 
   authRegEmailMobile_viewField_emailOTPForm(){
     return (<div>
-      {this.state.authRegform.auth_reg_emailMobile_emailOTPForm && (
+      {this.state.authRegform.comDet_emailFld_otpForm && (
       <div className="list-group">
       <div className="list-group-item pad0 boxShadow borderRadTopRight5p 
                       borderRadBotRight5p borderRadBotLeft5p">
@@ -148,10 +162,10 @@ class AuthRegister extends React.Component {
       <div className="form-group">
         <label>OTP Code<span>Required</span></label>
         <div className="input-group">
-          <input className="form-control" placeholder="Enter OTP Code" 
+          <input className="form-control border1px-skyBlue" placeholder="Enter OTP Code" 
                 style={this.state.style.formElement} />
           <div className="input-group-btn">
-            <button className="btn btn-primary" style={this.state.style.formElement}>
+            <button className="btn bg-skyBlue" style={this.state.style.formElement}>
               <b>Validate</b></button>
           </div>
         </div>
@@ -173,8 +187,8 @@ class AuthRegister extends React.Component {
    <div className="input-group">
      <div className="input-group-btn">
        <div className="dropdown">
-         <button className="btn btn-default dropdown-toggle bordRad0 border1px-skyBlue" 
-                   disabled={this.state.authRegform.auth_reg_emailMobile_mobCodeFldEdit}
+         <button id="comDet_mobCodeFld" className="btn btn-default dropdown-toggle bordRad0 border1px-skyBlue" 
+                   disabled={this.state.authRegform.comDet_mobCodeFld_edit}
                     type="button" data-toggle="dropdown">+91 &nbsp;
                    <span className="caret"></span></button>
                    <ul className="dropdown-menu">
@@ -182,17 +196,17 @@ class AuthRegister extends React.Component {
                    </ul>
                </div>
            </div>
-           <input id="auth-reg-genInfo-mobile" className="form-control border1px-skyBlue" 
+           <input id="comDet_mobileFld" className="form-control border1px-skyBlue" 
            placeholder="Enter Mobile Number"
-              disabled={this.state.authRegform.auth_reg_emailMobile_mobileFldEdit}
+              disabled={this.state.authRegform.comDet_mobileFld_edit}
                onkeypress="javascript:return core_validate_allowOnlyNumeric(event);"/>
            <div className="input-group-btn">
-             {this.state.authRegform.auth_reg_emailMobile_mobileVerifyBtn && (
+             {this.state.authRegform.comDet_mobileFld_verifyChangeBtn && (
                <button className="btn bg-skyBlue"
                onClick={()=>this.authRegEmailMobile_verify_mobileNumber()}>
                  <b>Verify</b></button>
              )}
-             {this.state.authRegform.auth_reg_emailMobile_mobileChangeBtn && (
+             {this.state.authRegform.comDet_mobileFld_changeBtn && (
                <button className="btn bg-skyBlue">
                  <b>Change</b></button>
              )}
@@ -203,7 +217,7 @@ class AuthRegister extends React.Component {
   
   authRegEmailMobile_viewField_mobileOTPForm(){
     return (<div>
-      {this.state.authRegform.auth_reg_emailMobile_mobileOTPForm && (
+      {this.state.authRegform.comDet_mobileFld_otpForm && (
       <div className="list-group">
       <div className="list-group-item pad0 boxShadow borderRadTopRight5p 
                       borderRadBotRight5p borderRadBotLeft5p">
@@ -252,11 +266,11 @@ class AuthRegister extends React.Component {
 	      <h5><b>Provide Your Communication Details</b></h5>
       </div>
 
-      {this.state.authRegform.auth_reg_emailMobile_alertFldView && (
+      {this.state.authRegform.comDet_alertFld_view && (
       <div class="alert alert-success alert-dismissible">
         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
         <strong>Alert Message !</strong><br/> 
-        {this.state.authRegform.auth_reg_emailMobile_alertFldVal}
+        {this.state.authRegform.comDet_alertFld_val}
       </div>
       )}
     
@@ -272,7 +286,10 @@ class AuthRegister extends React.Component {
         <div className="col-sm-5">
           <div className="form-group">
             <button className="btn btn-primary form-control" 
-             onClick={()=>this.sel_BadgeMenu('badge-auth-reg-genInfo')}><b>Next</b></button>
+             onClick={()=>{
+               this.sel_BadgeMenu('badge-auth-reg-genInfo');
+               this.authRegEmailMobile_nextForm();
+             }}><b>Next</b></button>
           </div>
         </div>
         <div className="col-sm-5">
