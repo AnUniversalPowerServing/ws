@@ -90,7 +90,16 @@ if(menu === 'html'){
                                                       "url":"tutorial/webtech/java-spring-framework/modules-of-java-spring-framework" }]
                                 }]
                 };
+} else if(menu === 'aws'){
+  pageContent = { "contentMenu":[{ "id":"aws-certification-program-info",
+                                   "label":"AWS Certificate Program",
+                                   "subContentMenu":[{"id":"aws-certification-courses",
+                                                      "label":"AWS Certification Courses"}]
+                                }]
+                };
 }
+
+
 console.log(pageContent);
 </script>
 </head>
@@ -150,6 +159,13 @@ console.log(pageContent);
             include_once 'templates/webtech/dev/java-spring/01-introduction-to-java-spring-framework.php';
           } else if($_GET["1"]==$WEBTECH_JAVASPRING && $_GET["2"]==$WEBTECH_JAVASPRING_MODULES){
             include_once 'templates/webtech/dev/java-spring/02-modules-of-spring.php';
+          }
+
+          /**
+           * AWS Tutorials
+           */
+          else if($_GET["1"]==$WEBTECH_AWS && $_GET["2"]==$WEBTECH_AWS_CERTIFYPROG){
+            include_once 'templates/webtech/dev/aws/01-certification-program-info.php';
           }
      ?>
    </div>

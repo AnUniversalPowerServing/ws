@@ -20,6 +20,9 @@ $WEBTECH_JAVAINTFC_COMPARABLE_COMPARATOR= 'java-interfaces-comparable-and-compar
 $WEBTECH_JAVASPRING = 'java-spring-framework';
 $WEBTECH_JAVASPRING_OVERVIEW = 'overview-of-java-spring-framework';
 $WEBTECH_JAVASPRING_MODULES = 'modules-of-java-spring-framework';
+
+$WEBTECH_AWS = 'aws';
+$WEBTECH_AWS_CERTIFYPROG = 'aws-certification-courses';
 ?>
 <?php 
   if(isset($_GET["1"]) && isset($_GET["2"])){
@@ -67,8 +70,12 @@ $WEBTECH_JAVASPRING_MODULES = 'modules-of-java-spring-framework';
     } else if($_GET["1"]==$WEBTECH_JAVASPRING && $_GET["2"]==$WEBTECH_JAVASPRING_MODULES){
       echo '<title>Widesecond.com | Modules of Java Spring Framework</title>';
     }
-
-
     
+    /**
+     * AWS Tutorials
+     */
+    else if($_GET["1"]==$WEBTECH_AWS && $_GET["2"]==$WEBTECH_AWS_CERTIFYPROG){
+      echo '<title>Widesecond.com | AWS Certificate Program</title>'; 
+    }
   }
 ?>

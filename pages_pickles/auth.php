@@ -17,6 +17,7 @@
   <script src="<?php echo $PROJECT_URL; ?>/vendor/react@16/react.production.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/react-dom@16/react-dom.production.min.js"></script>
   <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/component.auth.register.js"></script>
+  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.alert.js"></script>
 <style>
 body { background-color:#fff;color:#000; }
 </style>
