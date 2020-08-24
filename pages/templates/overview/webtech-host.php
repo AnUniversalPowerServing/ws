@@ -31,7 +31,7 @@
       <div class="col-sm-4">
 
         <!-- AWS ::: START -->
-        <a href="#">
+        <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/aws/aws-certification-courses">
         <div class="list-group boxShadow">
          <div class="list-group-item bg-purple"><b>Amazon Web Services</b></div>
            <div class="list-group-item bg-lgtPurple">
