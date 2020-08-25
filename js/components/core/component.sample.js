@@ -11,9 +11,9 @@ class Sample extends React.Component {
 
 validateAndAlert(callBack, elem_isValid){
   let alertMsg = this.state.alertMsg;
-  let alertView = true;
+  let alertView = false;
   let alertMsgElem = Object.keys(alertMsg);
-      if(alertMsgElem.length==0){ alertView = false; }
+      if(alertMsgElem.length>0){ alertView = true; }
   let id = callBack.id;
   let isValid =  callBack.isValid;
   let msg = callBack.msg;
