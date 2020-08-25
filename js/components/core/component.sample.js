@@ -11,12 +11,15 @@ class Sample extends React.Component {
 
 validateAndAlert(callBack, elem_isValid){
   let alertMsg = this.state.alertMsg;
+  let alertView = true;
+  let alertMsgElem = Object.keys(alertMsg);
+      if(alertMsgElem.length==0){ alertView = false; }
   let id = callBack.id;
   let isValid =  callBack.isValid;
   let msg = callBack.msg;
   alertMsg[id]={ isValid:isValid, msg: msg  };
   if(isValid){ delete alertMsg[id]; }
-  this.setState({ alertView:true, elem_isValid: isValid, alertMsg });
+  this.setState({ alertView, elem_isValid: isValid, alertMsg });
 }
 
 isValid_securityCaptcha = (callBack) => {
@@ -41,7 +44,7 @@ isValid_emailAddress = (callBack) => {
         alertMsg={(alertMsgElem.length>0) ? 
                    alertMsg[alertMsgElem[alertMsgElem.length-1]].msg : '' } />
     )}
-      <EmailAddress id="fld_emailAddress" validateUrl="http://localhost/ws/php/test.php" 
+      <EmailAddress id="fld_emailAddress" validateUrl="http://widesecond.com/php/test.php" 
        isFormValid={this.isValid_emailAddress} />
       <SecurityCaptcha id="fld_userSecurityCaptcha" isFormValid={this.isValid_securityCaptcha} />
     </div>
