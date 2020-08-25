@@ -5,6 +5,9 @@ var JSONURL_MESSAGES_WARNING = "";
 /*****************************************************************************************************************************/
 /************************************ bootstrap-advanced-inputvalidations ****************************************************/
 /*****************************************************************************************************************************/
+function bootstrap_formField_trigger(perform,field_Ids){
+  bootstrap_formField_trigger(perform,field_Ids,undefined);
+}
 function bootstrap_formField_trigger(perform,field_Ids,css){
  if(perform.toLowerCase()==='remove'){
      if(Array.isArray(field_Ids)){
