@@ -11,14 +11,14 @@ class Sample extends React.Component {
 
 validateAndAlert(callBack, elem_isValid){
   let alertMsg = this.state.alertMsg;
-  let alertView = false;
-  let alertMsgElem = Object.keys(alertMsg);
-      if(alertMsgElem.length>0){ alertView = true; }
   let id = callBack.id;
   let isValid =  callBack.isValid;
   let msg = callBack.msg;
   alertMsg[id]={ isValid:isValid, msg: msg  };
   if(isValid){ delete alertMsg[id]; }
+  let alertMsgElem = Object.keys(alertMsg);
+  let alertView = false;
+  if(alertMsgElem.length>0){ alertView = true; }
   this.setState({ alertView, elem_isValid: isValid, alertMsg });
 }
 
@@ -36,15 +36,15 @@ isValid_emailAddress = (callBack) => {
     let alertMsgElem = Object.keys(alertMsg);
     console.log(alertMsgElem);
     console.log(alertMsgElem.length);
+    console.log(this.state.alertView);
   return (
     <div>
-    {this.state.alertView && (!this.state.securityCaptcha_isValid || 
-      !this.state.emailAddress_isValid) &&  (
+    {this.state.alertView &&  (
       <Alert alertType="danger" 
         alertMsg={(alertMsgElem.length>0) ? 
                    alertMsg[alertMsgElem[alertMsgElem.length-1]].msg : '' } />
     )}
-      <EmailAddress id="fld_emailAddress" validateUrl="http://widesecond.com/php/test.php" 
+      <EmailAddress id="fld_emailAddress" validateUrl="http://localhost/ws/php/test.php" 
        isFormValid={this.isValid_emailAddress} />
       <SecurityCaptcha id="fld_userSecurityCaptcha" isFormValid={this.isValid_securityCaptcha} />
     </div>
