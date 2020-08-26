@@ -22,7 +22,11 @@
   <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.security.captcha.js"></script>
   <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.sample.js"></script>
   <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.alert.js"></script>
+  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.auth.validate.email.js"></script>
 <script type="text/babel">
+function genRandomNumber(min,max){
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
 ReactDOM.render(<Sample />, document.getElementById('root'));
 </script>
 </head>

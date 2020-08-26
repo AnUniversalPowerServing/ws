@@ -9,7 +9,7 @@ class Alert extends React.Component {
   return (<div class={alertType}>
             <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
             <strong>Alert Message !</strong><br/>
-            {this.props.alertMsg}
+            <div dangerouslySetInnerHTML={{__html: this.props.alertMsg}} />
           </div>);
  }
 }

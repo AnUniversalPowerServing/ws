@@ -1,3 +1,5 @@
 componentDidMount() { } => Equivalent to $(document).ready(function(){}); in JQuery and window.load={} in Vanilla Javascript.
 --------------
 Get list of Keys in JSON  (Returns Keys in Array Format) - Object.keys(jsonData)
+---------------
+<div dangerouslySetInnerHTML={{__html: this.props.alertMsg}} /> - String to HTML loading

@@ -13,15 +13,19 @@ class SecurityCaptcha extends React.Component {
  isFormValid(event){
    let fld_userSecurityCaptcha = this.state.fld_userSecurityCaptcha;
    let isUserCaptchaValid = this.state.isUserCaptchaValid;
+   let userCaptchaCode = event.target.value;
    let formStatus = 'error';
    let msg = "Please Enter Valid Security Captcha.";
-   if(this.state.sysCaptchaCode === event.target.value) {
+   if(this.state.sysCaptchaCode === userCaptchaCode) {
       isUserCaptchaValid = true;
       formStatus = 'success';
       msg = '';
    }
    bootstrap_formField_trigger(formStatus,fld_userSecurityCaptcha);
-   let callBack = { id:fld_userSecurityCaptcha, isValid: isUserCaptchaValid, msg: msg };
+   let callBack = { id:fld_userSecurityCaptcha, 
+                    value: userCaptchaCode, 
+                    isValid: isUserCaptchaValid, 
+                    msg: msg };
    this.props.isFormValid(callBack);
  }
 

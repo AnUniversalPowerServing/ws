@@ -14,17 +14,21 @@ class EmailAddress extends React.Component {
     .then(data => {
         if(data.isExist){
            bootstrap_formField_trigger('success', fld_userEmailAddress);
-           let callBack = { id:fld_userEmailAddress, isValid: true, msg: '' }
+           let callBack = { id:fld_userEmailAddress, value:email, isValid: true, msg: '' }
            this.props.isFormValid(callBack);
         } else {
            bootstrap_formField_trigger('error', fld_userEmailAddress);
-           let callBack = { id:fld_userEmailAddress, isValid: false, msg: 'Email Address is already Registered.' }
+           let callBack = { id:fld_userEmailAddress, 
+                            value:email, 
+                            isValid: false, 
+                            msg: 'Email Address is already Registered.' 
+                          };
            this.props.isFormValid(callBack);
         }
     });
    } else {
       bootstrap_formField_trigger('error', fld_userEmailAddress);
-      let callBack = { id:fld_userEmailAddress, isValid: false, msg: 'Looks Incorrect Email Format. Please Enter Valid Email Address.' }
+      let callBack = { id:fld_userEmailAddress, value:email, isValid: false, msg: 'Looks Incorrect Email Format. Please Enter Valid Email Address.' }
       this.props.isFormValid(callBack);
    }
    
