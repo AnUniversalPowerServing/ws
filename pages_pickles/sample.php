@@ -19,13 +19,23 @@
   <script src="<?php echo $PROJECT_URL; ?>/vendor/react@16/react.production.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/react-dom@16/react-dom.production.min.js"></script>
   <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.auth.email.js"></script>
+  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.auth.mobile.js"></script>
   <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.security.captcha.js"></script>
   <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.sample.js"></script>
   <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.alert.js"></script>
   <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.auth.validate.email.js"></script>
+  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.auth.validate.mobile.js"></script>
 <script type="text/babel">
 function genRandomNumber(min,max){
-  return Math.floor(Math.random() * (max - min + 1) + min);
+ return Math.floor(Math.random() * (max - min + 1) + min);
+}
+function allowOnlyNumbers(event) {
+ event = (event) ? event : window.event;
+ var charCode = (event.which) ? event.which : event.keyCode;
+ var status = false;
+ if (charCode >= 48 && charCode <= 57) { status = true; }
+ console.log("charCode: "+charCode+" status: "+status);
+ return status;
 }
 ReactDOM.render(<Sample />, document.getElementById('root'));
 </script>
