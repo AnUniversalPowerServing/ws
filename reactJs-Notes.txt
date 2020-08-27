@@ -3,3 +3,9 @@ componentDidMount() { } => Equivalent to $(document).ready(function(){}); in JQu
 Get list of Keys in JSON  (Returns Keys in Array Format) - Object.keys(jsonData)
 ---------------
 <div dangerouslySetInnerHTML={{__html: this.props.alertMsg}} /> - String to HTML loading
+---------------
+Dynamic State Set - this.setState({ [element]: value });
+Dynamic State Get - this.state[element];
+---------------
+Rules:
+1) Never Set State in render() Method and the functions called from render().

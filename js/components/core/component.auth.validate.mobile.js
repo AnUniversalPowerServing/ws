@@ -2,10 +2,16 @@ class ValidateMobile extends React.Component {
  constructor(props) {
   super(props);
   this.state = { alert:{ view:false, type:'', msg:''},
-                 fld_userOTPCode:'fld_mobile_userOTPCode', 
+                 fld_userOTPCode:'fld_mobile_userOTPCode',
+                 mobCode: this.props.mobCode,
+                 mobile: this.props.mobile,
+                 sendOTPCode: this.props.sendOTPCode, 
                  sysOTPCode:0, 
                  userOTPCode:'' 
                };
+  if(this.state.sendOTPCode){
+    this.sendOTPCode();
+  }
  }
 
  showAlert(type, msg){
@@ -13,22 +19,20 @@ class ValidateMobile extends React.Component {
         alert.view = true;
         alert.type = type;
         alert.msg = msg;
-    this.setState({ alert });
+    console.log(JSON.stringify(alert));
+    console.log(this.state.alert);
+  //  this.setState({ alert });
  }
 
  sendOTPCode(){
-   /* let msg = 'An OTP Code is sent to your Mobile ';
-        msg+='<b>'+this.props.mobCode+'-'+this.props.mobile+'</b>';
+    let msg = 'An OTP Code is sent to your Mobile ';
+        msg+='<b>'+this.state.mobCode+'-'+this.state.mobile+'</b>';
         msg+='. Please check it and Enter that OTP Code in the given below field:'
     this.showAlert('info', msg);
     if(this.state.sysOTPCode === 0){
       this.setState({ sysOTPCode:genRandomNumber(10000,99999) });
     }
-  console.log("sysOTPCode: "+this.state.sysOTPCode); */
- }
-
- ComponentDidUpdate(prevProps, currentProps){
-  console.log("send OTP Code");
+  console.log("sysOTPCode: "+this.state.sysOTPCode);
  }
 
  validateOTPCode(){
@@ -48,9 +52,7 @@ class ValidateMobile extends React.Component {
  }
 
  render(){
-  if(this.props.sendOTPCode && this.props.mobCode.length>0 && this.props.mobile.length>0){
-    this.sendOTPCode();
-  }
+
   return (<div className="list-group">
             <div className="list-group-item pad0 boxShadow borderRadTopRight5p borderRadBotRight5p borderRadBotLeft5p">
               <div>

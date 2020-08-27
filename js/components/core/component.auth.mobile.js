@@ -13,41 +13,60 @@ class Mobile extends React.Component {
 
  validateMobile(event){
    let fld_userMobile = this.state.fld_userMobile;
+   let fld_userMobCode = this.state.fld_userMobCode;
    let mobile = event.target.value;
    if(mobile.length=== 10){
     fetch(this.props.validateUrl).then(response => response.json())
     .then(data => {
         if(data.isExist){
            bootstrap_formField_trigger('success', fld_userMobile);
-           let callBack = { id:fld_userMobile, value:mobile, isValid: true, msg: '' }
+           let callBack = { mobile: { id: fld_userMobile, 
+                                      value: mobile, 
+                                      isValid: true, 
+                                      msg: '' },
+                            mobCode: { id: fld_userMobCode,
+                                       value: this.state.mobCode.value,
+                                       isValid: true, 
+                                       msg: ''
+                                     }
+                          };
            this.props.isMobileFormValid(callBack);
         } else {
            bootstrap_formField_trigger('error', fld_userMobile);
-           let callBack = { id:fld_userMobile, 
-                            value:mobile, 
-                            isValid: false, 
-                            msg: 'Mobile Number is already Registered.' 
-                          };
+           let callBack = { mobile: { id: fld_userMobile, 
+                                      value: mobile, 
+                                      isValid: false, 
+                                      msg: 'Mobile Number is already Registered' },
+                            mobCode: { id: fld_userMobCode,
+                                       value: this.state.mobCode.value,
+                                       isValid: true, 
+                                       msg: ''
+                                     }
+                           };
            this.props.isMobileFormValid(callBack);
         }
     });
    } else {
       bootstrap_formField_trigger('error', fld_userMobile);
-      let callBack = { id:fld_userMobile, 
-         value:mobile, 
-         isValid: false, 
-         msg: 'Please Enter valid 10-digit Mobile Number.' 
-       };
+      let callBack = { mobile: { id: fld_userMobile, 
+                                 value: mobile, 
+                                 isValid: false, 
+                                 msg: 'Please Enter valid 10-digit Mobile Number.' },
+                       mobCode: { id: fld_userMobCode,
+                                  value: this.state.mobCode.value,
+                                  isValid: true, 
+                                  msg: ''
+                                }
+                     };
       this.props.isMobileFormValid(callBack);
    }
-   this.props.isMobCodeFormValid({ value: this.state.mobCode.value, isValid: true });
    document.getElementById(event.target.id).focus();
  }
 
  render(){
   return (
     <div className="form-group">
-     <label>Mobile Number</label>
+     <label>Mobile Number {(this.props.isRequired) && <span>Required</span>}</label>
      <div className="input-group">
      <div className="input-group-btn">
        <div className="dropdown">

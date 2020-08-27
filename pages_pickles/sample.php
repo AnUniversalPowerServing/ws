@@ -25,7 +25,15 @@
   <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.alert.js"></script>
   <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.auth.validate.email.js"></script>
   <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.auth.validate.mobile.js"></script>
+  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.base.js"></script>
+  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.base.trigger.js"></script>
 <script type="text/babel">
+ const FORM_INPUT_NAME = "name";
+ const FORM_INPUT_EMAIL = "email";
+ const FORM_INPUT_MOBILE = "mobile";
+ const FORM_VALIDATE_EMAIL = "validate_email";
+ const FORM_VALIDATE_MOBILE = "validate_mobile";
+ const FORM_INPUT_SQ = "sQ"; 
 function genRandomNumber(min,max){
  return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -37,16 +45,12 @@ function allowOnlyNumbers(event) {
  console.log("charCode: "+charCode+" status: "+status);
  return status;
 }
-ReactDOM.render(<Sample />, document.getElementById('root'));
+ReactDOM.render(<CodeBase />, document.getElementById('root'));
 </script>
 </head>
 <body>
 
 <div class="container">
-  <div class="jumbotron">
-    <h1>Bootstrap Tutorial</h1>      
-    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
-  </div>
   <div id="root"></div>    
 </div>
 

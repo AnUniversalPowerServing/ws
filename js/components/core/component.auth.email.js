@@ -45,7 +45,7 @@ class EmailAddress extends React.Component {
  render(){
   return (
     <div className="form-group">
-     <label>Email Address</label>
+     <label>Email Address {(this.props.isRequired) && <span>Required</span>}</label>
      <input id={this.state.fld_userEmailAddress} type="text" className="form-control" 
      placeholder="Enter Email Address" onChange={(event)=>{
         this.validateEmail(event);
