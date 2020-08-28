@@ -3,10 +3,59 @@
 class Trigger extends React.Component {
  constructor(props) {
   super(props);
-  this.state = { info: this.props.form };
+  this.state = { alertView: false,
+                 alertMsg:{},
+                 badge: { index:0,
+                          info: this.props.form,
+                        },
+                 emailAddress:{ value:'', isValid: false, sendOTPCode:false }, 
+               };
+ }
+
+ ui_viewBadgeMenu(){
+  let badgeMenu = []; // Build Form
+  let badgeContent = [];
+  let info = this.state.badge.info;
+  console.log(info);
+  let formData = info.form.data;
+  let size = formData.length;
+  if(size>0){
+    formData.map((arry, formIndex)=>{
+        badgeMenu.push((size > 1)?(<div align="center" className="col-xs-3">
+                                     <span id={'menu'+formIndex} 
+                                           className="badge"
+                                           onClick={(event)=>this.sel_BadgeMenu(formIndex, size)}>
+                                        {formIndex+1}
+                                     </span>
+                                   </div>):'');
+        let elements = arry.elements; 
+        let alertMsg = this.state.alertMsg;
+        let alertMsgElem = Object.keys(alertMsg);
+        badgeContent.push((formIndex > 0)?
+        <div id={'content'+formIndex} className="mtop15p hide-block">
+          {this.state.alertView &&  (
+      <Alert alertType="danger" 
+             alertMsg={(alertMsgElem.length>0) ? 
+                        alertMsg[alertMsgElem[alertMsgElem.length-1]].msg : '' } />
+    )}
+           {this.ui_elements(elements)} 
+        </div>:
+        <div id={'content'+formIndex}>
+           {this.state.alertView &&  (
+      <Alert alertType="danger" 
+             alertMsg={(alertMsgElem.length>0) ? 
+                        alertMsg[alertMsgElem[alertMsgElem.length-1]].msg : '' } />
+    )}
+          {this.ui_elements(elements)}
+        </div>);  
+    });
+  }
+  return { menu: badgeMenu, content:badgeContent };
  }
 
  sel_BadgeMenu(index, size){
+  this.state.badge.index = index;
+  console.log("badgeIndex: "+this.state.badge.index);
   for(let i=0;i<size;i++){
     if(i === index) {
         if($('#content'+i).hasClass('hide-block')){
@@ -20,33 +69,8 @@ class Trigger extends React.Component {
   }
  }
 
- ui_viewBadgeMenu(){
-  let badgeMenu = []; // Build Form
-  let badgeContent = [];
-  let info = this.state.info;
-  let formData = info.form.data;
-  let size = formData.length;
-  if(size>0){
-    formData.map((arry, index)=>{
-        badgeMenu.push((size > 1)?(<div align="center" className="col-xs-3">
-                                     <span id={'menu'+index} 
-                                           className="badge"
-                                           onClick={(event)=>this.sel_BadgeMenu(index, size)}>
-                                        {index+1}
-                                     </span>
-                                   </div>):'');
-        let elements = arry.elements; 
-        console.log(elements);
-        badgeContent.push((index > 0)?
-        <div id={'content'+index} className="hide-block">{this.ui_elements(elements)}</div>:
-        <div id={'content'+index}>{this.ui_elements(elements)}</div>);  
-    });
-  }
-  return { menu: badgeMenu, content:badgeContent };
- }
-
  ui_emailAddress(element){
-    let formName = this.state.info.form.name;
+    let formName = this.state.badge.info.form.name;
     let isRequired = element.isRequired;
     let validateUrl= element.validateUrl;
     return (<EmailAddress id={formName+'_emailAddress'} 
@@ -56,7 +80,7 @@ class Trigger extends React.Component {
  }
 
  ui_mobile(element){
-    let formName = this.state.info.form.name;
+    let formName = this.state.badge.info.form.name;
     let isRequired = element.isRequired;
     let validateUrl= element.validateUrl;
     return (<Mobile mobCodeId={formName+'_mobCode'}
@@ -85,6 +109,32 @@ class Trigger extends React.Component {
   console.log();
   return html;
  }
+
+
+ validateAndAlert(callBack, element){
+  let alertMsg = this.state.alertMsg;
+  let id = callBack.id;
+  let isValid =  callBack.isValid;
+  let msg = callBack.msg;
+  let value = callBack.value;
+  alertMsg[id]={ isValid:isValid, msg: msg };
+  if(isValid){ 
+    delete alertMsg[id]; 
+    let elem = this.state[element];
+    elem.isValid = isValid;
+    elem.value = value;
+    this.setState({ [element]: elem });
+  }
+  let alertMsgElem = Object.keys(alertMsg);
+  let alertView = false;
+  if(alertMsgElem.length>0){ alertView = true; }
+  this.setState({ alertView, alertMsg });
+  console.log(this.state);
+}
+
+isValid_emailAddress = (callBack) => { 
+  this.validateAndAlert(callBack, 'emailAddress');
+}
 
  render(){
     let badge = this.ui_viewBadgeMenu();
