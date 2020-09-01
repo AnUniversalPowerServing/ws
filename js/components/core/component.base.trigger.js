@@ -114,12 +114,16 @@ class Trigger extends React.Component {
 
  ui_emailAddress(element){
     let formName = this.state.badge.info.form.name;
-    let emailAddress_Id = formName+'_emailAddress';
+    let emailAddress_Id = element.id;
     this.state.emailAddress.id = emailAddress_Id;
     let isRequired = element.isRequired;
-    let validateUrl= element.validateUrl;
+    let validateUrl = element.validateUrl;
+    let purpose = element.purpose;
+    let label = element.label;
     return (<EmailAddress id={emailAddress_Id} 
+                    label={label}
                     isRequired={isRequired}
+                    purpose={purpose}
                     validateUrl={validateUrl} 
                     isFormValid={this.isValid_emailAddress}
                     reset={this.state.emailAddress.reset} />);
@@ -127,19 +131,23 @@ class Trigger extends React.Component {
 
  ui_mobile(element){
     let formName = this.state.badge.info.form.name;
-    let mobile_Id = formName+'_mobile';
-    let mobCode = formName+'_mobCode';
+    let mobile_Id = element.id.split("|")[0];
+    let mobCode = element.id.split("|")[1];
     this.state.mobCode.id = mobile_Id;
     this.state.mobile.id = mobCode;
     let isRequired = element.isRequired;
     let validateUrl= element.validateUrl;
-    return (<Mobile mobCodeId={mobile_Id}
+    let purpose = element.purpose;
+    let label = element.label;
+    return (<Mobile label={label}
+                    mobCodeId={mobile_Id}
                     mobCodeDefault={{ value:'+91', 
                                       flag:'/img/country-flag/india.png', 
                                       country:'India' }}
                     mobileId={mobCode} 
                     isRequired={isRequired}
                     validateUrl={validateUrl}
+                    purpose={purpose}
                     isFormValid={this.isValid_mobile}
                     resetMobCode={this.state.mobCode.reset}
                     resetMobile={this.state.mobile.reset} />);

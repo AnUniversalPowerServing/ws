@@ -39,13 +39,23 @@ class Mobile extends React.Component {
    if(mobile.length=== 10){
     fetch(this.props.validateUrl).then(response => response.json())
     .then(data => {
-        if(data.isExist){
-           bootstrap_formField_trigger('success', fld_userMobile);
+      if(this.props.purpose === 'Register'){
+         if(!data.isExist){
+            bootstrap_formField_trigger('success', fld_userMobile);
+            this.callBack(mobile, true, '', mobCode, true, '');
+         } else {
+            bootstrap_formField_trigger('error', fld_userMobile);
+            this.callBack(mobile, false, 'Mobile Number is already Registered.', mobCode, true, '');
+         }
+      } else if(this.props.purpose === 'Authenticate') {
+         if(data.isExist){
+            bootstrap_formField_trigger('success', fld_userMobile);
            this.callBack(mobile, true, '', mobCode, true, '');
-        } else {
-           bootstrap_formField_trigger('error', fld_userMobile);
-           this.callBack(mobile, false, 'Mobile Number is already Registered.', mobCode, true, '');
-        }
+         } else {
+            bootstrap_formField_trigger('error', fld_userMobile);
+            this.callBack(mobile, false, 'Mobile Number is not Registered. Please do Signup / Register for an Account.', mobCode, true, '');
+         }
+      }
     });
    } else {
       bootstrap_formField_trigger('error', fld_userMobile);
@@ -75,7 +85,7 @@ class Mobile extends React.Component {
   if(this.props.resetMobile){ this.ui_reset_mobile(); }
   return (
     <div className="form-group">
-     <label>Mobile Number {(this.props.isRequired) && <span>Required</span>}</label>
+     <label>{this.props.label} {(this.props.isRequired) && <span>Required</span>}</label>
      <div className="input-group">
      <div className="input-group-btn">
        <div className="dropdown">

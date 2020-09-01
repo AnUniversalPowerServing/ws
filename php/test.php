@@ -1,6 +1,6 @@
 <?php
  header('Content-Type: application/json');
  $data = array();
- $data["isExist"] = true;
+ $data["isExist"] = false;
  echo json_encode($data);
 ?>

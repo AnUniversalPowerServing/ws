@@ -12,13 +12,13 @@ class PaymentButton extends React.Component {
   rzrpy_purchaseId = this.props.purchaseId;
   rzrpy_purchaseDesc = this.props.purchaseDesc;
   rzrpy_amount_in_paisa = this.props.amount;
-  rzrpy_amount_in_rupee = amount_in_paisa/100;
+  rzrpy_amount_in_rupee = rzrpy_amount_in_paisa/100;
   rzrpy_orderId = this.props.orderId;
   this.state = {  paymentTrackService: "", // it will store complete Project Payment info
                   options:{"key": "rzp_test_smHMQSdt5KOYRk",
-                          "amount": this.props.amount, // in paisa (Rs.5 mention as 500)
+                          "amount": rzrpy_amount_in_paisa, // in paisa (Rs.5 mention as 500)
                           "name": PROJECT_NAME,
-                          "description": purchaseDesc,
+                          "description": rzrpy_purchaseDesc,
                           "image": PROJECT_PAYLOGO,
                           "handler": this.customerPaymentResponse,
                           "prefill": {
@@ -48,7 +48,7 @@ class PaymentButton extends React.Component {
   console.log("purchaseId: "+rzrpy_purchaseId);
   console.log("purchaseDesc: "+rzrpy_purchaseDesc);
   console.log("amount_in_rupee: "+rzrpy_amount_in_rupee); 
-  console.log("orderId": "+rzrpy_orderId);
+  console.log("orderId: "+rzrpy_orderId);
   // call service that saves in Database
   // OrderRefId - which Db product is related
  };

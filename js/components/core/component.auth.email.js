@@ -27,11 +27,19 @@ class EmailAddress extends React.Component {
    if(this.checkEmailFormat(email)){
     fetch(this.props.validateUrl).then(response => response.json())
     .then(data => {
-        if(data.isExist){
-           this.callBack('success', email, true, '');
-        } else {
-           this.callBack('error', email, false, 'Email Address is already Registered.');
-        }
+      if(this.props.purpose === 'Register'){
+         if(!data.isExist){
+            this.callBack('success', email, true, '');
+         } else {
+            this.callBack('error', email, false, 'Email Address is already Registered.');
+         }
+      } else if(this.props.purpose === 'Authenticate') {
+         if(data.isExist){
+            this.callBack('success', email, true, '');
+         } else {
+            this.callBack('error', email, false, 'Email Address is not Registered. Please do Signup / Register for an Account.');
+         }
+      }
     });
    } else {
       this.callBack('error', email, false, 'Looks Incorrect Email Format. Please Enter Valid Email Address.');
@@ -56,7 +64,7 @@ class EmailAddress extends React.Component {
   if(this.props.reset){ this.ui_reset_emailAddress(); }
   return (
     <div className="form-group">
-     <label>Email Address {(this.props.isRequired) && <span>Required</span>}</label>
+     <label>{this.props.label} {(this.props.isRequired) && <span>Required</span>}</label>
      <input id={this.state.fld_userEmailAddress} type="text" className="form-control" 
      placeholder="Enter Email Address" onChange={(event)=>{
         this.validateEmail(event);
