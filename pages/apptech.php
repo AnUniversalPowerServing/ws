@@ -34,6 +34,15 @@ if(menu === 'ionic'){
                                 }]
               };
 }
+else if(menu === 'android'){
+  pageContent = { "contentMenu":[{ "id":"android-project",
+                                   "label":"Android Project", 
+                                   "subContentMenu":[{"id":"android-manifest-file",
+                                                      "label":"Android Manifest File",  
+                                                      "url":"tutorial/app/android/android-manifest-file" }]
+                                }]
+              };
+}
 console.log(pageContent);
 </script>
 </head>
@@ -49,6 +58,9 @@ console.log(pageContent);
        if(isset($_GET["1"]) && isset($_GET["2"])){
         if($_GET["1"]==$APPTECH_IONIC && $_GET["2"]==$APPTECH_IONIC_PROJSTR){
           include_once 'templates/apptech/ionic/01-project-structure.php';
+        }
+        else if($_GET["1"]==$APPTECH_ANDROID && $_GET["2"]==$APPTECH_ANDROID_MANIFEST){
+          include_once 'templates/apptech/android/01-android-manifest.php';
         }
        }
        

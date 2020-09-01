@@ -1,69 +1,78 @@
-var mobCodes = [{"mobCode":"+91", "flag":"/img/country-flag/india.png","country":"India"},
-                {"mobCode":"+1", "flag":"/img/country-flag/usa.png","country":"United States of America"},
-                {"mobCode":"+61", "flag":"/img/country-flag/australia.png","country":"Australia"}
-                  ];
+
 class Mobile extends React.Component {
  constructor(props) {
   super(props);
   this.state = { fld_userMobCode: this.props.mobCodeId,
                  fld_userMobile: this.props.mobileId,
-                 mobCode: { value:'+91', flag:'/img/country-flag/india.png', country:'India' } // Default
+                 mobCode: this.props.mobCodeDefault, // Default
+                 callBack: { mobile: { id: this.props.mobileId, 
+                                       value: '', 
+                                       isValid: false, 
+                                       msg: '' },
+                             mobCode: { id: this.props.mobCodeId,
+                                        value: '',
+                                        isValid: true, 
+                                        msg: ''
+                                       }
+                            }
                };
+ }
+
+ callBack(mobileValue, mobileIsValid, mobileMsg, 
+          mobCodeValue, mobCodeIsValid, mobCodeMsg){
+   let callBack = this.state.callBack;
+       callBack.mobile.value = mobileValue;
+       callBack.mobile.isValid = mobileIsValid;
+       callBack.mobile.msg = mobileMsg;
+       callBack.mobCode.value = mobCodeValue;
+       callBack.mobCode.isValid = mobCodeIsValid;
+       callBack.mobCode.msg = mobCodeMsg;
+   this.setState({ callBack });
+   this.props.isFormValid(callBack);
  }
 
  validateMobile(event){
    let fld_userMobile = this.state.fld_userMobile;
-   let fld_userMobCode = this.state.fld_userMobCode;
    let mobile = event.target.value;
+   let callBack = this.state.callBack;
+   let mobCode = this.state.mobCode.value;
    if(mobile.length=== 10){
     fetch(this.props.validateUrl).then(response => response.json())
     .then(data => {
         if(data.isExist){
            bootstrap_formField_trigger('success', fld_userMobile);
-           let callBack = { mobile: { id: fld_userMobile, 
-                                      value: mobile, 
-                                      isValid: true, 
-                                      msg: '' },
-                            mobCode: { id: fld_userMobCode,
-                                       value: this.state.mobCode.value,
-                                       isValid: true, 
-                                       msg: ''
-                                     }
-                          };
-           this.props.isMobileFormValid(callBack);
+           this.callBack(mobile, true, '', mobCode, true, '');
         } else {
            bootstrap_formField_trigger('error', fld_userMobile);
-           let callBack = { mobile: { id: fld_userMobile, 
-                                      value: mobile, 
-                                      isValid: false, 
-                                      msg: 'Mobile Number is already Registered' },
-                            mobCode: { id: fld_userMobCode,
-                                       value: this.state.mobCode.value,
-                                       isValid: true, 
-                                       msg: ''
-                                     }
-                           };
-           this.props.isMobileFormValid(callBack);
+           this.callBack(mobile, false, 'Mobile Number is already Registered.', mobCode, true, '');
         }
     });
    } else {
       bootstrap_formField_trigger('error', fld_userMobile);
-      let callBack = { mobile: { id: fld_userMobile, 
-                                 value: mobile, 
-                                 isValid: false, 
-                                 msg: 'Please Enter valid 10-digit Mobile Number.' },
-                       mobCode: { id: fld_userMobCode,
-                                  value: this.state.mobCode.value,
-                                  isValid: true, 
-                                  msg: ''
-                                }
-                     };
-      this.props.isMobileFormValid(callBack);
+      this.callBack(mobile, false, 'Please Enter valid 10-digit Mobile Number.', mobCode, true, '');
    }
    document.getElementById(event.target.id).focus();
  }
 
+ ui_reset_mobCode(){
+   let mobCode = this.state.mobCode;
+       mobCode.flag = this.props.mobCodeDefault.flag;
+       mobCode.value = this.props.mobCodeDefault.value;
+       mobCode.country = this.props.mobCodeDefault.country;
+   this.callBack('', false, '', '', false, '');
+  }
+
+  ui_reset_mobile(){
+   let callBack = this.state.callBack;
+   let mobile = callBack.mobile;
+   callBack.mobile.value = '';
+   document.getElementById(mobile.id).value = '';
+   bootstrap_formField_trigger('remove',mobile.id);
+  }
+
  render(){
+  if(this.props.resetMobCode){ this.ui_reset_mobCode(); }
+  if(this.props.resetMobile){ this.ui_reset_mobile(); }
   return (
     <div className="form-group">
      <label>Mobile Number {(this.props.isRequired) && <span>Required</span>}</label>
@@ -73,9 +82,11 @@ class Mobile extends React.Component {
          <button id={this.state.fld_userMobCode} 
             className="btn btn-default dropdown-toggle bordRad0 border1px-skyBlue" 
             type="button" data-toggle="dropdown">
-               <img style={{width:'20px'}}  src={PROJECT_URL+this.state.mobCode.flag} />
+               <div>
+            <img style={{width:'20px'}}  src={PROJECT_URL+this.state.mobCode.flag} />
                 &nbsp;&nbsp; {this.state.mobCode.value} &nbsp;
-            <span className="caret"></span></button>
+            <span className="caret"></span>
+         </div></button>
          <ul className="dropdown-menu">
             {mobCodes.map((data) =>{
                return (<li onClick={()=>{
@@ -84,8 +95,6 @@ class Mobile extends React.Component {
                                mobCode.flag = data.flag;
                                mobCode.country = data.country;
                            this.setState({ mobCode });
-                           this.props.isMobCodeFormValid({ value: mobCode.value, isValid: true });
-
                         }}>
                         <a href="#">
                            <img style={{width:'25px'}}  src={PROJECT_URL+data.flag} />

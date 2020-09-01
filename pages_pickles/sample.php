@@ -18,15 +18,7 @@
   <script src="<?php echo $PROJECT_URL; ?>/vendor/babel-standalone@6/babel.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/react@16/react.production.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/react-dom@16/react-dom.production.min.js"></script>
-  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.auth.email.js"></script>
-  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.auth.mobile.js"></script>
-  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.security.captcha.js"></script>
-  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.sample.js"></script>
-  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.alert.js"></script>
-  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.auth.validate.email.js"></script>
-  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.auth.validate.mobile.js"></script>
-  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.base.js"></script>
-  <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.base.trigger.js"></script>
+  <?php include_once 'templates/components.js'; ?>
 <script type="text/babel">
  const FORM_INPUT_NAME = "name";
  const FORM_INPUT_EMAIL = "email";
@@ -34,6 +26,10 @@
  const FORM_VALIDATE_EMAIL = "validate_email";
  const FORM_VALIDATE_MOBILE = "validate_mobile";
  const FORM_INPUT_SQ = "sQ"; 
+ var mobCodes = [{"mobCode":"+91", "flag":"/img/country-flag/india.png","country":"India"},
+                {"mobCode":"+1", "flag":"/img/country-flag/usa.png","country":"United States of America"},
+                {"mobCode":"+61", "flag":"/img/country-flag/australia.png","country":"Australia"}
+                  ];
 function genRandomNumber(min,max){
  return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -46,12 +42,19 @@ function allowOnlyNumbers(event) {
  return status;
 }
 ReactDOM.render(<CodeBase />, document.getElementById('root'));
+ReactDOM.render(<PaymentButton orderId="0"
+                               customerId="0" 
+                               purchaseId="0" 
+                               purchaseDesc=""  
+                               amount="500" />, 
+      document.getElementById('paymentGtwy'));
 </script>
 </head>
 <body>
 
 <div class="container">
   <div id="root"></div>    
+  <div id="paymentGtwy"></div>
 </div>
 
 </body>

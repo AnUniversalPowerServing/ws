@@ -8,10 +8,10 @@ class CodeBase extends React.Component {
                                                         { "field":FORM_INPUT_EMAIL, isRequired:true, validateUrl:'http://localhost/ws/php/test.php' },
                                                         { "field": FORM_INPUT_MOBILE, isRequired:true, validateUrl:'http://localhost/ws/php/test.php' } ]},
                                           { "title":"Page#2",
-                                            "elements":[{ "field":FORM_VALIDATE_EMAIL,  isRequired:true }, 
-                                                        {  "field":FORM_VALIDATE_MOBILE, isRequired:false }]},
+                                            "elements":[{ "id":"authRegister_validateEmail_1","field":FORM_VALIDATE_EMAIL,  isRequired:true }, 
+                                                        {  "id":"authRegister_validateMobile_1","field":FORM_VALIDATE_MOBILE, isRequired:false }]},
                                           { "title":"Page#3",
-                                            "elements":[{  "field":FORM_INPUT_SQ,  isRequired:true }]}
+                                            "elements":[{  "id":"authRegister_sQ","field":FORM_INPUT_SQ,  isRequired:true }]}
                                         ]}
                         }
                  };

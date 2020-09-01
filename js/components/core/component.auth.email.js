@@ -1,37 +1,41 @@
 class EmailAddress extends React.Component {
  constructor(props) {
   super(props);
-  this.state = { fld_userEmailAddress: this.props.id
-
+  this.state = { fld_userEmailAddress: this.props.id,
+                 callBack:{ emailAddress :{ id: this.props.id, 
+                                            value: '', 
+                                            isValid: false, 
+                                            msg: '' }
+               }
         };
  }
 
+ callBack(status, email, isValid, msg){
+  let fld_userEmailAddress = this.state.fld_userEmailAddress;
+  let callBack = { id:fld_userEmailAddress, 
+      value:email, 
+      isValid: isValid, 
+      msg: msg
+    };
+  this.setState({ callBack });
+  this.props.isFormValid(callBack);
+  bootstrap_formField_trigger(status, fld_userEmailAddress);
+ }
+
  validateEmail(event){
-   let fld_userEmailAddress = this.state.fld_userEmailAddress;
    let email = event.target.value;
    if(this.checkEmailFormat(email)){
     fetch(this.props.validateUrl).then(response => response.json())
     .then(data => {
         if(data.isExist){
-           bootstrap_formField_trigger('success', fld_userEmailAddress);
-           let callBack = { id:fld_userEmailAddress, value:email, isValid: true, msg: '' }
-           this.props.isFormValid(callBack);
+           this.callBack('success', email, true, '');
         } else {
-           bootstrap_formField_trigger('error', fld_userEmailAddress);
-           let callBack = { id:fld_userEmailAddress, 
-                            value:email, 
-                            isValid: false, 
-                            msg: 'Email Address is already Registered.' 
-                          };
-           this.props.isFormValid(callBack);
+           this.callBack('error', email, false, 'Email Address is already Registered.');
         }
     });
    } else {
-      bootstrap_formField_trigger('error', fld_userEmailAddress);
-      let callBack = { id:fld_userEmailAddress, value:email, isValid: false, msg: 'Looks Incorrect Email Format. Please Enter Valid Email Address.' }
-      this.props.isFormValid(callBack);
-   }
-   
+      this.callBack('error', email, false, 'Looks Incorrect Email Format. Please Enter Valid Email Address.');
+   } 
  }
 
  checkEmailFormat(email){
@@ -42,7 +46,14 @@ class EmailAddress extends React.Component {
     return validFormat;
  }
 
+ ui_reset_emailAddress(){
+   let emailAddress = this.state.emailAddress;
+   document.getElementById(this.state.fld_userEmailAddress).value = '';
+   this.callBack('remove', emailAddress, false, '');
+ }
+
  render(){
+  if(this.props.reset){ this.ui_reset_emailAddress(); }
   return (
     <div className="form-group">
      <label>Email Address {(this.props.isRequired) && <span>Required</span>}</label>
