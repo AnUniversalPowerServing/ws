@@ -26,7 +26,7 @@
       <!-- HTML Programming Language ::: END -->
 
       <!-- Font-Awesome Icons ::: START -->
-      <a href="<?php echo $PROJECT_URL; ?>">
+      <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/font-awesome-icons/overview-of-font-awesome-icons">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-darkPurple"><b>Font-Awesome Icons</b></div>
         <div class="list-group-item bg-lgtDarkPurple">
@@ -41,7 +41,7 @@
       <!-- Font-Awesome Icons ::: END -->
 
       <!-- Typescript ::: START -->
-      <a href="<?php echo $PROJECT_URL; ?>">
+      <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/typescript/overview-of-typescript">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-primary"><b>TypeScript</b></div>
         <div class="list-group-item bg-lgtPrimary">
@@ -59,7 +59,7 @@
       <!-- Typescript ::: END -->
 
       <!-- ReactJS ::: START -->
-      <a href="<?php echo $PROJECT_URL; ?>">
+      <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/reactjs/overview-of-reactjs">
        <div class="list-group boxShadow">
         <div class="list-group-item bg-purple"><b>ReactJS</b></div>
         <div class="list-group-item bg-lgtPurple">
@@ -77,7 +77,7 @@
       <!-- ReactJS ::: END -->
 
       <!-- PHP ::: START -->
-      <a href="<?php echo $PROJECT_URL; ?>">
+      <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/php/overview-of-php">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-darkPurple"><b>PHP</b></div>
         <div class="list-group-item  bg-lgtDarkPurple">
@@ -100,7 +100,7 @@
   <div class="col-sm-4">
      
       <!-- Javascript ::: START -->
-      <a href="<?php echo $PROJECT_URL; ?>">
+      <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/javascript/overview-of-javascript">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-skyBlue"><b>Javascript</b></div>
         <div class="list-group-item bg-lgtSkyBlue">
@@ -115,7 +115,7 @@
       <!-- Javascript ::: END -->
 
       <!-- JQuery ::: START -->
-      <a href="<?php echo $PROJECT_URL; ?>">
+      <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/jquery/overview-of-jquery">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-mud"><b>JQuery</b></div>
         <div class="list-group-item bg-lgtMud">
@@ -130,7 +130,7 @@
       <!-- JQuery ::: END -->
 
       <!-- NodeJS ::: START -->
-      <a href="<?php echo $PROJECT_URL; ?>">
+      <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/nodejs/overview-of-nodejs">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-cement"><b>NodeJS</b></div>
         <div class="list-group-item bg-lgtCement">
@@ -172,7 +172,7 @@
   <div class="col-sm-4">
 
    <!-- CSS ::: START -->
-   <a href="<?php echo $PROJECT_URL; ?>">
+   <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/css/overview-of-css">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-darkLeaf "><b>CSS</b></div>
         <div class="list-group-item bg-lgtDarkLeaf ">
@@ -187,7 +187,7 @@
       <!-- CSS ::: END -->
 
       <!-- ECMAScript ::: START -->
-      <a href="<?php echo $PROJECT_URL; ?>">
+      <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/ecmascript/overview-of-ecmascript">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-pink"><b>ECMAScript</b></div>
         <div class="list-group-item bg-lgtPink">
@@ -226,7 +226,7 @@
       <!-- AngularJS / Angular ::: END -->
 
       <!-- Java Spring Framework ::: START -->
-      <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/java-spring-framework/overview-of-java-spring-framework">
+      <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/java-spring/overview-of-java-spring-framework">
       <div class="list-group boxShadow">
         <div class="list-group-item bg-primary"><b>Java (Spring Framework, Spring Boot & Micro-Services) </b></div>
         <div class="list-group-item bg-lgtPrimary">

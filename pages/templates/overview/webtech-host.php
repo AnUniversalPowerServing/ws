@@ -10,7 +10,7 @@
       <div class="col-sm-4">
           
         <!-- Godaddy.com ::: START -->
-        <a href="#">
+        <a href="<?php echo $PROJECT_URL; ?>//tutorial/webtech/godaddy/overview-of-godaddy">
         <div class="list-group boxShadow">
          <div class="list-group-item bg-darkleaf"><b>Godaddy.com</b></div>
            <div class="list-group-item bg-lgtDarkleaf">
@@ -47,7 +47,7 @@
            </div><!--/.list-group-item -->
         </div><!--/.list-group -->
         </a>
-        <!-- Godaddy.com ::: END -->
+        <!-- AWS ::: END -->
 
       </div><!--/.col-sm-4 -->
       <div class="col-sm-4">

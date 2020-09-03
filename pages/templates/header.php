@@ -30,22 +30,7 @@ $('.navbar .dropdown').on('hidden.bs.dropdown', function () {
 
 });
 
-function build_pageBreadcrumb(jsonData){
- var content='<nav aria-label="breadcrumb">';
-     content+='<ol class="breadcrumb">';
- for(var index in jsonData){
-  var url = jsonData[index].url;
-  var label = jsonData[index].label;
-  if(url === undefined){
-    content+='<li class="breadcrumb-item active" aria-current="page">'+label+'</li>';
-  } else {
-    content+='<li class="breadcrumb-item"><a href="'+PROJECT_URL+'/'+url+'">'+label+'</a></li>';
-  }
- }  
-     content+='</ol>';
-     content+='</nav>';
- document.getElementById("page-breadcrumb").innerHTML = content;
-}
+
 </script>
 
 <div id="appHeader">

@@ -10,7 +10,7 @@
       <div class="col-sm-4">
           
         <!-- Apache Tomcat ::: START -->
-        <a href="#">
+        <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/apache-tomcat/overview-of-apache-tomcat">
         <div class="list-group boxShadow">
          <div class="list-group-item bg-primary"><b>Apache Tomcat (Java based HTTP Web Server)</b></div>
            <div class="list-group-item bg-lgtPrimary">
@@ -31,7 +31,7 @@
       <div class="col-sm-4">
 
         <!-- Apache HTTP Server ::: START -->
-        <a href="#">
+        <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/apache-http-server/overview-of-apache-http-server">
         <div class="list-group boxShadow">
          <div class="list-group-item bg-mud"><b>Apache HTTP Server</b></div>
            <div class="list-group-item bg-lgtMud">

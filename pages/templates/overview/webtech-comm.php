@@ -10,7 +10,7 @@
       <div class="col-sm-4">
 
         <!-- RabbitMQ ::: START -->
-        <a href="#">
+        <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/rabbitMQ/overview-of-rabbitMQ">
         <div class="list-group boxShadow">
          <div class="list-group-item bg-skyBlue"><b>Rabbit MQ</b></div>
            <div class="list-group-item bg-lgtSkyBlue">
@@ -31,7 +31,7 @@
       <div class="col-sm-4">
 
         <!-- Kafka ::: START -->
-        <a href="#">
+        <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/apache-kafka/overview-of-apache-kafka">
         <div class="list-group boxShadow">
          <div class="list-group-item bg-cement"><b>Apache Kafka</b></div>
            <div class="list-group-item  bg-lgtCement">

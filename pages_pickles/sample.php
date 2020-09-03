@@ -48,6 +48,7 @@ ReactDOM.render(<PaymentButton orderId="0"
                                purchaseDesc=""  
                                amount="500" />, 
       document.getElementById('paymentGtwy'));
+ReactDOM.render(<Dropdown />,  document.getElementById('select'));
 </script>
 </head>
 <body>
@@ -55,6 +56,12 @@ ReactDOM.render(<PaymentButton orderId="0"
 <div class="container">
   <div id="root"></div>    
   <div id="paymentGtwy"></div>
+  <div id="select"></div>
+  <select class="form-control">
+    <option>Value</option>
+    <option>Value</option>
+    <option>Value</option>
+  </select>
 </div>
 
 </body>

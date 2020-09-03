@@ -10,7 +10,7 @@
       <div class="col-sm-4">
 
         <!-- Search Engine Optimization (SEO) ::: START -->
-        <a href="#">
+        <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/seo/overview-of-seo">
         <div class="list-group boxShadow">
          <div class="list-group-item bg-pink"><b>Search Engine Optimization (SEO)</b></div>
            <div class="list-group-item bg-lgtPink">

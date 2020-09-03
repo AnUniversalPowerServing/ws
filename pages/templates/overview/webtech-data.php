@@ -10,7 +10,7 @@
     <div class="col-sm-4">
 
         <!-- MySQLDatabase ::: START -->
-        <a href="#">
+        <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/mysql/overview-of-mysql">
         <div class="list-group boxShadow">
          <div class="list-group-item bg-pink"><b>MySQLDatabase</b></div>
            <div class="list-group-item bg-lgtPink">
@@ -31,7 +31,7 @@
     <div class="col-sm-4">
 
       <!-- Web Browser Cookies ::: START -->
-      <a href="#">
+      <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/web-cookies/overview-of-web-cookies">
         <div class="list-group boxShadow">
          <div class="list-group-item bg-purple"><b>Web Browser Cookies</b></div>
            <div class="list-group-item bg-lgtPurple">
@@ -53,7 +53,7 @@
 
 
         <!-- Web Browser Sessions ::: START -->
-        <a href="#">
+        <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/web-sessions/overview-of-web-sessions">
         <div class="list-group boxShadow">
          <div class="list-group-item bg-darkLeaf"><b>Web Browser Sessions</b></div>
            <div class="list-group-item bg-lgtDarkLeaf">

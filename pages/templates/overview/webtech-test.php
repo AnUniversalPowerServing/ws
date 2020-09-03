@@ -10,7 +10,7 @@
       <div class="col-sm-4">
 
         <!-- Selenium Automation for Java ::: START -->
-        <a href="#">
+        <a href="<?php echo $PROJECT_URL; ?>/tutorial/webtech/selenium/overview-of-selenium">
         <div class="list-group boxShadow">
          <div class="list-group-item bg-darkPurple"><b>Selenium Automation</b></div>
            <div class="list-group-item bg-lgtDarkPurple">

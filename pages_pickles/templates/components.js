@@ -7,6 +7,7 @@
 <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.auth.validate.mobile.js"></script>
 <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.base.js"></script>
 <script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.base.trigger.js"></script>
+<script type="text/babel" src="<?php echo $PROJECT_URL; ?>/js/components/core/component.dropdown.js"></script>
 
 <!-- Payment Gateway Plugin ::: START -->
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
