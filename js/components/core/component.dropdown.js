@@ -21,6 +21,16 @@ class Dropdown extends React.Component {
  }
 
  ui_buildOptions(){
+  let options = [];
+  for(let index=0;index<select.length;index++){
+    let option = select[index];
+    if(index<5){
+      options.push(<li onClick={()=>{this.setDropdownValue(option)}}><a href="#">{option}</a></li>);
+    } else {
+      options.push(<li onClick={()=>{}}><a href="#">View All Options</a></li>);
+      break;
+    }
+  }
   return (<ul className="dropdown-menu">
     <li><div className="form-group mleft5p">
          <div className="input-group">
@@ -32,9 +42,7 @@ class Dropdown extends React.Component {
       </div>
     </li>
     <li class="divider"></li>
-  {select.map((option)=>{
-    return (<li onClick={()=>{this.setDropdownValue(option)}}><a href="#">{option}</a></li>);
-  })}
+    {options}
   </ul>);
  }
 
