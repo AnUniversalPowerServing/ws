@@ -118,11 +118,10 @@ class EmailAddress extends React.Component {
   let callBack = this.state.callBack;
   let showTextCapacity = callBack.emailAddress.showTextCapacity;
   let totalTextSize = callBack.emailAddress.totalTextSize;
-  console.log("showTextCapacity: "+showTextCapacity);
   if(reset_emailAddress){ this.ui_reset_emailAddress(); }
   return (<div className="form-group">
             <label>{label_emailAddress} {(isRequired_emailAddress) &&  <span><b>REQUIRED</b></span>}</label>
-            {(showTextCapacity!==undefined && showTextCapacity) &&  (totalTextSize!==undefined) && ? 
+            {(showTextCapacity!==undefined && showTextCapacity) &&  (totalTextSize!==undefined) ? 
                this.ui_viewWithTextCapacity_emailAddress() : this.ui_viewWithOutTextCapacity_emailAddress() }
          </div>);
  }
