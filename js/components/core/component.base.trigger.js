@@ -118,13 +118,19 @@ class Trigger extends React.Component {
     this.state.emailAddress.id = emailAddress_Id;
     let isRequired = element.isRequired;
     let validateUrl = element.validateUrl;
+    let showTextCapacity = element.showTextCapacity;
+    let totalTextSize = element.totalTextSize;
     let purpose = element.purpose;
     let label = element.label;
+    console.log("emailAddress_Id: "+emailAddress_Id);
+    console.log("showTextCapacity: "+showTextCapacity);
     return (<EmailAddress id={emailAddress_Id} 
                     label={label}
                     isRequired={isRequired}
                     purpose={purpose}
                     validateUrl={validateUrl} 
+                    showTextCapacity={showTextCapacity}
+                    totalTextSize={totalTextSize}
                     isFormValid={this.isValid_emailAddress}
                     reset={this.state.emailAddress.reset} />);
  }
@@ -137,6 +143,8 @@ class Trigger extends React.Component {
     this.state.mobile.id = mobCode;
     let isRequired = element.isRequired;
     let validateUrl= element.validateUrl;
+    let showTextCapacity = element.showTextCapacity;
+    let totalTextSize = element.totalTextSize;
     let purpose = element.purpose;
     let label = element.label;
     return (<Mobile label={label}
@@ -148,6 +156,8 @@ class Trigger extends React.Component {
                     isRequired={isRequired}
                     validateUrl={validateUrl}
                     purpose={purpose}
+                    showTextCapacity={showTextCapacity}
+                    totalTextSize={totalTextSize}
                     isFormValid={this.isValid_mobile}
                     resetMobCode={this.state.mobCode.reset}
                     resetMobile={this.state.mobile.reset} />);
@@ -168,7 +178,6 @@ class Trigger extends React.Component {
       case FORM_INPUT_SQ: { html.push(<div>SQ {(isRequired) && '(Required)'}</div>);break; }
     }
   });
-  console.log();
   return html;
  }
  
@@ -230,7 +239,7 @@ class Trigger extends React.Component {
 
 
 isValid_emailAddress = (callBack) => { 
-  this.validateAndAlert(callBack, 'emailAddress');
+  this.validateAndAlert(callBack.emailAddress, 'emailAddress');
 }
 
 isValid_mobile = (callBack) => { 

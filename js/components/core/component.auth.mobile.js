@@ -2,12 +2,12 @@
 class Mobile extends React.Component {
  constructor(props) {
   super(props);
-  this.state = { fld_userMobCode: this.props.mobCodeId,
-                 fld_userMobile: this.props.mobileId,
-                 mobCode: this.props.mobCodeDefault, // Default
+  this.state = { mobCode: this.props.mobCodeDefault, // Default
                  callBack: { mobile: { id: this.props.mobileId, 
                                        value: '', 
                                        isValid: false, 
+                                       totalTextSize: this.props.totalTextSize,
+                                       showTextCapacity:this.props.showTextCapacity,
                                        msg: '' },
                              mobCode: { id: this.props.mobCodeId,
                                         value: '',
@@ -18,50 +18,52 @@ class Mobile extends React.Component {
                };
  }
 
- callBack(mobileValue, mobileIsValid, mobileMsg, 
+ callBack(status, mobileValue, mobileIsValid, mobileMsg, 
           mobCodeValue, mobCodeIsValid, mobCodeMsg){
    let callBack = this.state.callBack;
+   let fld_userMobile = callBack.mobile.id;
        callBack.mobile.value = mobileValue;
        callBack.mobile.isValid = mobileIsValid;
        callBack.mobile.msg = mobileMsg;
        callBack.mobCode.value = mobCodeValue;
        callBack.mobCode.isValid = mobCodeIsValid;
        callBack.mobCode.msg = mobCodeMsg;
-   this.setState({ callBack });
+   this.setState({ callBack }); 
+   if(status.length>0){
+      bootstrap_formField_trigger(status, fld_userMobile);
+   } 
    this.props.isFormValid(callBack);
  }
 
  validateMobile(event){
-   let fld_userMobile = this.state.fld_userMobile;
-   let mobile = event.target.value;
    let callBack = this.state.callBack;
+   let fld_userMobile_id = callBack.mobile.id;
+   let fld_userMobile_value = event.target.value;
+   let totalTextSize = callBack.mobile.totalTextSize;
    let mobCode = this.state.mobCode.value;
-   if(mobile.length=== 10){
-    fetch(this.props.validateUrl).then(response => response.json())
+   let validateUrl = this.props.validateUrl;
+   let purpose = this.props.purpose;
+   if(fld_userMobile_value.length=== totalTextSize){
+    fetch(validateUrl).then(response => response.json())
     .then(data => {
-      if(this.props.purpose === 'Register'){
+      if(purpose === 'Register'){
          if(!data.isExist){
-            bootstrap_formField_trigger('success', fld_userMobile);
-            this.callBack(mobile, true, '', mobCode, true, '');
+            this.callBack('success',fld_userMobile_value, true, '', mobCode, true, '');
          } else {
-            bootstrap_formField_trigger('error', fld_userMobile);
-            this.callBack(mobile, false, 'Mobile Number is already Registered.', mobCode, true, '');
+            this.callBack('error',fld_userMobile_value, false, 'Mobile Number is already Registered.', mobCode, true, '');
          }
-      } else if(this.props.purpose === 'Authenticate') {
+      } else if(purpose === 'Authenticate') {
          if(data.isExist){
-            bootstrap_formField_trigger('success', fld_userMobile);
-           this.callBack(mobile, true, '', mobCode, true, '');
+           this.callBack('success',fld_userMobile_value, true, '', mobCode, true, '');
          } else {
-            bootstrap_formField_trigger('error', fld_userMobile);
-            this.callBack(mobile, false, 'Mobile Number is not Registered. Please do Signup / Register for an Account.', mobCode, true, '');
+            this.callBack('error',fld_userMobile_value, false, 'Mobile Number is not Registered. Please do Signup / Register for an Account.', mobCode, true, '');
          }
       }
     });
    } else {
-      bootstrap_formField_trigger('error', fld_userMobile);
-      this.callBack(mobile, false, 'Please Enter valid 10-digit Mobile Number.', mobCode, true, '');
+      this.callBack('error',fld_userMobile_value, false, 'Please Enter valid 10-digit Mobile Number.', mobCode, true, '');
    }
-   document.getElementById(event.target.id).focus();
+   document.getElementById(fld_userMobile_id).focus();
  }
 
  ui_reset_mobCode(){
@@ -69,10 +71,11 @@ class Mobile extends React.Component {
        mobCode.flag = this.props.mobCodeDefault.flag;
        mobCode.value = this.props.mobCodeDefault.value;
        mobCode.country = this.props.mobCodeDefault.country;
-   this.callBack('', false, '', '', false, '');
+   this.callBack('','', false, '', '', false, '');
   }
 
   ui_reset_mobile(){
+   console.log('ui_reset_mobile: called...');
    let callBack = this.state.callBack;
    let mobile = callBack.mobile;
    callBack.mobile.value = '';
@@ -80,21 +83,53 @@ class Mobile extends React.Component {
    bootstrap_formField_trigger('remove',mobile.id);
   }
 
+  handleMobileOnChange = (event) =>{
+   let callBack = this.state.callBack;
+   let mobile_value = callBack.mobile.value;
+   let mobCode_value = callBack.mobCode.value;
+   let mobile_totalTextSize = callBack.mobile.totalTextSize;
+   if(mobile_totalTextSize!==undefined){
+      if(mobile_value.length<mobile_totalTextSize || event.target.value.length<mobile_totalTextSize){
+         this.validateMobile(event);
+      } else {
+         this.callBack('error', mobile_value, false,
+                              'Mobile Field allows '+mobile_totalTextSize+' letters only. You are trying to enter more than it.',
+                              mobCode_value, true, '' );
+      }
+   } else {
+      this.validateMobile(event);
+   }
+ };
+
  render(){
-  if(this.props.resetMobCode){ this.ui_reset_mobCode(); }
-  if(this.props.resetMobile){ this.ui_reset_mobile(); }
+  let label = this.props.label;
+  let isRequired = this.props.isRequired;
+  let resetMobCode = this.props.resetMobCode;
+  let resetMobile = this.props.resetMobile;
+  let callBack = this.state.callBack;
+  let fld_userMobCode_Id =  callBack.mobCode.id;
+  let fld_userMobCode_flag = PROJECT_URL+this.state.mobCode.flag;
+  let fld_userMobCode_value = this.state.mobCode.value;
+  let fld_userMobile_Id = callBack.mobile.id;
+  let fld_userMobile_value = callBack.mobile.value;
+  let showTextCapacity = callBack.mobile.showTextCapacity;
+  let totalTextSize = callBack.mobile.totalTextSize;
+
+  if(resetMobCode){ this.ui_reset_mobCode(); }
+  if(resetMobile){ this.ui_reset_mobile(); }
   return (
     <div className="form-group">
-     <label>{this.props.label} {(this.props.isRequired) && <span>Required</span>}</label>
+     <label>{label} {(isRequired) && <span><b>REQUIRED</b></span>}</label>
      <div className="input-group">
+
      <div className="input-group-btn">
        <div className="dropdown">
-         <button id={this.state.fld_userMobCode} 
+         <button id={fld_userMobCode_Id} 
             className="btn btn-default dropdown-toggle bordRad0 border1px-skyBlue" 
             type="button" data-toggle="dropdown">
                <div>
-            <img style={{width:'20px'}}  src={PROJECT_URL+this.state.mobCode.flag} />
-                &nbsp;&nbsp; {this.state.mobCode.value} &nbsp;
+            <img style={{width:'20px'}}  src={fld_userMobCode_flag} />
+                &nbsp;&nbsp; {fld_userMobCode_value} &nbsp;
             <span className="caret"></span>
          </div></button>
          <ul className="dropdown-menu">
@@ -115,13 +150,16 @@ class Mobile extends React.Component {
          </ul>
       </div>
      </div>
-     <input id={this.state.fld_userMobile} type="number" className="form-control" 
+     <input id={fld_userMobile_Id} type="number" className="form-control" 
      placeholder="Enter Mobile Number"  
-     onKeyPress={(event)=>{ allowOnlyNumbers(event); }}
-     onChange={(event)=>{
-        this.validateMobile(event);
-        
-     }}/>
+     value={fld_userMobile_value}
+     style={{borderTopRightRadius:'5px', borderBottomRightRadius:'5px'}}
+     onChange={this.handleMobileOnChange}/>
+     {(showTextCapacity!==undefined && showTextCapacity===true) && 
+      (totalTextSize!==undefined) && (
+       <span className="input-group-addon">
+        {fld_userMobile_value.length}/{totalTextSize}</span>
+      )}
      </div>
     </div>
   );

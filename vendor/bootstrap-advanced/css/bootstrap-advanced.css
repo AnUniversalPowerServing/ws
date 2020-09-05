@@ -4,11 +4,11 @@
 .step-badges>div>span.badge.active { font-size:30px; }
 .hide-block { display:none; }
 .input-group-addon-success,.input-group-addon-success:hover,.input-group-addon-success:active,.input-group-addon-success:focus,
-.input-group-addon-success:active:hover{ background-color:#3c763d;color:#fff;border:1px solid #3c763d; }
+.input-group-addon-success:active:hover{ color:#3c763d; }
 .input-group-addon-warning,.input-group-addon-warning:hover,.input-group-addon-warning:active,.input-group-addon-warning:focus,
-.input-group-addon-warning:active:hover { background-color:#8a6d3b;color:#fff;border:1px solid #8a6d3b; }
+.input-group-addon-warning:active:hover { color:#8a6d3b; }
 .input-group-addon-error,.input-group-addon-error:hover,.input-group-addon-error:active,.input-group-addon-error:focus,
-.input-group-addon-error:active:hover { background-color:#a94442;color:#fff;border:1px solid #a94442; }
+.input-group-addon-error:active:hover { color:#a94442; }
 /*
 @media only screen and (max-width: 330px) { /* Mobiles */
  /*   .input-group>div.has-feedback>input { margin-top:2.5%; }

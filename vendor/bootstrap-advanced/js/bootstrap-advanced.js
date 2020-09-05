@@ -100,7 +100,8 @@ function bootstrap_formField_hglRemove(field_Id, css){
    if($('#'+field_Id).parent().is('div[class="has-warning has-feedback"]')){ $('#'+field_Id).unwrap(); }
    if($('#'+field_Id).parent().is('div[class="has-error has-feedback"]')){ $('#'+field_Id).unwrap(); }
    
-   if(inputgroup.children('span').hasClass('input-group-addon')){
+  if(inputgroup.children('span').hasClass('input-group-addon')){
+
 	if(inputgroup.children('span').hasClass('input-group-addon-success')){ 
     inputgroup.children('span').removeClass('input-group-addon-success'); 
     if(css!==undefined){inputgroup.children('span').addClass(css); }
