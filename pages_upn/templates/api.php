@@ -1,5 +1,5 @@
 <?php 
-$PROJECT_MODE='DEBUG';
+$PROJECT_MODE='PROD';
 $PROJECT_NAME='NativePickles.com';
 $PROJECT_URL = 'http://192.168.1.6/ws';
 $PROJECT_PAYLOGO = 'http://localhost/KalynVna/website/images/logo-square.png';

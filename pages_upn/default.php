@@ -19,7 +19,7 @@
   <script src="<?php echo $PROJECT_URL; ?>/vendor/react@16/react.production.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/react-dom@16/react-dom.production.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/js/components/core/component.base.js"></script>
-  <?php include_once 'templates/components.js'; ?>
+  <?php include_once 'templates/components.php'; ?>
 <style>
 .app-icon-s1 { width:220px;height:auto; }
 .mtop15p { margin-top:15px; }
