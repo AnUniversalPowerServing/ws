@@ -6,8 +6,7 @@ class CodeBase extends React.Component {
                                  "data": [{ "title":"Page#1",
                                             "elements":[{ "field":FORM_INPUT_NAME, 
                                                           "label":"Name",
-                                                          "id":"name1",
-                                                          isRequired:true
+                                                          "id":"name1"
                                                         }, 
                                                         { "field":FORM_INPUT_EMAIL, 
                                                           "label":"Enter Email Address",
@@ -16,7 +15,7 @@ class CodeBase extends React.Component {
                                                           validateUrl:PROJECT_URL+'/php/test.php', 
                                                           purpose:'Register',
                                                           showTextCapacity:true,
-                                                          totalTextSize:5 },
+                                                          totalTextSize:15 },
                                                         { "field":FORM_INPUT_EMAIL, 
                                                           "id":"email2",
                                                           "label":"Email Address",
@@ -26,7 +25,7 @@ class CodeBase extends React.Component {
                                                         { "field": FORM_INPUT_MOBILE, 
                                                           "id":"mobCodeId|mobileId",
                                                           "label":"Enter Mobile Number",
-                                                          isRequired:true, 
+                                                          isRequired:"false|true", 
                                                           validateUrl:PROJECT_URL+'/php/test.php', 
                                                           purpose:'Register',
                                                           showTextCapacity:true,

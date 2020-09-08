@@ -60,7 +60,7 @@ class EmailAddress extends React.Component {
  ui_reset_emailAddress(){
    let emailAddress = this.state.callBack.emailAddress.id;
    document.getElementById(emailAddress).value = '';
-   this.callBack('remove', emailAddress, false, '');
+   this.callBack('remove', '', false, '');
  }
 
  handleOnChange = (event) =>{

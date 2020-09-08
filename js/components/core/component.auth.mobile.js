@@ -2,8 +2,7 @@
 class Mobile extends React.Component {
  constructor(props) {
   super(props);
-  this.state = { mobCode: this.props.mobCodeDefault, // Default
-                 callBack: { mobile: { id: this.props.mobileId, 
+  this.state = { callBack: { mobile: { id: this.props.mobileId, 
                                        value: '', 
                                        isValid: false, 
                                        totalTextSize: this.props.totalTextSize,
@@ -12,7 +11,8 @@ class Mobile extends React.Component {
                              mobCode: { id: this.props.mobCodeId,
                                         value: '',
                                         isValid: true, 
-                                        msg: ''
+                                        msg: '',
+                                        default: this.props.mobCodeDefault, // Default
                                        }
                             }
                };
@@ -40,7 +40,7 @@ class Mobile extends React.Component {
    let fld_userMobile_id = callBack.mobile.id;
    let fld_userMobile_value = event.target.value;
    let totalTextSize = callBack.mobile.totalTextSize;
-   let mobCode = this.state.mobCode.value;
+   let mobCode = this.state.callBack.mobCode.default.value;
    let validateUrl = this.props.validateUrl;
    let purpose = this.props.purpose;
    if(fld_userMobile_value.length=== totalTextSize){
@@ -67,7 +67,7 @@ class Mobile extends React.Component {
  }
 
  ui_reset_mobCode(){
-   let mobCode = this.state.mobCode;
+   let mobCode = this.state.callBack.mobCode.default;
        mobCode.flag = this.props.mobCodeDefault.flag;
        mobCode.value = this.props.mobCodeDefault.value;
        mobCode.country = this.props.mobCodeDefault.country;
@@ -108,8 +108,8 @@ class Mobile extends React.Component {
   let resetMobile = this.props.resetMobile;
   let callBack = this.state.callBack;
   let fld_userMobCode_Id =  callBack.mobCode.id;
-  let fld_userMobCode_flag = PROJECT_URL+this.state.mobCode.flag;
-  let fld_userMobCode_value = this.state.mobCode.value;
+  let fld_userMobCode_flag = PROJECT_URL+this.state.callBack.mobCode.default.flag;
+  let fld_userMobCode_value = this.state.callBack.mobCode.default.value;
   let fld_userMobile_Id = callBack.mobile.id;
   let fld_userMobile_value = callBack.mobile.value;
   let showTextCapacity = callBack.mobile.showTextCapacity;
@@ -135,7 +135,7 @@ class Mobile extends React.Component {
          <ul className="dropdown-menu">
             {mobCodes.map((data) =>{
                return (<li onClick={()=>{
-                           let mobCode = this.state.mobCode;
+                           let mobCode = this.state.callBack.mobCode.default;
                                mobCode.value = data.mobCode;
                                mobCode.flag = data.flag;
                                mobCode.country = data.country;
@@ -151,10 +151,19 @@ class Mobile extends React.Component {
       </div>
      </div>
      <input id={fld_userMobile_Id} type="number" className="form-control" 
-     placeholder="Enter Mobile Number"  
-     value={fld_userMobile_value}
-     style={{borderTopRightRadius:'5px', borderBottomRightRadius:'5px'}}
-     onChange={this.handleMobileOnChange}/>
+            placeholder="Enter Mobile Number"  
+            value={fld_userMobile_value}
+            style={{borderTopRightRadius:'5px', borderBottomRightRadius:'5px'}}
+            onKeyPress={(event)=>{ 
+               if(allowOnlyNumbers(event)){ return true; }
+               else {
+                  this.callBack('error',fld_userMobile_value, false, 
+                  'Mobile Field is allowed to enter the Numbers only.', fld_userMobCode_value, true, '');
+                  document.getElementById(fld_userMobile_Id).focus();
+                  return false;
+               }
+            }}
+            onChange={this.handleMobileOnChange}/>
      {(showTextCapacity!==undefined && showTextCapacity===true) && 
       (totalTextSize!==undefined) && (
        <span className="input-group-addon">
