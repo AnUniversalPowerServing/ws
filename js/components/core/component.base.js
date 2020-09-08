@@ -41,6 +41,6 @@ class CodeBase extends React.Component {
                  };
   }
   render(){
-    return (<Trigger form={this.state.data}/>);
+    return (<Trigger form={this.state.data} />);
   }
 }
