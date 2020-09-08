@@ -5,7 +5,7 @@ class Alert extends React.Component {
  }
 
  render(){
-  let alertType = 'alert alert-'+this.props.alertType+' alert-dismissible';
+  let alertType = 'alert alert-'+this.props.alertType+' alert-dismissible mtop15p';
   return (<div class={alertType}>
             <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
             <strong>Alert Message !</strong><br/>
