@@ -62,7 +62,9 @@ ReactDOM.render(<CodeBase />, document.getElementById('loginForm'));
    <div class="col-sm-4"></div>
    <div class="col-sm-4" style="margin:15px;">
 	<div><h5 style="padding:5px;border-bottom:1px solid #000;"><b>Login to your Account</b></h5></div>
-	<div id="loginForm"></div>
+	<div id="loginForm">
+     <div align="center"><img src="<?php echo $PROJECT_URL ?>/img/commons/loading.gif"/></div>
+   </div>
    </div>
    <div class="col-sm-4"></div>
   </div>
@@ -74,18 +76,6 @@ ReactDOM.render(<CodeBase />, document.getElementById('loginForm'));
   </div>
   
  </div>
- <div></div>
-<div align="center" class="mtop60p">
-   <div align="center" class="mtop160p">
-    <div class="col-md-2 col-sm-2 col-xs-1"></div>
-    <div class="col-md-8 col-sm-8 col-xs-10">
-     <div class="mbot35p">
-       
-     </div>
-     <div id="progressDisplay" class="mtop15p"></div>
-    </div>
-   </div>
-</div>
 
 </body>
 </html>
