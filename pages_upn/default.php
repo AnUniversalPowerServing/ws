@@ -62,8 +62,8 @@ ReactDOM.render(<CodeBase />, document.getElementById('loginForm'));
    <div class="col-sm-4"></div>
    <div class="col-sm-4" style="margin:15px;">
 	<div><h5 style="padding:5px;border-bottom:1px solid #000;"><b>Login to your Account</b></h5></div>
-	<div id="loginForm">
-     <div align="center"><img src="<?php echo $PROJECT_URL ?>/img/commons/loading.gif"/></div>
+	<div id="loginForm" class="mtop15p">
+     <div align="center" class="mtop60p"><img src="<?php echo $PROJECT_URL ?>/img/commons/loading.gif" style="width:100px;"/></div>
    </div>
    </div>
    <div class="col-sm-4"></div>

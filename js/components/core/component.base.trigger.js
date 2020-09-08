@@ -65,7 +65,8 @@ class Trigger extends React.Component {
   if(size>0){
     formData.map((arry, formIndex)=>{
         /** Building badgeMenu */
-        badgeMenu.push((size > 1)?(<div align="center" className="col-xs-3">
+
+        badgeMenu.push((size > 1)?(<div align="center" className={'col-xs-'+(12/size)}>
                                      <span id={'menu'+formIndex} 
                                            className="badge"
                                            onClick={(event)=>this.sel_BadgeMenu(formIndex, size)}>

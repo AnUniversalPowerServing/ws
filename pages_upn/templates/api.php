@@ -1,7 +1,7 @@
 <?php 
-$PROJECT_MODE='PROD';
+$PROJECT_MODE='DEBUG';
 $PROJECT_NAME='NativePickles.com';
-$PROJECT_URL = 'http://192.168.1.6/ws';
+$PROJECT_URL = 'http://localhost/ws';
 $PROJECT_PAYLOGO = 'http://localhost/KalynVna/website/images/logo-square.png';
 if($PROJECT_MODE=='PROD'){ 
  $PROJECT_URL = (isset($_SERVER['HTTPS'])&&$_SERVER['HTTPS']==='on'?"https":"http")."://".$_SERVER['HTTP_HOST']; 
