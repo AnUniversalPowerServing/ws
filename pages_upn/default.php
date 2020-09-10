@@ -14,11 +14,9 @@
   <script src="<?php echo $PROJECT_URL; ?>/vendor/captcha/js/jquery-captcha-lgh.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/bootstrap-advanced/js/bootstrap-advanced.js"></script>
-  <script src="<?php echo $PROJECT_URL; ?>/vendor/bootstrap-advanced/js/bootstrap-advanced.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/babel-standalone@6/babel.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/react@16/react.production.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/react-dom@16/react-dom.production.min.js"></script>
-  <script src="<?php echo $PROJECT_URL; ?>/js/components/core/component.base.js"></script>
   <?php include_once 'templates/components.php'; ?>
 <style>
 .app-icon-s1 { width:220px;height:auto; }

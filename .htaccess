@@ -34,3 +34,6 @@ RewriteRule pickles/sample pages_pickles/sample.php [QSA,L]
 
 #Rewrite URLs
 RewriteRule upn/default  pages_upn/default.php [QSA,L]
+
+#Rewrite URLs
+RewriteRule jsf/default  pages_jsf/index.php [QSA,L]
