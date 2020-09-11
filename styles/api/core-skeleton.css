@@ -126,6 +126,9 @@ h5 { font-size:14px;line-height:22px; }
 .borderRadBotRight5p { border-bottom-right-radius: 5px; }
 
 .pad0{ padding:0px; }
+.padLeft15p { padding-left:15px; }
+.padRight15p { padding-right:15px; }
+.pad2p{ padding:2px; }
 .pad5p { padding:5px; }
 .pad8p { padding:8px; }
 .pad10p{ padding:10px; }f
@@ -137,9 +140,8 @@ hr { margin-bottom:10px; }
 
 @font-face { font-family:thirdDegree;src:url('../../fonts/third-degree.ttf'); }
 
-.form-group>label { position:relative;width:100%; }
-.form-group>label>span, .form-group>.has-feedback>label>span { position:absolute;right:0;font-weight:500;font-size:11px;letter-spacing:0.8px; }
-
+.form-group-label  { position:relative;width:100%; } 
+.form-group-label-span { position:absolute;right:0;font-weight:500;font-size:11px;letter-spacing:0.8px; }
 /* images: zoom-hover Effect within Divsion */
 div.img-hover-zoom { position: relative;height: 300px;overflow: hidden; }
 div.img-hover-zoom img { transition: transform 1s ease; }
