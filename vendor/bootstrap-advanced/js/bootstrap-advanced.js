@@ -52,11 +52,11 @@ function bootstrap_formField_addToField(hglApply,field_Id){
     $('#'+field_Id).wrap('<div class="'+msg[hglApply].field+' has-feedback"></div>');
    }
    if(inputgroup.children('span').hasClass('input-group-addon')){
-	inputgroup.children('span').addClass('input-group-addon-'+hglApply);
+	  inputgroup.children('span').addClass('input-group-addon-'+hglApply);
    }// input-group-addon
    if(inputgroup.children('div.input-group-btn')){
-  inputgroup.children('div.input-group-btn').children('button').removeAttr('class');
-  inputgroup.children('div.input-group-btn').children('button').attr('class','btn input-group-addon-'+hglApply);
+    inputgroup.children('div.input-group-btn').children('button').removeAttr('class');
+    inputgroup.children('div.input-group-btn').children('button').attr('class','btn input-group-addon-'+hglApply);
    }
  } else {
     formgroup.addClass(msg[hglApply].field+' has-feedback');

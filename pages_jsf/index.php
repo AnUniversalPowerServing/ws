@@ -9,13 +9,17 @@
   <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/vendor/bootstrap-advanced/css/bootstrap-advanced.css">
   <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/vendor/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/styles/api/core-skeleton.css">
+  <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/vendor/jquery-ui/css/jquery-ui.css">
   <script src="<?php echo $PROJECT_URL; ?>/vendor/jquery/jquery.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/captcha/js/jquery-captcha-lgh.min.js"></script>
+  <script src="<?php echo $PROJECT_URL; ?>/vendor/jquery-ui/js/jquery-ui.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/bootstrap-advanced/js/bootstrap-advanced.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/js/api/core-skeleton.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/js/templates/auth/WebForm.js"></script>
-
+  
+  
+  
   <!-- Payment Gateway Plugin ::: START -->
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/js/templates/auth/PaymentButton.js"></script>
@@ -27,12 +31,20 @@ $(document).ready(function(){
 
   webFormBuilder = new WebFormBuilder(webForm);
   document.getElementById("root").innerHTML = webFormBuilder.display();
-  bootstrap_formField_trigger('error',['SingleFormOpt1','MultipleFormOpt1','MultipleFormOpt2','MultipleFormOpt3']);
+  webFormBuilder.executeAfterContentLoad();
+  bootstrap_formField_trigger('error',['MultipleFormOpt1','MultipleFormOpt5','MultipleFormOpt6','MultipleFormOpt7',
+                                       'MultipleFormOpt2','MultipleFormOpt3']);
+  bootstrap_formField_trigger('success',['SingleFormOpt1','SingleFormTextArea1','name1']);
 });
 </script>
 </head>
 <body>
 <div id="paymentGateway"></div>
 <div id="root"></div>
+
+<!-- -->
+<input type="date" id="dateTime5" class="form-control" min="13-09-2020" max="18-09-2020">
+<!-- -->
+
 </body>
 </html>

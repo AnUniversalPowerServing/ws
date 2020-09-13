@@ -3,12 +3,36 @@
 .step-badges>div>span.badge { font-size:30px; }
 .step-badges>div>span.badge.active { font-size:30px; }
 .hide-block { display:none; }
-.input-group-addon-success,.input-group-addon-success:hover,.input-group-addon-success:active,.input-group-addon-success:focus,
-.input-group-addon-success:active:hover{ color:#3c763d; }
-.input-group-addon-warning,.input-group-addon-warning:hover,.input-group-addon-warning:active,.input-group-addon-warning:focus,
-.input-group-addon-warning:active:hover { color:#8a6d3b; }
-.input-group-addon-error,.input-group-addon-error:hover,.input-group-addon-error:active,.input-group-addon-error:focus,
-.input-group-addon-error:active:hover { color:#a94442; }
+
+.ui-datepicker { z-index:2; }
+.padRight0 { padding-right:0px }
+.padLeft0 { padding-left:0px }
+.padRight5p { padding-right:5px; }
+.padLeft5p { padding-left:5px }
+
+span.input-group-addon-success,span.input-group-addon-success:hover,
+span.input-group-addon-success:active,span.input-group-addon-success:focus,
+span.input-group-addon-success:active:hover{ color:#3c763d; }
+span.input-group-addon-warning,span.input-group-addon-warning:hover,
+span.input-group-addon-warning:active,span.input-group-addon-warning:focus,
+span.input-group-addon-warning:active:hover { color:#8a6d3b; }
+span.input-group-addon-error,span.input-group-addon-error:hover,
+span.input-group-addon-error:active,span.input-group-addon-error:focus,
+span.input-group-addon-error:active:hover { color:#a94442; }
+
+.input-group-btn>.input-group-addon-success,.input-group-btn>.input-group-addon-success:hover,
+.input-group-btn>.input-group-addon-success:active,.input-group-btn>.input-group-addon-success:focus,
+.input-group-btn>.input-group-addon-success:active:hover{ background-color:#3c763d;color:#fff; }
+.input-group-btn>.input-group-addon-warning,.input-group-btn>.input-group-addon-warning:hover,
+.input-group-btn>.input-group-addon-warning:active,.input-group-btn>.input-group-addon-warning:focus,
+.input-group-btn>.input-group-addon-warning:active:hover { background-color:#8a6d3b;color:#fff; }
+.input-group-btn>.input-group-addon-error,.input-group-btn>.input-group-addon-error:hover,
+.input-group-btn>.input-group-addon-error:active,.input-group-btn>.input-group-addon-error:focus,
+.input-group-btn>.input-group-addon-error:active:hover { background-color:#a94442;color:#fff; }
+
+.input-group>.has-feedback>.form-control-feedback { right:0; }
+.padRight0>.form-control-feedback { right:-6; }
+.padRight5p>.form-control-feedback { right:-1; }
 /*
 @media only screen and (max-width: 330px) { /* Mobiles */
  /*   .input-group>div.has-feedback>input { margin-top:2.5%; }

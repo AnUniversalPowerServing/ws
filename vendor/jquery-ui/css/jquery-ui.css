@@ -127,7 +127,7 @@
 }
 .ui-menu .ui-menu-item-wrapper {
 	position: relative;
-	padding: 3px 1em 3px .4em;
+	padding: 6px;
 }
 .ui-menu .ui-menu-divider {
 	margin: 5px 0;
@@ -899,7 +899,7 @@ body .ui-tooltip {
 }
 .ui-widget.ui-widget-content {
 	border: 1px solid #c5c5c5;
-	background-color: #e3eaa7;
+	background-color: #fff;
 }
 .ui-widget-content {
 	border: 1px solid #dddddd;
