@@ -14,6 +14,7 @@ RewriteEngine on
 # Rewrite URLs'
 RewriteRule tutorial/webtech/([^/]+)/([^/]+)$ pages/webtech.php?1=$1&2=$2 [QSA,L]
 RewriteRule tutorial/apptech/([^/]+)/([^/]+)$ pages/apptech.php?1=$1&2=$2 [QSA,L]
+RewriteRule tutorial/networking/([^/]+)/([^/]+)$ pages/netwrk.php?1=$1&2=$2 [QSA,L]
 
 # RewriteRule tutorial/reactjs/([^/]+)$ pages/reactjs.php?1=$1 [QSA,L]
 # RewriteRule tutorial/seo/([^/]+)$ pages/seo.php?1=$1 [QSA,L]
@@ -37,3 +38,4 @@ RewriteRule upn/default  pages_upn/default.php [QSA,L]
 
 #Rewrite URLs
 RewriteRule jsf/default  pages_jsf/index.php [QSA,L]
+RewriteRule jsf/webForm  pages_jsf/webForm.php [QSA,L]

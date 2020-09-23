@@ -117,6 +117,24 @@ class HtmlCommons {
       content+='min="'+minDate+'" max="'+maxDate+'" />';
   return content;  
  }
+ buildElement_inputTime_hr(id){
+  let content = '<select id="'+id+'" class="form-control">';
+  for(let index=0;index<=12;index++){ 
+    index = (index<=9)?'0'+index:index;
+    content+='<option value="'+index+'">'+index+'</option>';
+  }
+  content+='</select>';
+  return content;
+ }
+ buildElement_inputTime_minsec(id){
+  let content = '<select id="'+id+'" class="form-control">';
+  for(let index=0;index<=60;index++){ 
+    index = (index<=9)?'0'+index:index;
+    content+='<option value="'+index+'">'+index+'</option>';
+  }
+  content+='</select>';
+  return content;
+ }
 
  autoComplete_element(id, url, totalSize){
   fetch(url).then(response => response.json()).then(data => {
@@ -241,7 +259,6 @@ class InputDateForm {
 	 let data = { id:id, minDate: pick.from, maxDate: pick.to };
 	 fieldContent+=htmlCommons.buildElement_inputDate(data);
   } else {
-    console.log("timeDate: "+JSON.stringify(pick));
      let durationTime = pick.durationTime.split("-");
      let durYear = parseInt(durationTime[0]);
      let durMonth = parseInt(durationTime[1]);
@@ -285,6 +302,17 @@ class InputDateForm {
   content = htmlCommons.wrap_formGroup(content); 
   return content;
  }
+}
+
+class InputTimeForm {
+  constructor(props){
+   this.props = props;
+  }
+  display(){
+    let content = htmlCommons.wrap_label(label, isRequired);
+    buildElement_selectOption({id:id, placeholder:placeholder, options:options });
+    return content;
+  }
 }
 
 class InputEmailForm {
@@ -409,6 +437,14 @@ var webForm = { name:"authRegister",
                                             {label:'Option#3', value:'3'},
                                             {label:'Option#4', value:'4'}
                                             ]]
+                                  },
+                                  {
+                                    field:FORM_INPUT_TIME,
+                                    id:'time1',
+                                    type:'24H',
+                                    label:'Time Form 1', 
+                                    isRequired:true,
+                                    display:{ from:'00:00', to:'13:00' }
                                   },
                                   {
                                     field:FORM_INPUT_DATETIME,
