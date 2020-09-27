@@ -1,9 +1,11 @@
 <?php 
 $PROJECT_MODE='PROD';
-$PROJECT_URL = 'http://localhost/ws';
-if($PROJECT_MODE=='PROD'){ 
- $PROJECT_URL = (isset($_SERVER['HTTPS'])&&$_SERVER['HTTPS']==='on'?"https":"http")."://".$_SERVER['HTTP_HOST']; 
-}
+$PROJECT_NAME='WideSecond.com';
+$PROJECT_PROTOCOL=(isset($_SERVER['HTTPS'])&&$_SERVER['HTTPS']==='on'?"https":"http");
+$PROJECT_HOST = $_SERVER['HTTP_HOST'];
+if($PROJECT_HOST=='localhost'){ $PROJECT_MODE='DEBUG'; } 
+$PROJECT_URL = $PROJECT_PROTOCOL."://".$PROJECT_HOST;
+if($PROJECT_MODE=='DEBUG'){ $PROJECT_URL = 'http://localhost/ws'; }
 ?>
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo $PROJECT_URL; ?>/favicon.ico?v=2"/>
 <script type="text/javascript">
