@@ -19,22 +19,21 @@ body { overflow-x:hidden; }
 .mbot35p { margin-bottom:35px; }
 a { color:#fff; }
 a.a-custom { text-decoration:none;color:#000; }
-.navbar-nav>li>a ,.navbar-nav>li>a:hover, .navbar-nav>li>a:focus{ background-color:#630062;color:#fff; }
-.navbar-nav>li.active>a,.navbar-nav>li.active>a:hover, .navbar-nav>li.active>a:focus { background-color:#630062;color:#ffc801;border-bottom:3px solid #ffc801; }
+.navbar-nav>li>a , .navbar-nav>li>a:focus{ background-color:#fff;color:#a965b5; }
+.navbar-nav>li>a:hover {  background-color:#fff;color:#333; }
+.navbar-nav>li.active>a,.navbar-nav>li.active>a:hover, .navbar-nav>li.active>a:focus { color:#630062;border-bottom:3px solid #630062; }
 .navbar { border-radius:0px;margin-bottom:0px; }
+.navbar-white { background-color: #fff; border-color: #fff; }
 .navbar-purple { background-color: #630062; border-color: #630062; }
 .navbar-purple .navbar-toggle { border-color: #fff; }
 .navbar-purple .navbar-toggle .icon-bar { background-color: #fff; }
 .navbar-brand,.navbar-brand:hover { height:45px;color:#fff; }
-@media (min-width: 768px) {
-// #kvHeaderMenu { margin-top:5px; }
-}
 body::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);background-color: #F5F5F5; }         
 body::-webkit-scrollbar { width: 6px;background-color: #F5F5F5; }        
 body::-webkit-scrollbar-thumb { background-color: #000000; }
 body { overflow-x:hidden; }
-@font-face { font-family: "kvfont001";src: url("fonts/acratica-font.otf"); }
-@font-face { font-family: "kvfont002";src: url("fonts/boogaloo-regular.otf"); }
+@font-face { font-family: "kvfont001";src: url("../fonts/acratica-font.otf"); }
+@font-face { font-family: "kvfont002";src: url("../fonts/boogaloo-regular.otf"); }
 .slidecontainer { width: 100%; }
 .slider { -webkit-appearance: none;width: 100%;height: 15px;border-radius: 5px;background: #d3d3d3;
 		  outline: none;opacity: 0.7;-webkit-transition: .2s;transition: opacity .2s; }
@@ -63,7 +62,7 @@ function kvHeaderMenu(id){
 }
 </script>
 <div>
-<nav class="navbar navbar-purple">
+<nav class="navbar navbar-white">
   <div class="container-fluid">
     <div class="navbar-header">
 	  <?php if(isset($_SESSION["ACCOUNT_TYPE"])) { ?>
@@ -75,7 +74,7 @@ function kvHeaderMenu(id){
       </button>
       <a class="navbar-brand" style="margin-top:5px;" href="#"><!--img src="images/logo.png" style="width:180px;height:auto;"/-->
 	    <span style="font-family:kvfont001;font-size:24px;">
-		 <span style="color:#ffc801;">Kalyana</span><span style="color:#ffc801;">Veena</span><span style="color:#ffc801;">.com</span>
+		 <span style="color:#630062;">Kalyana</span><span style="color:#630062;">Veena</span><span style="color:#630062;">.com</span>
 		</span>
 	  </a>
     </div>

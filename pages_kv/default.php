@@ -8,16 +8,16 @@ if(!isset($_SESSION["ACCOUNT_TYPE"])){ ?>
   <title>KalyanaVeena</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/font-awesome/css/font-awesome.min.css">
-  <link href="<?php echo $PROJECT_URL; ?>/bootstrap-toggle/css/bootstrap-toggle.min.css" rel="stylesheet">
-  <script src="<?php echo $PROJECT_URL; ?>/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
-  <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/vendor/bootstrap-advanced/css/bootstrap-advanced.css">
+  <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/vendor/font-awesome/css/font-awesome.min.css">
+  <link href="<?php echo $PROJECT_URL; ?>/vendor/bootstrap-toggle/css/bootstrap-toggle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/vendor/bootstrap-advanced/css/bootstrap-advanced.css">
   <link rel="stylesheet" href="<?php echo $PROJECT_URL; ?>/styles/api/core-skeleton.css">
-  <script src="<?php echo $PROJECT_URL; ?>/js/api/core-skeleton.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/jquery/jquery.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="<?php echo $PROJECT_URL; ?>/vendor/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
   <script src="<?php echo $PROJECT_URL; ?>/vendor/bootstrap-advanced/js/bootstrap-advanced.js"></script>
+  <script src="<?php echo $PROJECT_URL; ?>/js/api/core-skeleton.js"></script>
   <script type="text/javascript">
   $(document).ready(function(){
     kvHeaderMenu('kvHeaderMenu-Home');
@@ -32,14 +32,14 @@ if(!isset($_SESSION["ACCOUNT_TYPE"])){ ?>
 <body>
 <?php include_once 'templates/api_header.php'; ?>
 
-<div align="center" style="width:100%;background-color:#6c047d;color:#fff;">
-  <div style="font-size:16px;padding:15px;letter-spacing:1px;line-height:26px;">
-    <b>Welcome to the World's No.1 :</b> Highly Secured, most trusted and Successful Matrimonial Search Engine Platform
+<div align="center" style="width:100%;background-color:#630062;color:#fff;"><!-- background-color:#eab15c;color:#333; -->
+  <div style="font-family: UniNeue,sans-serif,Helvetica,Arial;font-size:14px;padding:15px;letter-spacing:1px;line-height:26px;font-weight:700;">
+    Welcome to the World's No.1 : Highly Secured, most trusted and Successful Matrimonial Search Engine Platform
   </div>
 </div>
-<div class="container-fluid pad0">
+<div class="container-fluid">
   <div class="row">
-	<div class="col-sm-12" style="width:100%;height:600px;background-image: url('images/martimony-wallpaper.jpg');background-position:center;">
+	<div class="col-sm-12" style="width:100%;height:600px;background-image: url('../img/kv/martimony-wallpaper.jpg');background-position:center;">
 	   <div class="col-sm-1"></div>
 	   <div class="col-sm-6">
 		  <!--div id="kvShortDesc" class="list-group" style="margin-top:25%;opacity:0.9;">
@@ -199,7 +199,16 @@ if(!isset($_SESSION["ACCOUNT_TYPE"])){ ?>
   <div class="row">
    <div class="col-sm-7" style="padding-left:15px;">
 	`<div align="center" style="padding:6px;"><h3><b>This Trusted Platform is Simple, Fast and Secure</b></h3></div>
-	 <div><h4>World's First Highly Secure Matrimony Platform</h4></div>
+	 <div class="row">
+	   <div class="col-sm-10">
+	     <div><h4 style="padding:10px;border-bottom:1px solid #000;">
+		 	  <b>World's First Highly Secure and Safe Matrimony Search Engine Platform</b></h4>
+		 </div>
+
+	   </div><!--/.col-sm-6 -->
+	    
+		
+	  </div><!--/.row -->
 	 <div></div>
    </div><!--/.col-sm-7 -->
   </div><!--/.row -->

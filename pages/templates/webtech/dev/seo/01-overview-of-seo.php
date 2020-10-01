@@ -201,6 +201,17 @@ $(document).ready(function(){
   </div>
   <div class="list-group">
    <div class="list-group-item mtop10p">
+     <div><h4 class="font-red"><b>Planning to Build a Search Engine, then look</b></h4></div>
+     <div>
+      <ul>
+        <li><a href="#">Apache Lucene</a> <span class="label label-success">Open Source Search Library</span></li>
+        <li><a href="#">Apache Solr</a> <span class="label label-success">Open Source Project</span></li>
+      </ul>
+     </div>
+   </div>
+  </div>
+  <div class="list-group">
+   <div class="list-group-item mtop10p">
      <div><h4 class="font-red"><b>Other Related links</b></h4></div>
    </div>
   </div>
