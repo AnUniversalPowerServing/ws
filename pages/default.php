@@ -58,7 +58,7 @@
    </a>
    <!-- -->
    <!-- -->
-   <a href="<?php echo $PROJECT_URL; ?>/tutorial/tutorial/networking/basic/dns-ipAddress-url">
+   <a href="<?php echo $PROJECT_URL; ?>/tutorial/networking/basic/dns-ipAddress-url">
       <div class="list-group mtop15p boxShadow">
         <div class="list-group-item bg-skyBlue"><b>Networking</b></div>
         <div class="list-group-item bg-lgtSkyBlue">
