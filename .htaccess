@@ -41,4 +41,4 @@ RewriteRule jsf/default  pages_jsf/index.php [QSA,L]
 RewriteRule jsf/webForm  pages_jsf/webForm.php [QSA,L]
 
 #Rewrite URLs
-RewriteRule kv/home  pages_kv/default.php [QSA,L]
+#RewriteRule kv/home  pages_kv/default.php [QSA,L]
